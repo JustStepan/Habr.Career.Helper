@@ -1,0 +1,55 @@
+2026-01-25 15:37:50.565 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=lead, страниц=1
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&qid=6
+2026-01-25 15:37:50.574 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-25 15:37:52.315 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: Руководитель группы оптимизации сети [ИРТЕЯ]
+2026-01-25 15:37:53.321 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: HR Manager (Doha)
+2026-01-25 15:37:54.454 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: Руководитель проекта
+2026-01-25 15:37:55.422 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: Руководитель проекта
+2026-01-25 15:37:56.601 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: Backend Team Lead (PHP)
+2026-01-25 15:37:57.735 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Ведущий разработчик в Yandex Network Blockstore (C++)
+2026-01-25 15:37:58.778 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: Руководитель группы разработки управления цепочками поставок в DCIM
+2026-01-25 15:37:59.878 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: Team lead Ruby on Rails
+2026-01-25 15:38:00.900 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Java Developer (Клик)
+2026-01-25 15:38:02.056 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: Product Owner [ИРТЕЯ]
+2026-01-25 15:38:03.099 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: ИТ Лид команды разработки (java)
+2026-01-25 15:38:04.277 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: Техлид Backend Engineer
+2026-01-25 15:38:05.333 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Заместитель начальника отдела направление автотестирования
+2026-01-25 15:38:06.324 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Chapter Lead системного анализа (Трайб Daily Banking)
+2026-01-25 15:38:07.372 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: Tech Lead Java (Управление рисками строительных проектов)
+2026-01-25 15:38:08.483 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: Tech Lead .NET developer (Рыночные риски)
+2026-01-25 15:38:09.500 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Тимлид сетевого отдела
+2026-01-25 15:38:10.553 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Infrastructure Tech Lead
+2026-01-25 15:38:11.552 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Platforms Tech Lead
+2026-01-25 15:38:12.627 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Ведущий консультант-разработчик Сфера/Atlassian
+2026-01-25 15:38:13.684 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-01-25 15:38:14.832 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Системный аналитик (Средства защиты информации) ОС Astra Linux
+2026-01-25 15:38:15.851 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Lead account manager
+2026-01-25 15:38:16.889 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Руководитель группы анализа защищенности приложений (Кибербезопасность)
+2026-01-25 15:38:17.943 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Руководитель направления автоматизации производственных систем
+2026-01-25 15:38:18.446 | INFO     | app.parser:parse_habr_vacancies:203 - Парсинг завершен. Найдено вакансий: 25
+2026-01-25 15:38:18.447 | INFO     | app.main:parse_vacancies:41 - Успешно обработано 25 вакансий.
+2026-01-25 15:38:18.494 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: HR Manager (Doha)
+2026-01-25 15:38:18.495 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель проекта
+2026-01-25 15:38:18.496 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель проекта
+2026-01-25 15:38:18.497 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Backend Team Lead (PHP)
+2026-01-25 15:38:18.498 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Ведущий разработчик в Yandex Network Blockstore (C++)
+2026-01-25 15:38:18.498 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель группы разработки управления цепочками поставок в DCIM
+2026-01-25 15:38:18.499 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Team lead Ruby on Rails
+2026-01-25 15:38:18.500 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Java Developer (Клик)
+2026-01-25 15:38:18.502 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Product Owner [ИРТЕЯ]
+2026-01-25 15:38:18.504 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: ИТ Лид команды разработки (java)
+2026-01-25 15:38:18.505 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Техлид Backend Engineer
+2026-01-25 15:38:18.507 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Заместитель начальника отдела направление автотестирования
+2026-01-25 15:38:18.509 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Chapter Lead системного анализа (Трайб Daily Banking)
+2026-01-25 15:38:18.510 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Tech Lead Java (Управление рисками строительных проектов)
+2026-01-25 15:38:18.511 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Tech Lead .NET developer (Рыночные риски)
+2026-01-25 15:38:18.512 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Тимлид сетевого отдела
+2026-01-25 15:38:18.513 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Infrastructure Tech Lead
+2026-01-25 15:38:18.514 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Platforms Tech Lead
+2026-01-25 15:38:18.515 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Ведущий консультант-разработчик Сфера/Atlassian
+2026-01-25 15:38:18.515 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-01-25 15:38:18.516 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Системный аналитик (Средства защиты информации) ОС Astra Linux
+2026-01-25 15:38:18.517 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Lead account manager
+2026-01-25 15:38:18.518 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель группы анализа защищенности приложений (Кибербезопасность)
+2026-01-25 15:38:18.519 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель направления автоматизации производственных систем
+2026-01-25 15:38:18.519 | INFO     | app.main:parse_vacancies:65 - Всего дублей: 24
