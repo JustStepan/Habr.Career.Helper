@@ -11,3 +11,5 @@ wheels/
 
 .environments
 .env
+
+.vscode

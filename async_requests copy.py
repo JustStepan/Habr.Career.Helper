@@ -186,6 +186,7 @@ if __name__ == "__main__":
             vacancies = await fetch_all_pages(MAX_PAGES)
             save_json(vacancies)
 
+
     def save_json(vacancies):
         with open("vacancies.json", "w", encoding="utf-8") as f:
             json.dump(vacancies, f, ensure_ascii=False, indent=2)
