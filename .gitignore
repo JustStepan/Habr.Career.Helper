@@ -15,3 +15,5 @@ wheels/
 .vscode
 
 __test_fold
+
+pgdata
