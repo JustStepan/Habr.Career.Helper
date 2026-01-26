@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, text, Table, ForeignKey
 from sqlalchemy.orm import relationship
-from database import Base
+from app.database import Base
 
 # Промежуточная таблица (многие-ко-многим)
 vacancy_skills = Table(
