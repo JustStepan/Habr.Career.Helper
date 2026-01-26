@@ -10,17 +10,19 @@ from app.models import ParseRequest, VacancyResponse, VacanciesDBRequest
 from app.parser import parse_habr_vacancies
 from app.logger_config import logger
 from app.db_models import Vacancy, Skill
+from app.routes import auth
 
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
+from sqlalchemy import desc, select, func
 from sqlalchemy.orm import selectinload
-
 
 app = FastAPI(
     title="Habr Career Parser API",
     description="API для парсинга вакансий с Habr Career",
     version="1.0.0",
 )
+# Маршруты
+app.include_router(auth.router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -80,7 +82,7 @@ async def get_vacancy(
 async def get_vacancies(
     request: VacanciesDBRequest,
     skip: int = 0,
-    limit: int = 10,
+    limit: int = 20,
     db: AsyncSession = Depends(get_db)
 ):
     # Базовый запрос
@@ -110,8 +112,8 @@ async def get_vacancies(
                 Vacancy.skills.any(Skill.id == skill_id)
             )
 
-    # Пагинация в конце!
-    query = query.offset(skip).limit(limit)
+    # Пагинация в конце и сортиовка по дате!
+    query = query.order_by(desc(Vacancy.published_date)).offset(skip).limit(limit)
     
     result = await db.execute(query)
     vacancies = result.scalars().all()

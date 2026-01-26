@@ -1,55 +1,120 @@
-2026-01-25 15:37:50.565 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=lead, страниц=1
- url для парсинга: https://career.habr.com/vacancies?q=&sort=date&qid=6
-2026-01-25 15:37:50.574 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
-2026-01-25 15:37:52.315 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: Руководитель группы оптимизации сети [ИРТЕЯ]
-2026-01-25 15:37:53.321 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: HR Manager (Doha)
-2026-01-25 15:37:54.454 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: Руководитель проекта
-2026-01-25 15:37:55.422 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: Руководитель проекта
-2026-01-25 15:37:56.601 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: Backend Team Lead (PHP)
-2026-01-25 15:37:57.735 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Ведущий разработчик в Yandex Network Blockstore (C++)
-2026-01-25 15:37:58.778 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: Руководитель группы разработки управления цепочками поставок в DCIM
-2026-01-25 15:37:59.878 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: Team lead Ruby on Rails
-2026-01-25 15:38:00.900 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Java Developer (Клик)
-2026-01-25 15:38:02.056 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: Product Owner [ИРТЕЯ]
-2026-01-25 15:38:03.099 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: ИТ Лид команды разработки (java)
-2026-01-25 15:38:04.277 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: Техлид Backend Engineer
-2026-01-25 15:38:05.333 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Заместитель начальника отдела направление автотестирования
-2026-01-25 15:38:06.324 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Chapter Lead системного анализа (Трайб Daily Banking)
-2026-01-25 15:38:07.372 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: Tech Lead Java (Управление рисками строительных проектов)
-2026-01-25 15:38:08.483 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: Tech Lead .NET developer (Рыночные риски)
-2026-01-25 15:38:09.500 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Тимлид сетевого отдела
-2026-01-25 15:38:10.553 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Infrastructure Tech Lead
-2026-01-25 15:38:11.552 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Platforms Tech Lead
-2026-01-25 15:38:12.627 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Ведущий консультант-разработчик Сфера/Atlassian
-2026-01-25 15:38:13.684 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
-2026-01-25 15:38:14.832 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Системный аналитик (Средства защиты информации) ОС Astra Linux
-2026-01-25 15:38:15.851 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Lead account manager
-2026-01-25 15:38:16.889 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Руководитель группы анализа защищенности приложений (Кибербезопасность)
-2026-01-25 15:38:17.943 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Руководитель направления автоматизации производственных систем
-2026-01-25 15:38:18.446 | INFO     | app.parser:parse_habr_vacancies:203 - Парсинг завершен. Найдено вакансий: 25
-2026-01-25 15:38:18.447 | INFO     | app.main:parse_vacancies:41 - Успешно обработано 25 вакансий.
-2026-01-25 15:38:18.494 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: HR Manager (Doha)
-2026-01-25 15:38:18.495 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель проекта
-2026-01-25 15:38:18.496 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель проекта
-2026-01-25 15:38:18.497 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Backend Team Lead (PHP)
-2026-01-25 15:38:18.498 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Ведущий разработчик в Yandex Network Blockstore (C++)
-2026-01-25 15:38:18.498 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель группы разработки управления цепочками поставок в DCIM
-2026-01-25 15:38:18.499 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Team lead Ruby on Rails
-2026-01-25 15:38:18.500 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Java Developer (Клик)
-2026-01-25 15:38:18.502 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Product Owner [ИРТЕЯ]
-2026-01-25 15:38:18.504 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: ИТ Лид команды разработки (java)
-2026-01-25 15:38:18.505 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Техлид Backend Engineer
-2026-01-25 15:38:18.507 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Заместитель начальника отдела направление автотестирования
-2026-01-25 15:38:18.509 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Chapter Lead системного анализа (Трайб Daily Banking)
-2026-01-25 15:38:18.510 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Tech Lead Java (Управление рисками строительных проектов)
-2026-01-25 15:38:18.511 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Tech Lead .NET developer (Рыночные риски)
-2026-01-25 15:38:18.512 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Тимлид сетевого отдела
-2026-01-25 15:38:18.513 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Infrastructure Tech Lead
-2026-01-25 15:38:18.514 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Platforms Tech Lead
-2026-01-25 15:38:18.515 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Ведущий консультант-разработчик Сфера/Atlassian
-2026-01-25 15:38:18.515 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
-2026-01-25 15:38:18.516 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Системный аналитик (Средства защиты информации) ОС Astra Linux
-2026-01-25 15:38:18.517 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Lead account manager
-2026-01-25 15:38:18.518 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель группы анализа защищенности приложений (Кибербезопасность)
-2026-01-25 15:38:18.519 | INFO     | app.main:parse_vacancies:63 - Дубликат пропущен: Руководитель направления автоматизации производственных систем
-2026-01-25 15:38:18.519 | INFO     | app.main:parse_vacancies:65 - Всего дублей: 24
+2026-01-26 14:17:38.961 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=all, страниц=4
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-01-26 14:17:38.965 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-26 14:17:43.663 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: Дежурный системный администратор  [MWS Cloud Platform]
+2026-01-26 14:17:44.698 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: Инженер-разработчик
+2026-01-26 14:17:46.488 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: AppSeс - инженер
+2026-01-26 14:17:48.136 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: Middle Business Analyst [NEMO]
+2026-01-26 14:17:49.301 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: Руководитель отдела эксплуатации информационных систем и сервисов
+2026-01-26 14:17:50.469 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Python Developer
+2026-01-26 14:17:51.490 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: BI Разработчик
+2026-01-26 14:17:52.433 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: Системный аналитик SAP
+2026-01-26 14:17:53.797 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Стажёр Продакт-менеджер
+2026-01-26 14:17:54.837 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: ML Data engineer (LLM Gigachat)
+2026-01-26 14:17:55.886 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: Сетевой инженер Cisco
+2026-01-26 14:17:56.988 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: Системный Администратор Linux
+2026-01-26 14:17:57.889 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Программист 1С ERP
+2026-01-26 14:17:58.748 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Системный администратор (СРК, СХД)
+2026-01-26 14:17:59.776 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: .NET разработчик
+2026-01-26 14:18:00.761 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: Специалист по информационной безопасности
+2026-01-26 14:18:02.033 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Tech Lead Python (IaaS/PaaS)
+2026-01-26 14:18:03.059 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Системный аналитик (ОС Astra Linux)
+2026-01-26 14:18:04.025 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Инженер по автоматизированному тестированию (Golang)
+2026-01-26 14:18:05.968 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Инженер по тестированию абонентской линии связи
+2026-01-26 14:18:07.373 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: Специалист по информационной безопасности/Инженер AppSec
+2026-01-26 14:18:08.373 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Стажер специалист по сопровождению сделок по проблемным активам
+2026-01-26 14:18:09.299 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Аналитик 1С: ERP
+2026-01-26 14:18:10.439 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Эксперт по информационной безопасности/ Архитектор ИБ
+2026-01-26 14:18:11.444 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Эксперт по информационной безопасности
+2026-01-26 14:18:12.947 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 2...
+2026-01-26 14:18:14.644 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: ML-аналитик
+2026-01-26 14:18:15.700 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: Инженер кибербезопасности облака
+2026-01-26 14:18:16.723 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: ML Tech Lead
+2026-01-26 14:18:17.734 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: Инженер по кибербезопасности (DLP)
+2026-01-26 14:18:18.670 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: Эксперт по защите периметра (WAF)
+2026-01-26 14:18:19.605 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Senior системный аналитик на проект ДБО  (офис)
+2026-01-26 14:18:20.868 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: Системный инженер цифровой аппаратуры
+2026-01-26 14:18:21.890 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: Team Lead DevOps | Базовая инфраструктура
+2026-01-26 14:18:22.914 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Senior React-разработчик
+2026-01-26 14:18:23.846 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: Web Pentester / Специалист по тестированию безопасности веб-приложений
+2026-01-26 14:18:24.877 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: Ведущий инженер по серверному оборудованию
+2026-01-26 14:18:26.122 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: Automation QA (Java)
+2026-01-26 14:18:27.283 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Стажер Специалист по сопровождению внутрибанковских проектов
+2026-01-26 14:18:28.343 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Инженер нагрузочного тестирования
+2026-01-26 14:18:29.322 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: Application Security Еngineer (Кибербезопасность)
+2026-01-26 14:18:30.392 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: Руководитель мобильной разработки
+2026-01-26 14:18:31.416 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Strategic Planner / Менеджер по стратегическому планированию
+2026-01-26 14:18:32.323 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Инженер по вычислительным системам и СХД
+2026-01-26 14:18:33.212 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Торговый представитель
+2026-01-26 14:18:34.383 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Разработчик бэкенда (Python/Django) в команду развития сотрудников
+2026-01-26 14:18:35.507 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: DevOps
+2026-01-26 14:18:36.796 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Python-developer
+2026-01-26 14:18:38.071 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Openstack engineer [Openstack]
+2026-01-26 14:18:39.256 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Data Scientist
+2026-01-26 14:18:40.333 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Tech lead ML [МТС Веб Сервисы]
+2026-01-26 14:18:41.836 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 3...
+2026-01-26 14:18:43.498 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: Data Analyst (Блок Финансы)
+2026-01-26 14:18:44.561 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: Бизнес-аналитик в команду РКО
+2026-01-26 14:18:45.546 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: Бизнес-аналитик в команду Массовых кредитных продуктов
+2026-01-26 14:18:46.671 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: DevOps/SRE
+2026-01-26 14:18:47.643 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: QA инженер (Linux)
+2026-01-26 14:18:48.721 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Senior QA Python Automation Engineer
+2026-01-26 14:18:49.743 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: Инженер по нагрузочному тестированию
+2026-01-26 14:18:50.946 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: PHP developer
+2026-01-26 14:18:52.005 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Tech Lead PHP
+2026-01-26 14:18:53.027 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: Разработчик 1С
+2026-01-26 14:18:54.615 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: Ведущий системный аналитик
+2026-01-26 14:18:55.785 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: PHP Developer
+2026-01-26 14:18:56.759 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Аналитик данных (Внутренний контроль)
+2026-01-26 14:18:57.783 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Менеджер проектов генеративных ИИ-систем
+2026-01-26 14:18:58.766 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: Разработчик WebRTC-сервисов на Go в видеоплатформу
+2026-01-26 14:18:59.734 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: DevSecOps/AppSec
+2026-01-26 14:19:00.905 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Java (Т-банк)
+2026-01-26 14:19:02.036 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Java Developer eFX
+2026-01-26 14:19:03.043 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Java разработчик (СОПББ)
+2026-01-26 14:19:04.138 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Системный аналитик (НО БО)
+2026-01-26 14:19:05.156 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: Системный аналитик (СОПББ)
+2026-01-26 14:19:06.391 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Junior Go Developer
+2026-01-26 14:19:07.377 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Разработчик 1С:УАТ
+2026-01-26 14:19:09.557 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Функциональный архитектор 1С:УХ (бюджетирование)
+2026-01-26 14:19:10.589 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Ведущий аналитик 1С:УХ
+2026-01-26 14:19:12.093 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 4...
+2026-01-26 14:19:16.449 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 1/25: Продуктовый аналитик (Рекомендации в Поиск)
+2026-01-26 14:19:17.375 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 2/25: Бизнес системный аналитик
+2026-01-26 14:19:18.283 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 3/25: Эксперт КИИ
+2026-01-26 14:19:19.218 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 4/25: Руководитель группы оптимизации сети [ИРТЕЯ]
+2026-01-26 14:19:20.186 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 5/25: Администратор проекта
+2026-01-26 14:19:21.104 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 6/25: Системный аналитик НОБО
+2026-01-26 14:19:22.189 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 7/25: Системный аналитик ТОСБО
+2026-01-26 14:19:23.287 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 8/25: Системный аналитик
+2026-01-26 14:19:24.310 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 9/25: Системный аналитик на проект внедрения Сферы
+2026-01-26 14:19:25.440 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 10/25: Системный аналитик в команду демо-стендов и пилотов
+2026-01-26 14:19:26.460 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 11/25: Продуктовый аналитик
+2026-01-26 14:19:28.305 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 12/25: Ведущий разработчик БД (PostgreSQL)
+2026-01-26 14:19:29.325 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 13/25: Solution Sale в VK Tech
+2026-01-26 14:19:30.603 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 14/25: Бизнес/системный аналитик
+2026-01-26 14:19:31.840 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 15/25: Инженер по кибербезопасности
+2026-01-26 14:19:33.007 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 16/25: Разработчик BPMSoft/Creatio
+2026-01-26 14:19:35.099 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 17/25: Аналитик по развитию бизнес-приложений
+2026-01-26 14:19:36.337 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 18/25: Deep Learning Engineer (ASR)
+2026-01-26 14:19:37.634 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 19/25: Продуктовый маркетолог/Product Marketing manager
+2026-01-26 14:19:38.695 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 20/25: Инженер-электроник / инженер-электронщик
+2026-01-26 14:19:39.712 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 21/25: Программист ПЛИС (FPGA)
+2026-01-26 14:19:40.639 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 22/25: Разработчик SDR-систем / Инженер-программист
+2026-01-26 14:19:41.663 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 23/25: Схемотехник
+2026-01-26 14:19:42.690 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 24/25: Инженер-программист встраиваемых систем
+2026-01-26 14:19:44.355 | INFO     | app.parser:fetch_vacancies:91 - Парсинг вакансии 25/25: Стажёр по универсальному тестированию (Java)
+2026-01-26 14:19:44.856 | INFO     | app.parser:parse_habr_vacancies:203 - Парсинг завершен. Найдено вакансий: 100
+2026-01-26 14:19:44.857 | INFO     | app.main:parse_vacancies:43 - Успешно обработано 100 вакансий.
+2026-01-26 14:19:45.012 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Python Developer
+2026-01-26 14:19:45.030 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Стажёр Продакт-менеджер
+2026-01-26 14:19:45.111 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Стажер специалист по сопровождению сделок по проблемным активам
+2026-01-26 14:19:45.187 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Стажер Специалист по сопровождению внутрибанковских проектов
+2026-01-26 14:19:45.187 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Инженер нагрузочного тестирования
+2026-01-26 14:19:45.230 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Data Scientist
+2026-01-26 14:19:45.238 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Data Analyst (Блок Финансы)
+2026-01-26 14:19:45.296 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Менеджер проектов генеративных ИИ-систем
+2026-01-26 14:19:45.330 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Junior Go Developer
+2026-01-26 14:19:45.360 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Руководитель группы оптимизации сети [ИРТЕЯ]
+2026-01-26 14:19:45.461 | INFO     | app.main:parse_vacancies:65 - Дубликат пропущен: Стажёр по универсальному тестированию (Java)
+2026-01-26 14:19:45.462 | INFO     | app.main:parse_vacancies:67 - Всего дублей: 11

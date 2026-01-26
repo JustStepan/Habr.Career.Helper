@@ -28,7 +28,7 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                         <option value="Средний (Middle)">Середняк</option>
                         <option value="Старший (Senior)">Профи</option>
                         <option value="Ведущий (Lead)">Лидер</option>
-                        <option value="Квалификация не указана">Квалификация не указана</option>
+                        <option value="">Все квалицикации</option>
                     </select>
                 </div>
 
