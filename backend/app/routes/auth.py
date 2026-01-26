@@ -1,51 +1,59 @@
-from typing import List, Optional
-
-from fastapi import FastAPI, HTTPException, Depends, Path, Query, APIRouter
-from fastapi.middleware.cors import CORSMiddleware
-import httpx
-from passlib.context import CryptContext
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 
 from app.database import get_db
-from app.crud import create_vacancy_with_skills, get_vacancy_by_id
-from app.auth_models import UserRegister, UserResponse
-from app.parser import parse_habr_vacancies
-from app.logger_config import logger
-from app.auth_utils import hash_password, verify_password
-from app.db_models import User, Vacancy, Skill
-
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
-from sqlalchemy.orm import selectinload
-
+from app.db_models import User
+from app.auth_models import UserRegister, UserLogin, UserResponse, Token
+from app.auth_utils import hash_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 
 @router.post('/register', response_model=UserResponse)
-async def registration(reg_data: UserRegister, db: AsyncSession = Depends(get_db)):
-    is_email_exist = await db.execute(select(User).where(User.email == reg_data.email))
-    is_username_exist = await db.execute(select(User).where(User.username == reg_data.username))
-
-    if is_email_exist.scalar_one_or_none() or is_username_exist.scalar_one_or_none():
-        raise HTTPException(409, "Эти учетные данные уже зарегистрированы")
-
-    hashed_password = hash_password(reg_data.password)
-
+async def registration(
+    reg_data: UserRegister, 
+    db: AsyncSession = Depends(get_db)
+):
+    # Проверка email
+    existing_email = await db.execute(
+        select(User).where(User.email == reg_data.email)
+    )
+    if existing_email.scalar_one_or_none():
+        raise HTTPException(409, "Email уже зарегистрирован")
+    
+    # Проверка username
+    existing_username = await db.execute(
+        select(User).where(User.username == reg_data.username)
+    )
+    if existing_username.scalar_one_or_none():
+        raise HTTPException(409, "Username уже занят")
+    
+    # Создание пользователя
     new_user = User(
         email=reg_data.email,
         username=reg_data.username,
-        hashed_password=hashed_password,
-        is_active=True
+        hashed_password=hash_password(reg_data.password)
     )
+    
     db.add(new_user)
     await db.commit()
     await db.refresh(new_user)
-    logger.info(f'Пользователь "{new_user.username}" с id: {new_user.id} успешно зарегистрирован')
 
     return new_user
 
 
+@router.post("/login", response_model=Token)
+async def login(
+    login_data: UserLogin, 
+    db: AsyncSession = Depends(get_db)
+):
 
+    response = {
+        "access_token": "ЭТО СТРОКА С ТОКЕНОМ",
+        "token_type": "bearer"
+    }
+    return response
 
 
 
