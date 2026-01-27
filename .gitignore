@@ -8,12 +8,16 @@ wheels/
 
 # Virtual environments
 .venv
-
 .environments
 .env
 
+# VSCode
 .vscode
+.DS_Store
 
-__test_fold
+# Папки и файлы для локального тестирования
+.local_*
 
+
+# PostgreSQL
 pgdata
