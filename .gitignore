@@ -16,7 +16,7 @@ wheels/
 .DS_Store
 
 # Папки и файлы для локального тестирования
-/.local_*/
+.local_*
 
 
 # PostgreSQL
