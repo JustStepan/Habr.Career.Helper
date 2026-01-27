@@ -7,6 +7,7 @@ import ParseVacancies from '@/pages/ParseVacancies'
 import SearchVacansy from '@/pages/SearchVacansy'
 import ExperimentForm from '@/pages/ExperimentForm'
 import UserRegistration from '@/pages/UserRegistration'
+import LoginPage from '@/pages/LoginPage'
 import '@/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="search" element={<SearchVacansy />} />
           <Route path="experiments" element={<ExperimentForm />} />
           <Route path="registration" element={<UserRegistration />} />
+          <Route path="login" element={<LoginPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -15,13 +15,18 @@ function RegForm( {onRegister} ) {
             return;
         }
 
+        if (password.length < 6) {
+            setErMessage('Пароль должен быть не менее 6 символов');
+            return;
+        }
+
         // Проверка на совпадение паролей
         if (password !== passwordRepeat) {
             setErMessage('Пароли не совпадают');
             return;
         }
         else {
-            onRegister(username, email, password, passwordRepeat);
+            onRegister(username, email, password);
         }
     }
 
