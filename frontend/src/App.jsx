@@ -52,6 +52,17 @@ function App() {
                 >
                     Формы ввода
                 </NavLink>
+
+                <NavLink 
+                    to="/registration" 
+                    className={({ isActive }) => 
+                        isActive 
+                            ? "text-blue-400 font-bold"
+                            : "text-white hover:text-blue-400"
+                    }
+                >
+                    👤 Регистрация
+                </NavLink>
             </nav>
             
             <main className="flex-1">
