@@ -1,4 +1,4 @@
-import TextForm from '@/components/form_experiments/textForm';
+import TextForm from '@/components/form_experiments/TextForm';
 import NumberForm from '@/components/form_experiments/NumberForm';
 import EmailForm from '@/components/form_experiments/EmailForm';
 import TextAreaForm from '@/components/form_experiments/TextAreaForm';

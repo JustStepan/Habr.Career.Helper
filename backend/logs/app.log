@@ -183,3 +183,61 @@
 2026-01-28 20:48:41.252 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик
 2026-01-28 20:48:41.252 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Программист С++
 2026-01-28 20:48:41.253 | INFO     | app.routes.parser:parse_vacancies:49 - Всего дублей: 43
+2026-01-28 20:50:18.401 | INFO     | app.parser:parse_habr_vacancies:112 - Запуск парсинга: уровень=junior, страниц=2
+2026-01-28 20:50:18.402 | INFO     | app.parser:parse_habr_vacancies:113 - URL: https://career.habr.com/vacancies?q=Python&sort=date&qid=3
+2026-01-28 20:50:18.402 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 1/2...
+2026-01-28 20:50:20.152 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 1/25: Младший QA инженер
+2026-01-28 20:50:21.368 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 2/25: Инженер мониторинга Zabbix
+2026-01-28 20:50:22.494 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 3/25: Application security engineer
+2026-01-28 20:50:23.659 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 4/25: Видеомонтажёр / Начинающий AI контент-мейкер (YouTube)
+2026-01-28 20:50:25.051 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 5/25: Системный аналитик
+2026-01-28 20:50:26.317 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 6/25: Mobile QA Engineer (Android, iOS) в офис
+2026-01-28 20:50:27.299 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 7/25: Python Developer
+2026-01-28 20:50:28.691 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 8/25: Data Scientist
+2026-01-28 20:50:29.840 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 9/25: Data Analyst (Блок Финансы)
+2026-01-28 20:50:30.818 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 10/25: Менеджер проектов генеративных ИИ-систем
+2026-01-28 20:50:31.984 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 11/25: Junior Go Developer
+2026-01-28 20:50:33.222 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 12/25: Системный аналитик (со знанием кредитных процессов)
+2026-01-28 20:50:34.520 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 13/25: Системный аналитик (со знанием кредитных процессов (Junior))
+2026-01-28 20:50:35.616 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 14/25: Java разработчик
+2026-01-28 20:50:36.951 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 15/25: Python разработчик
+2026-01-28 20:50:38.115 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 16/25: Frontend-разработчик
+2026-01-28 20:50:39.331 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 17/25: Архитектор данных
+2026-01-28 20:50:40.654 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 18/25: QA Junior (frontend + backend)
+2026-01-28 20:50:41.775 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 19/25: Специалист группы мониторинга бизнес-приложений
+2026-01-28 20:50:42.971 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 20/25: React Developer
+2026-01-28 20:50:44.315 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 21/25: Automation QA Engineer (Java)
+2026-01-28 20:50:46.243 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 22/25: QA-инженер/тестировщик
+2026-01-28 20:50:47.365 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 23/25: Разработчик DB Oracle
+2026-01-28 20:50:48.449 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 24/25: Java разработчик
+2026-01-28 20:50:49.520 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 25/25: Программист С++
+2026-01-28 20:50:51.024 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 2/2...
+2026-01-28 20:50:51.775 | WARNING  | app.parser:_fetch_vacancies_page:150 - На странице 2 не найдено карточек вакансий
+2026-01-28 20:50:51.776 | INFO     | app.parser:parse_habr_vacancies:126 - Парсинг завершен. Найдено вакансий: 25
+2026-01-28 20:50:51.776 | INFO     | app.routes.parser:parse_vacancies:25 - Успешно обработано 25 вакансий.
+2026-01-28 20:50:51.779 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Младший QA инженер
+2026-01-28 20:50:51.780 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Инженер мониторинга Zabbix
+2026-01-28 20:50:51.780 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Application security engineer
+2026-01-28 20:50:51.781 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Видеомонтажёр / Начинающий AI контент-мейкер (YouTube)
+2026-01-28 20:50:51.782 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-28 20:50:51.782 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Mobile QA Engineer (Android, iOS) в офис
+2026-01-28 20:50:51.783 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Python Developer
+2026-01-28 20:50:51.784 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Scientist
+2026-01-28 20:50:51.784 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Analyst (Блок Финансы)
+2026-01-28 20:50:51.785 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер проектов генеративных ИИ-систем
+2026-01-28 20:50:51.785 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Junior Go Developer
+2026-01-28 20:50:51.786 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик (со знанием кредитных процессов)
+2026-01-28 20:50:51.787 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик (со знанием кредитных процессов (Junior))
+2026-01-28 20:50:51.787 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик
+2026-01-28 20:50:51.788 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Python разработчик
+2026-01-28 20:50:51.789 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Frontend-разработчик
+2026-01-28 20:50:51.789 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Архитектор данных
+2026-01-28 20:50:51.790 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: QA Junior (frontend + backend)
+2026-01-28 20:50:51.791 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист группы мониторинга бизнес-приложений
+2026-01-28 20:50:51.792 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: React Developer
+2026-01-28 20:50:51.793 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Automation QA Engineer (Java)
+2026-01-28 20:50:51.794 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: QA-инженер/тестировщик
+2026-01-28 20:50:51.794 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик DB Oracle
+2026-01-28 20:50:51.795 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик
+2026-01-28 20:50:51.795 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Программист С++
+2026-01-28 20:50:51.795 | INFO     | app.routes.parser:parse_vacancies:49 - Всего дублей: 25

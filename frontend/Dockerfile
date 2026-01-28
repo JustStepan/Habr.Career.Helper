@@ -1,7 +1,7 @@
 # ============================================
 # STAGE 1: Builder (сборка проекта)
 # ============================================
-FROM node:20-alpine AS builder
+FROM node:25-alpine AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # npm ci - быстрая установка из lock файла (для CI/CD)
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 # Копируем весь исходный код
 COPY . .
