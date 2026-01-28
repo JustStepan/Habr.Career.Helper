@@ -1,0 +1,83 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  BACKEND_IMAGE: habr-parser-backend
+  FRONTEND_IMAGE: habr-parser-frontend
+
+jobs:
+  # ============================================
+  # Job 1: Сборка и пуш в Docker Hub
+  # ============================================
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      - name: Build Backend Image
+        run: |
+          cd backend
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:latest .
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:${{ github.sha }} .
+      
+      - name: Build Frontend Image
+        run: |
+          cd frontend
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:latest .
+          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:${{ github.sha }} .
+      
+      - name: Push Backend Images
+        run: |
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:latest
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:${{ github.sha }}
+      
+      - name: Push Frontend Images
+        run: |
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:latest
+          docker push ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:${{ github.sha }}
+
+  # ============================================
+  # Job 2: Деплой на сервер
+  # ============================================
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Создаём папку если не существует
+            mkdir -p /home/stefan/habr-vacancies-helper
+            cd /home/stefan/habr-vacancies-helper
+            
+            # Скачиваем docker-compose.prod.yml из репозитория
+            curl -o docker-compose.prod.yml https://raw.githubusercontent.com/juststepan/Habr.Career.Helper/main/docker-compose.prod.yml
+            
+            # Подтягиваем образы из Docker Hub
+            docker-compose -f docker-compose.prod.yml pull
+            
+            # Запускаем/обновляем контейнеры
+            docker-compose -f docker-compose.prod.yml up -d
+            
+            # Чистим старые образы
+            docker image prune -af

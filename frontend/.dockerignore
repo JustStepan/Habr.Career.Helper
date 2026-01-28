@@ -1,0 +1,27 @@
+# Папки окружения и сборки
+node_modules/
+dist/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Конфиги окружения
+.env
+.env.*
+.local_*
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore

@@ -51,19 +51,19 @@ function App() {
         <div className="min-h-screen flex flex-col">
             <nav className="bg-gray-800 p-4 flex justify-between">
                 {/* Левая часть */}
-                <div className="flex gap-6">
+                <div className="flex gap-6 items-center">
                     <NavLink to="/" className={({ isActive }) => 
-                        isActive ? "text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                        isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Главная
                     </NavLink>
                     <NavLink to="/parser" className={({ isActive }) => 
-                        isActive ? "text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                        isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Парсить вакансии
                     </NavLink>
                     <NavLink to="/search" className={({ isActive }) => 
-                        isActive ? "text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                        isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Подобрать вакансии
                     </NavLink>
@@ -77,12 +77,12 @@ function App() {
                                 👋 Привет, {user.username}!  {/* ← Показываем имя */}
                             </span>
                             <NavLink to="/favorites" className={({ isActive }) => 
-                                isActive ? "text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                                isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                             }>
                                 ⭐ Избранное
                             </NavLink>
                             <NavLink to="/profile" className={({ isActive }) => 
-                                isActive ? "text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                                isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                             }>
                                 👤 Профиль
                             </NavLink>
