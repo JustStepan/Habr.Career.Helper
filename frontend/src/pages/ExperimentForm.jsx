@@ -6,6 +6,7 @@ import CheckboxForm from '@/components/form_experiments/CheckboxForm';
 import SelectForm from '@/components/form_experiments/SelectForm';
 import DateForm from '@/components/form_experiments/DateForm';
 
+
 function ExperimentForm() {
     return (
         <div className="max-w-2xl mx-auto py-8">
@@ -15,7 +16,7 @@ function ExperimentForm() {
             
             <h1 className="text-3xl font-bold mb-6 text-center">
                 {/* ✅ text-center = текст по центру */}
-                Тестирование форм ввода
+                Тестирование форм ввода.
             </h1>
             
             <TextForm />
