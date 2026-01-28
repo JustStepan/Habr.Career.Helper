@@ -65,6 +65,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          debug: true
           script: |
             # Создаём папку если не существует
             mkdir -p /home/stefan/habr-vacancies-helper
