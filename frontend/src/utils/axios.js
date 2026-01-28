@@ -9,11 +9,16 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
     config => {
         const token = localStorage.getItem('access_token');
-        
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
+
+        // Проверяем что токен существует и не является строкой "undefined" или "null"
+        if (token && token !== 'undefined' && token !== 'null') {
+            // Инициализируем headers если его нет
+            if (!config.headers) {
+                config.headers = {};
+            }
+            config.headers['Authorization'] = `Bearer ${token}`;
         }
-        
+
         return config;
     },
     error => {

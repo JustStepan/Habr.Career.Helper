@@ -27,8 +27,12 @@ function UserRegistration() {
             console.log('Payload для бэкенда:', requestData);
             const response = await axiosInstance.post('api/auth/register', requestData);
 
-            // Сохраняем токен
-            localStorage.setItem('access_token', response.data.access_token);
+            // Сохраняем токен (с проверкой)
+            if (response.data?.access_token) {
+                localStorage.setItem('access_token', response.data.access_token);
+            } else {
+                throw new Error('Токен не получен от сервера');
+            }
 
             // Получаем данные пользователя
             const userResponse = await axiosInstance.get('api/auth/me', {
