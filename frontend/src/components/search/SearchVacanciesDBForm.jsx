@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SkillsAutocomplete from '@/components/search/SkillsAutocomplete';
 
 function SearchVacanciesDBForm({ onSearchDB }) {
-    const [level, setLevel] = useState('Младший (Junior)');
+    const [level, setLevel] = useState('Junior');
     const [skills, setSkills] = useState('');
     const [date, setDate] = useState('');
 
@@ -18,17 +18,17 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                         Уровень квалификации
                     </label>
-                    <select 
+                    <select
                         value={level}
                         onChange={(e) => setLevel(e.target.value)}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
-                        <option value="Стажёр (Intern)">Стажёр</option>
-                        <option value="Младший (Junior)">Новичок</option>
-                        <option value="Средний (Middle)">Середняк</option>
-                        <option value="Старший (Senior)">Профи</option>
-                        <option value="Ведущий (Lead)">Лидер</option>
-                        <option value="">Все квалицикации</option>
+                        <option value="Intern">Стажёр</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Middle">Middle</option>
+                        <option value="Senior">Senior</option>
+                        <option value="Lead">Lead</option>
+                        <option value="">Все квалификации</option>
                     </select>
                 </div>
 

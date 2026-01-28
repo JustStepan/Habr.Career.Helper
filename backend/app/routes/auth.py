@@ -25,7 +25,7 @@ async def get_user_or_none(db: AsyncSession, email: str = None, username: str = 
     
     return result.scalar_one_or_none()
 
-@router.post('/register', response_model=UserResponse)
+@router.post('/register', response_model=Token)
 async def registration(
     reg_data: UserRegister, 
     db: AsyncSession = Depends(get_db)
@@ -47,7 +47,13 @@ async def registration(
     await db.commit()
     await db.refresh(new_user)
 
-    return new_user
+    # после создания пользователя возвращаем токен. 
+    access_token = create_access_token(data={"user_id": new_user.id})
+    
+    return {
+        "access_token": access_token,
+        "token_type": "bearer"
+    }
 
 
 @router.post("/login", response_model=Token)

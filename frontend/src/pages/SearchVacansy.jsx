@@ -1,7 +1,7 @@
 import SearchVacanciesDBForm from '@/components/search/SearchVacanciesDBForm'
 import VacancyList from '@/components/parser/VacancyList';
 import { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '@/utils/axios';
 
 
 function SearchVacancyies() {
@@ -32,7 +32,7 @@ function SearchVacancyies() {
             
             console.log('Payload для бэкенда:', requestData);
             
-            const response = await axios.post('http://localhost:8000/api/vacancies', requestData);
+            const response = await axiosInstance.post('api/vacancies', requestData);
             
             console.log('Получены данные с БД');
             setVacancies(response.data);

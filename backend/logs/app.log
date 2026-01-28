@@ -104,3 +104,1345 @@
 2026-01-27 10:39:18.890 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DevOps инженер с нуля (стажер)
 2026-01-27 10:39:18.891 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: IT менеджер (Лидерская программа)
 2026-01-27 10:39:18.891 | INFO     | app.routes.parser:parse_vacancies:49 - Всего дублей: 22
+2026-01-27 20:24:34.014 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=all, страниц=4
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-01-27 20:24:34.015 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-27 20:24:35.583 | ERROR    | app.routes.parser:parse_vacancies:32 - Неожиданная ошибка: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x101003920>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x100e84a40>
+           └ <SpawnProcess name='SpawnProcess-6' parent=23507 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x100e77f60>
+    └ <SpawnProcess name='SpawnProcess-6' parent=23507 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x1011c0e90>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-6' parent=23507 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-6' parent=23507 started>
+    │    └ <function subprocess_started at 0x101816a20>
+    └ <SpawnProcess name='SpawnProcess-6' parent=23507 started>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x101afebd0>>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x1017a9440>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x1011c0e90>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x101afebd0>
+           │           │    │             └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x101815da0>
+           │           └ <uvicorn.server.Server object at 0x101afebd0>
+           └ <function run at 0x1014459e0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x101af1460>
+           │      └ <function Runner.run at 0x1014ad8a0>
+           └ <asyncio.runners.Runner object at 0x1017197c0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at /Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site...
+           │    │     └ <cyfunction Loop.run_until_complete at 0x1018d7640>
+           │    └ <uvloop.Loop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x1017197c0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x101e24110>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf590>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x1037d5670>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x101e24110>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf590>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf590>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104dcd1f0>
+          └ <fastapi.applications.FastAPI object at 0x1037d5670>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x101b13100>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x103f715b0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104dcd1f0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': 'localhost:8000', 'accept': 'application/json, text/plain, */*', 'content-type': 'application/json', 'sec-fe...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x101b13100>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x1038e4180>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x103f715b0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x103f715b0>>, sen...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x104dcd190>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x103f715b0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x103f715b0>>, sen...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x104dce1e0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x104dccef0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x104dcd190>
+          └ <function wrap_app_handling_exceptions at 0x103827b00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x104dccef0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x102a05580>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x104dccef0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x102a05580>>
+          └ <fastapi.routing.APIRouter object at 0x102a05580>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x103861120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x104dc1120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc1e40>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x104dceea0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x104dc1ee0>
+          └ <function wrap_app_handling_exceptions at 0x103827b00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x104dc2020>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x104dcf5...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x104dc1ee0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x104dceea0>
+                     └ <function get_request_handler.<locals>.app at 0x104dc1080>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x103862fc0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <sqlalchemy.ext.asyncio.session.AsyncSession object at 0x104dce9c0>, 'request': ParseRequest(level='all', search_query...
+                 │         └ <function parse_vacancies at 0x104c00ea0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "/Users/stepan/Documents/Dev/Site-parser/backend/app/routes/parser.py", line 24, in parse_vacancies
+    vacancies = await parse_habr_vacancies(request.level, request.max_pages, request.search_query)
+                      │                    │       │      │       │          │       └ ''
+                      │                    │       │      │       │          └ ParseRequest(level='all', search_query='', max_pages=4)
+                      │                    │       │      │       └ 4
+                      │                    │       │      └ ParseRequest(level='all', search_query='', max_pages=4)
+                      │                    │       └ 'all'
+                      │                    └ ParseRequest(level='all', search_query='', max_pages=4)
+                      └ <function parse_habr_vacancies at 0x104def920>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 197, in parse_habr_vacancies
+    vacancies_list = await fetch_vacancies(url, level, page)
+                           │               │    │      └ 1
+                           │               │    └ 'all'
+                           │               └ 'https://career.habr.com/vacancies?q=&sort=date&type=all&page=1'
+                           └ <function fetch_vacancies at 0x104d44720>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 89, in fetch_vacancies
+    vacancy_details = await parse_vacancy_detail_from_card(card, client)
+                            │                              │     └ <httpx.AsyncClient object at 0x1049c5940>
+                            │                              └ <div class="vacancy-card vacancy-card--bp"><a aria-label="QA Fullstack (автоматизация на C#, начинающий LEAD)" class="vacancy...
+                            └ <function parse_vacancy_detail_from_card at 0x104d53740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 64, in parse_vacancy_detail_from_card
+    requierments, description = await parse_vacancy_detail(v_url, client, MAX_RETRIES)
+                                      │                    │      │       └ 3
+                                      │                    │      └ <httpx.AsyncClient object at 0x1049c5940>
+                                      │                    └ 'https://career.habr.com/vacancies/1000162918'
+                                      └ <function parse_vacancy_detail at 0x104def740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 126, in parse_vacancy_detail
+    v_requierments = _requierments_parse(requierments_block.parent.parent)
+                     │                   │                  │      └ <div class="content-section content-section--appearance-chips"><div class="content-section__header content-section__header--a...
+                     │                   │                  └ <div class="content-section__header content-section__header--appearance-chips"><h2 class="content-section__title content-sect...
+                     │                   └ <h2 class="content-section__title content-section__title--appearance-chips">Требования</h2>
+                     └ <function _requierments_parse at 0x104def7e0>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 142, in _requierments_parse
+    for span in inline_list.find_all('span', recursive=False):
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2026-01-27 20:24:58.068 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=all, страниц=4
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-01-27 20:24:58.069 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-27 20:24:59.494 | ERROR    | app.routes.parser:parse_vacancies:32 - Неожиданная ошибка: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x1013db920>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x1012c8a40>
+           └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x1012bbf60>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x101514e60>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    └ <function subprocess_started at 0x101b6aa20>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x101e52ba0>>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x101afd440>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x101514e60>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x101e52ba0>
+           │           │    │             └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x101b69da0>
+           │           └ <uvicorn.server.Server object at 0x101e52ba0>
+           └ <function run at 0x1017999e0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x101e45460>
+           │      └ <function Runner.run at 0x1018018a0>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at /Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site...
+           │    │     └ <cyfunction Loop.run_until_complete at 0x101c2b640>
+           │    └ <uvloop.Loop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e80>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x103a45df0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e80>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e80>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+          └ <fastapi.applications.FastAPI object at 0x103a45df0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x105105c60>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': 'localhost:8000', 'accept': 'application/json, text/plain, */*', 'content-type': 'application/json', 'sec-fe...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x105105c60>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x103abc180>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x1050d5f40>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x105124980>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x105124980>>
+          └ <fastapi.routing.APIRouter object at 0x105124980>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x103a39120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x105105120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105da0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x1050d60f0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x105105e40>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105105f80>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x1050d5e...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x105105e40>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x1050d60f0>
+                     └ <function get_request_handler.<locals>.app at 0x105105080>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x103a3afc0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <sqlalchemy.ext.asyncio.session.AsyncSession object at 0x1050d6960>, 'request': ParseRequest(level='all', search_query...
+                 │         └ <function parse_vacancies at 0x104f44ea0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "/Users/stepan/Documents/Dev/Site-parser/backend/app/routes/parser.py", line 24, in parse_vacancies
+    vacancies = await parse_habr_vacancies(request.level, request.max_pages, request.search_query)
+                      │                    │       │      │       │          │       └ ''
+                      │                    │       │      │       │          └ ParseRequest(level='all', search_query='', max_pages=4)
+                      │                    │       │      │       └ 4
+                      │                    │       │      └ ParseRequest(level='all', search_query='', max_pages=4)
+                      │                    │       └ 'all'
+                      │                    └ ParseRequest(level='all', search_query='', max_pages=4)
+                      └ <function parse_habr_vacancies at 0x105137920>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 197, in parse_habr_vacancies
+    vacancies_list = await fetch_vacancies(url, level, page)
+                           │               │    │      └ 1
+                           │               │    └ 'all'
+                           │               └ 'https://career.habr.com/vacancies?q=&sort=date&type=all&page=1'
+                           └ <function fetch_vacancies at 0x10507c720>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 89, in fetch_vacancies
+    vacancy_details = await parse_vacancy_detail_from_card(card, client)
+                            │                              │     └ <httpx.AsyncClient object at 0x104f236e0>
+                            │                              └ <div class="vacancy-card vacancy-card--bp"><a aria-label="QA Fullstack (автоматизация на C#, начинающий LEAD)" class="vacancy...
+                            └ <function parse_vacancy_detail_from_card at 0x105093740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 64, in parse_vacancy_detail_from_card
+    requierments, description = await parse_vacancy_detail(v_url, client, MAX_RETRIES)
+                                      │                    │      │       └ 3
+                                      │                    │      └ <httpx.AsyncClient object at 0x104f236e0>
+                                      │                    └ 'https://career.habr.com/vacancies/1000162918'
+                                      └ <function parse_vacancy_detail at 0x105137740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 126, in parse_vacancy_detail
+    v_requierments = _requierments_parse(requierments_block.parent.parent)
+                     │                   │                  │      └ <div class="content-section content-section--appearance-chips"><div class="content-section__header content-section__header--a...
+                     │                   │                  └ <div class="content-section__header content-section__header--appearance-chips"><h2 class="content-section__title content-sect...
+                     │                   └ <h2 class="content-section__title content-section__title--appearance-chips">Требования</h2>
+                     └ <function _requierments_parse at 0x1051377e0>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 142, in _requierments_parse
+    for span in inline_list.find_all('span', recursive=False):
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2026-01-27 20:25:58.303 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=lead, страниц=2
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&qid=6
+2026-01-27 20:25:58.304 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-27 20:25:59.745 | ERROR    | app.routes.parser:parse_vacancies:32 - Неожиданная ошибка: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x1013db920>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x1012c8a40>
+           └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x1012bbf60>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x101514e60>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    └ <function subprocess_started at 0x101b6aa20>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x101e52ba0>>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x101afd440>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x101514e60>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x101e52ba0>
+           │           │    │             └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x101b69da0>
+           │           └ <uvicorn.server.Server object at 0x101e52ba0>
+           └ <function run at 0x1017999e0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x101e45460>
+           │      └ <function Runner.run at 0x1018018a0>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at /Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site...
+           │    │     └ <cyfunction Loop.run_until_complete at 0x101c2b640>
+           │    └ <uvloop.Loop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0e0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x103a45df0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0e0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0e0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+          └ <fastapi.applications.FastAPI object at 0x103a45df0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x10557bba0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': 'localhost:8000', 'accept': 'application/json, text/plain, */*', 'content-type': 'application/json', 'sec-fe...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x10557bba0>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x103abc180>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x1050d6480>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x105124980>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x105124980>>
+          └ <fastapi.routing.APIRouter object at 0x105124980>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x103a39120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x105105120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bce0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x10551f2f0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x10557bd80>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x10557bec0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x10551f0...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x10557bd80>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x10551f2f0>
+                     └ <function get_request_handler.<locals>.app at 0x105105080>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x103a3afc0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <sqlalchemy.ext.asyncio.session.AsyncSession object at 0x10551fbc0>, 'request': ParseRequest(level='lead', search_quer...
+                 │         └ <function parse_vacancies at 0x104f44ea0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "/Users/stepan/Documents/Dev/Site-parser/backend/app/routes/parser.py", line 24, in parse_vacancies
+    vacancies = await parse_habr_vacancies(request.level, request.max_pages, request.search_query)
+                      │                    │       │      │       │          │       └ ''
+                      │                    │       │      │       │          └ ParseRequest(level='lead', search_query='', max_pages=2)
+                      │                    │       │      │       └ 2
+                      │                    │       │      └ ParseRequest(level='lead', search_query='', max_pages=2)
+                      │                    │       └ 'lead'
+                      │                    └ ParseRequest(level='lead', search_query='', max_pages=2)
+                      └ <function parse_habr_vacancies at 0x105137920>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 197, in parse_habr_vacancies
+    vacancies_list = await fetch_vacancies(url, level, page)
+                           │               │    │      └ 1
+                           │               │    └ 'lead'
+                           │               └ 'https://career.habr.com/vacancies?q=&sort=date&qid=6&page=1'
+                           └ <function fetch_vacancies at 0x10507c720>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 89, in fetch_vacancies
+    vacancy_details = await parse_vacancy_detail_from_card(card, client)
+                            │                              │     └ <httpx.AsyncClient object at 0x10545e7e0>
+                            │                              └ <div class="vacancy-card"><a aria-label="Руководитель по аналитике и методологии образовательных программ" class="vacancy-car...
+                            └ <function parse_vacancy_detail_from_card at 0x105093740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 64, in parse_vacancy_detail_from_card
+    requierments, description = await parse_vacancy_detail(v_url, client, MAX_RETRIES)
+                                      │                    │      │       └ 3
+                                      │                    │      └ <httpx.AsyncClient object at 0x10545e7e0>
+                                      │                    └ 'https://career.habr.com/vacancies/1000162899'
+                                      └ <function parse_vacancy_detail at 0x105137740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 126, in parse_vacancy_detail
+    v_requierments = _requierments_parse(requierments_block.parent.parent)
+                     │                   │                  │      └ <div class="content-section content-section--appearance-chips"><div class="content-section__header content-section__header--a...
+                     │                   │                  └ <div class="content-section__header content-section__header--appearance-chips"><h2 class="content-section__title content-sect...
+                     │                   └ <h2 class="content-section__title content-section__title--appearance-chips">Требования</h2>
+                     └ <function _requierments_parse at 0x1051377e0>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 142, in _requierments_parse
+    for span in inline_list.find_all('span', recursive=False):
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2026-01-27 20:26:44.007 | INFO     | app.parser:parse_habr_vacancies:190 - Запуск парсинга: уровень=junior, страниц=1
+ url для парсинга: https://career.habr.com/vacancies?q=&sort=date&qid=3
+2026-01-27 20:26:44.008 | INFO     | app.parser:parse_habr_vacancies:194 - Парсинг страницы 1...
+2026-01-27 20:26:48.694 | ERROR    | app.routes.parser:parse_vacancies:32 - Неожиданная ошибка: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 4
+               │     └ 7
+               └ <function _main at 0x1013db920>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 4
+           │    └ <function BaseProcess._bootstrap at 0x1012c8a40>
+           └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x1012bbf60>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x101514e60>, 'target': <bound method Server.run of <uvicorn.server.Server object...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+    │    └ <function subprocess_started at 0x101b6aa20>
+    └ <SpawnProcess name='SpawnProcess-1' parent=59266 started>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x101e52ba0>>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x101afd440>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x101514e60>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x101e52ba0>
+           │           │    │             └ [<socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x101b69da0>
+           │           └ <uvicorn.server.Server object at 0x101e52ba0>
+           └ <function run at 0x1017999e0>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x101e45460>
+           │      └ <function Runner.run at 0x1018018a0>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at /Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site...
+           │    │     └ <cyfunction Loop.run_until_complete at 0x101c2b640>
+           │    └ <uvloop.Loop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x101af9880>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae7230>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x103a45df0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x104c37500>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae7230>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae7230>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+          └ <fastapi.applications.FastAPI object at 0x103a45df0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1056413a0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x104837cb0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': 'localhost:8000', 'accept': 'application/json, text/plain, */*', 'content-type': 'application/json', 'sec-fe...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x1056413a0>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x103abc180>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x105125040>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x105125040>>, sen...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x105ae7290>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x1050d52e0>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x105124980>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x1050d55e0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x105124980>>
+          └ <fastapi.routing.APIRouter object at 0x105124980>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x103a39120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x105105120>
+          └ APIRoute(path='/api/parse', name='parse_vacancies', methods=['POST'])
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641620>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x105ae7470>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x105641580>
+          └ <function wrap_app_handling_exceptions at 0x1035efb00>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x105641760>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x105ae72...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x105641580>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x105ae7470>
+                     └ <function get_request_handler.<locals>.app at 0x105105080>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x103a3afc0>
+  File "/Users/stepan/Documents/Dev/Site-parser/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'db': <sqlalchemy.ext.asyncio.session.AsyncSession object at 0x105ae77a0>, 'request': ParseRequest(level='junior', search_qu...
+                 │         └ <function parse_vacancies at 0x104f44ea0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "/Users/stepan/Documents/Dev/Site-parser/backend/app/routes/parser.py", line 24, in parse_vacancies
+    vacancies = await parse_habr_vacancies(request.level, request.max_pages, request.search_query)
+                      │                    │       │      │       │          │       └ ''
+                      │                    │       │      │       │          └ ParseRequest(level='junior', search_query='', max_pages=1)
+                      │                    │       │      │       └ 1
+                      │                    │       │      └ ParseRequest(level='junior', search_query='', max_pages=1)
+                      │                    │       └ 'junior'
+                      │                    └ ParseRequest(level='junior', search_query='', max_pages=1)
+                      └ <function parse_habr_vacancies at 0x105137920>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 197, in parse_habr_vacancies
+    vacancies_list = await fetch_vacancies(url, level, page)
+                           │               │    │      └ 1
+                           │               │    └ 'junior'
+                           │               └ 'https://career.habr.com/vacancies?q=&sort=date&qid=3&page=1'
+                           └ <function fetch_vacancies at 0x10507c720>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 89, in fetch_vacancies
+    vacancy_details = await parse_vacancy_detail_from_card(card, client)
+                            │                              │     └ <httpx.AsyncClient object at 0x105a231a0>
+                            │                              └ <div class="vacancy-card"><a aria-label="Инженер мониторинга Zabbix" class="vacancy-card__backdrop-link" href="/vacancies/100...
+                            └ <function parse_vacancy_detail_from_card at 0x105093740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 64, in parse_vacancy_detail_from_card
+    requierments, description = await parse_vacancy_detail(v_url, client, MAX_RETRIES)
+                                      │                    │      │       └ 3
+                                      │                    │      └ <httpx.AsyncClient object at 0x105a231a0>
+                                      │                    └ 'https://career.habr.com/vacancies/1000164625'
+                                      └ <function parse_vacancy_detail at 0x105137740>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 126, in parse_vacancy_detail
+    v_requierments = _requierments_parse(requierments_block.parent.parent)
+                     │                   │                  │      └ <div class="content-section content-section--appearance-chips"><div class="content-section__header content-section__header--a...
+                     │                   │                  └ <div class="content-section__header content-section__header--appearance-chips"><h2 class="content-section__title content-sect...
+                     │                   └ <h2 class="content-section__title content-section__title--appearance-chips">Требования</h2>
+                     └ <function _requierments_parse at 0x1051377e0>
+
+  File "/Users/stepan/Documents/Dev/Site-parser/backend/app/parser.py", line 142, in _requierments_parse
+    for span in inline_list.find_all('span', recursive=False):
+                └ None
+
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2026-01-27 20:39:33.316 | INFO     | app.parser:parse_habr_vacancies:251 - Запуск парсинга: уровень=junior, страниц=1
+2026-01-27 20:39:33.316 | INFO     | app.parser:parse_habr_vacancies:252 - URL: https://career.habr.com/vacancies?q=python&sort=date&qid=3
+2026-01-27 20:39:33.316 | INFO     | app.parser:parse_habr_vacancies:256 - Парсинг страницы 1/1...
+2026-01-27 20:39:35.159 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 1/25: Инженер мониторинга Zabbix
+2026-01-27 20:39:36.237 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 2/25: Application security engineer
+2026-01-27 20:39:37.508 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 3/25: Специалист по созданию YouTube-видео с помощью AI
+2026-01-27 20:39:38.760 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 4/25: Системный аналитик
+2026-01-27 20:39:39.716 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 5/25: Mobile QA Engineer (Android, iOS) в офис
+2026-01-27 20:39:40.711 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 6/25: Python Developer
+2026-01-27 20:39:41.752 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 7/25: Python-developer
+2026-01-27 20:39:42.960 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 8/25: Data Scientist
+2026-01-27 20:39:44.165 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 9/25: Data Analyst (Блок Финансы)
+2026-01-27 20:39:45.254 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 10/25: Менеджер проектов генеративных ИИ-систем
+2026-01-27 20:39:46.283 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 11/25: Junior Go Developer
+2026-01-27 20:39:47.398 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 12/25: Системный аналитик (со знанием кредитных процессов)
+2026-01-27 20:39:48.529 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 13/25: Системный аналитик (со знанием кредитных процессов (Junior))
+2026-01-27 20:39:49.999 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 14/25: Java разработчик
+2026-01-27 20:39:51.033 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 15/25: Python разработчик
+2026-01-27 20:39:52.073 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 16/25: Frontend-разработчик
+2026-01-27 20:39:53.193 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 17/25: Архитектор данных
+2026-01-27 20:39:54.147 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 18/25: QA Junior (frontend + backend)
+2026-01-27 20:39:55.074 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 19/25: Специалист группы мониторинга бизнес-приложений
+2026-01-27 20:39:56.197 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 20/25: React Developer
+2026-01-27 20:39:57.224 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 21/25: Automation QA Engineer (Java)
+2026-01-27 20:39:58.224 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 22/25: QA-инженер/тестировщик
+2026-01-27 20:39:59.224 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 23/25: Разработчик DB Oracle
+2026-01-27 20:40:00.347 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 24/25: Java разработчик
+2026-01-27 20:40:01.366 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 25/25: Программист С++
+2026-01-27 20:40:01.868 | INFO     | app.parser:parse_habr_vacancies:265 - Парсинг завершен. Найдено вакансий: 25
+2026-01-27 20:40:08.568 | INFO     | app.parser:parse_habr_vacancies:251 - Запуск парсинга: уровень=junior, страниц=1
+2026-01-27 20:40:08.568 | INFO     | app.parser:parse_habr_vacancies:252 - URL: https://career.habr.com/vacancies?q=python&sort=date&qid=3
+2026-01-27 20:40:08.568 | INFO     | app.parser:parse_habr_vacancies:256 - Парсинг страницы 1/1...
+2026-01-27 20:40:10.261 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 1/25: Инженер мониторинга Zabbix
+2026-01-27 20:40:11.420 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 2/25: Application security engineer
+2026-01-27 20:40:12.605 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 3/25: Специалист по созданию YouTube-видео с помощью AI
+2026-01-27 20:40:13.731 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 4/25: Системный аналитик
+2026-01-27 20:40:14.780 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 5/25: Mobile QA Engineer (Android, iOS) в офис
+2026-01-27 20:40:15.800 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 6/25: Python Developer
+2026-01-27 20:40:16.797 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 7/25: Python-developer
+2026-01-27 20:40:17.921 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 8/25: Data Scientist
+2026-01-27 20:40:19.156 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 9/25: Data Analyst (Блок Финансы)
+2026-01-27 20:40:20.321 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 10/25: Менеджер проектов генеративных ИИ-систем
+2026-01-27 20:40:21.445 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 11/25: Junior Go Developer
+2026-01-27 20:40:22.546 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 12/25: Системный аналитик (со знанием кредитных процессов)
+2026-01-27 20:40:23.698 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 13/25: Системный аналитик (со знанием кредитных процессов (Junior))
+2026-01-27 20:40:24.863 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 14/25: Java разработчик
+2026-01-27 20:40:25.973 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 15/25: Python разработчик
+2026-01-27 20:40:26.967 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 16/25: Frontend-разработчик
+2026-01-27 20:40:28.048 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 17/25: Архитектор данных
+2026-01-27 20:40:29.063 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 18/25: QA Junior (frontend + backend)
+2026-01-27 20:40:30.248 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 19/25: Специалист группы мониторинга бизнес-приложений
+2026-01-27 20:40:31.337 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 20/25: React Developer
+2026-01-27 20:40:32.508 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 21/25: Automation QA Engineer (Java)
+2026-01-27 20:40:33.443 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 22/25: QA-инженер/тестировщик
+2026-01-27 20:40:34.693 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 23/25: Разработчик DB Oracle
+2026-01-27 20:40:36.034 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 24/25: Java разработчик
+2026-01-27 20:40:37.255 | INFO     | app.parser:fetch_vacancies:115 - Страница 1, вакансия 25/25: Программист С++
+2026-01-27 20:40:37.756 | INFO     | app.parser:parse_habr_vacancies:265 - Парсинг завершен. Найдено вакансий: 25
+2026-01-27 20:52:32.100 | INFO     | app.parser:parse_habr_vacancies:112 - Запуск парсинга: уровень=junior, страниц=1
+2026-01-27 20:52:32.101 | INFO     | app.parser:parse_habr_vacancies:113 - URL: https://career.habr.com/vacancies?q=python&sort=date&qid=3
+2026-01-27 20:52:32.101 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 1/1...
+2026-01-27 20:52:33.836 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 1/25: Инженер мониторинга Zabbix
+2026-01-27 20:52:34.866 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 2/25: Application security engineer
+2026-01-27 20:52:35.873 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 3/25: Специалист по созданию YouTube-видео с помощью AI
+2026-01-27 20:52:36.972 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 4/25: Системный аналитик
+2026-01-27 20:52:38.051 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 5/25: Mobile QA Engineer (Android, iOS) в офис
+2026-01-27 20:52:39.113 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 6/25: Python Developer
+2026-01-27 20:52:40.083 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 7/25: Python-developer
+2026-01-27 20:52:41.182 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 8/25: Data Scientist
+2026-01-27 20:52:42.273 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 9/25: Data Analyst (Блок Финансы)
+2026-01-27 20:52:43.554 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 10/25: Менеджер проектов генеративных ИИ-систем
+2026-01-27 20:52:44.522 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 11/25: Junior Go Developer
+2026-01-27 20:52:45.767 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 12/25: Системный аналитик (со знанием кредитных процессов)
+2026-01-27 20:52:46.856 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 13/25: Системный аналитик (со знанием кредитных процессов (Junior))
+2026-01-27 20:52:47.923 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 14/25: Java разработчик
+2026-01-27 20:52:48.881 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 15/25: Python разработчик
+2026-01-27 20:52:49.884 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 16/25: Frontend-разработчик
+2026-01-27 20:52:50.853 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 17/25: Архитектор данных
+2026-01-27 20:52:51.875 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 18/25: QA Junior (frontend + backend)
+2026-01-27 20:52:53.060 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 19/25: Специалист группы мониторинга бизнес-приложений
+2026-01-27 20:52:53.995 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 20/25: React Developer
+2026-01-27 20:52:55.202 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 21/25: Automation QA Engineer (Java)
+2026-01-27 20:52:56.172 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 22/25: QA-инженер/тестировщик
+2026-01-27 20:52:57.221 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 23/25: Разработчик DB Oracle
+2026-01-27 20:52:58.140 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 24/25: Java разработчик
+2026-01-27 20:52:59.264 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 25/25: Программист С++
+2026-01-27 20:52:59.766 | INFO     | app.parser:parse_habr_vacancies:126 - Парсинг завершен. Найдено вакансий: 25
+2026-01-27 20:55:04.683 | INFO     | app.parser:parse_habr_vacancies:112 - Запуск парсинга: уровень=all, страниц=5
+2026-01-27 20:55:04.685 | INFO     | app.parser:parse_habr_vacancies:113 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-01-27 20:55:04.685 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 1/5...
+2026-01-27 20:55:06.630 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 1/25: QA Fullstack (автоматизация на C#, начинающий LEAD)
+2026-01-27 20:55:07.723 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 2/25: DevOps-инженер
+2026-01-27 20:55:08.845 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 3/25: DevOps инженер
+2026-01-27 20:55:10.121 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 4/25: Старший менеджер продуктов
+2026-01-27 20:55:11.300 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 5/25: Архитектор корпоративного хранилища данных
+2026-01-27 20:55:12.613 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 6/25: Data Scientist middle (NLP/ LLM)
+2026-01-27 20:55:13.810 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 7/25: Системный аналитик
+2026-01-27 20:55:14.919 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 8/25: Менеджер проекта (поддержка запуска тарифных акций в контактных центрах)
+2026-01-27 20:55:15.949 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 9/25: Главный специалист отдела оценки качества кредитов
+2026-01-27 20:55:17.045 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 10/25: Главный аналитик (Корпоративный бизнес)
+2026-01-27 20:55:18.101 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 11/25: Менеджер проектов (Центр стратегического развития)
+2026-01-27 20:55:19.141 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 12/25: AI - тренер GigaChat
+2026-01-27 20:55:20.195 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 13/25: Экономист (расчетные операции)
+2026-01-27 20:55:21.245 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 14/25: Главный специалист (Центр консолидированного анализа рисков и проектов развития)
+2026-01-27 20:55:22.337 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 15/25: Руководитель по аналитике и методологии образовательных программ
+2026-01-27 20:55:23.342 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 16/25: Software Lead в команду HD Maps
+2026-01-27 20:55:24.406 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 17/25: Управляющий менеджер по финансовому мониторингу юридических лиц
+2026-01-27 20:55:25.483 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 18/25: AppSec/DevSecOps
+2026-01-27 20:55:26.590 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 19/25: Senior backend разработчик (Golang, Python)
+2026-01-27 20:55:27.681 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 20/25: PR-менеджер (федеральные СМИ)
+2026-01-27 20:55:28.910 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 21/25: Инженер мониторинга Zabbix
+2026-01-27 20:55:30.145 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 22/25: Менеджер маркетинговых проектов (стратегический маркетинг)
+2026-01-27 20:55:31.336 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 23/25: Руководитель группы разработки в команду развития опенсорс-технологий DevTools
+2026-01-27 20:55:32.402 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 24/25: Программист Delphi/C++
+2026-01-27 20:55:33.578 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 25/25: Аналитик данных
+2026-01-27 20:55:35.083 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 2/5...
+2026-01-27 20:55:36.900 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 1/25: Аналитик SOC (L2)
+2026-01-27 20:55:38.077 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 2/25: Руководитель группы разработчиков бэкенда Arc в DevTools
+2026-01-27 20:55:39.031 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 3/25: Пентестер/Ведущий инженер по анализу уязвимостей
+2026-01-27 20:55:40.203 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 4/25: Руководитель группы разработки Sandbox в DevTools
+2026-01-27 20:55:41.439 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 5/25: ML Engineer (TTS Text-to-speech)
+2026-01-27 20:55:42.432 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 6/25: Менеджер по продажам
+2026-01-27 20:55:43.460 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 7/25: Архитектор сервисных платформ
+2026-01-27 20:55:44.593 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 8/25: Кредитный аналитик СМБ
+2026-01-27 20:55:45.620 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 9/25: Cетевой инженер ЦОД
+2026-01-27 20:55:46.656 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 10/25: Эксперт по валидации моделей
+2026-01-27 20:55:47.967 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 11/25: DevOps Engineer
+2026-01-27 20:55:48.983 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 12/25: Менеджер в отдел спонсорства и благотворительности
+2026-01-27 20:55:50.201 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 13/25: Robotics Software Engineer
+2026-01-27 20:55:51.245 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 14/25: Python Developer (Центр Искусственного интеллекта)
+2026-01-27 20:55:52.260 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 15/25: Специалист по ИТ-инфраструктуре в ЦОД
+2026-01-27 20:55:53.178 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 16/25: Программист С++
+2026-01-27 20:55:54.237 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 17/25: Системный инженер Linux
+2026-01-27 20:55:55.173 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 18/25: Главный менеджер управления поддержки продаж сети
+2026-01-27 20:55:56.198 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 19/25: Ведущий менеджер (Аналитик маркетинговых компаний)
+2026-01-27 20:55:57.655 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 20/25: Заместитель генерального директора по цифровизации
+2026-01-27 20:55:58.823 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 21/25: Data Scientist
+2026-01-27 20:55:59.755 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 22/25: Senior email - маркетолог
+2026-01-27 20:56:00.857 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 23/25: PHP-разработчик для AI-first проекта
+2026-01-27 20:56:01.886 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 24/25: Middle+ Java Backend Developer
+2026-01-27 20:56:02.982 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 25/25: Embedded - программист
+2026-01-27 20:56:04.486 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 3/5...
+2026-01-27 20:56:05.982 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 1/25: Экономист (сопровождение кредитных сделок)
+2026-01-27 20:56:07.139 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 2/25: Ведущий C++ разработчик (Центр Квантовых технологий)
+2026-01-27 20:56:08.860 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 3/25: Системный Аналитик
+2026-01-27 20:56:09.976 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 4/25: Стажер Аналитик
+2026-01-27 20:56:10.864 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 5/25: Веб дизайнер (иллюстратор)
+2026-01-27 20:56:11.923 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 6/25: DL engineer (Центр Робототехники Сбера)
+2026-01-27 20:56:13.152 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 7/25: DevOps/Database Engineer
+2026-01-27 20:56:14.171 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 8/25: Аналитик 1С ERP
+2026-01-27 20:56:15.225 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 9/25: Разработчик 1С ERP
+2026-01-27 20:56:16.233 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 10/25: C++ Разработчик
+2026-01-27 20:56:17.260 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 11/25: Java разработчик
+2026-01-27 20:56:18.215 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 12/25: Python Backend Developer
+2026-01-27 20:56:19.199 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 13/25: Аналитик CRM
+2026-01-27 20:56:20.441 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 14/25: Администратор баз данных PostgreSQL
+2026-01-27 20:56:21.448 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 15/25: Разработчик систем компьютерного зрения C++/Rust/Python
+2026-01-27 20:56:22.653 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 16/25: QA Automation (Java)
+2026-01-27 20:56:23.705 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 17/25: Data Engineer (Hadoop)
+2026-01-27 20:56:24.657 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 18/25: Data Scientist (Classic ML)
+2026-01-27 20:56:25.648 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 19/25: Senior Project Manager (BigData)
+2026-01-27 20:56:26.660 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 20/25: Kotlin developer (KMM/KMP) IOS, Android, SDK mobile
+2026-01-27 20:56:27.690 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 21/25: Инженер контроля качества [ИРТЕЯ]
+2026-01-27 20:56:28.820 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 22/25: Senior Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-27 20:56:29.774 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 23/25: Разработчик Java
+2026-01-27 20:56:30.753 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 24/25: Разработчик ЦФТ-Банк (Oracle, PL/SQL / PL PLUS)
+2026-01-27 20:56:31.889 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 25/25: Системный аналитик
+2026-01-27 20:56:33.393 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 4/5...
+2026-01-27 20:56:34.953 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 1/25: Специалист технической поддержки
+2026-01-27 20:56:35.901 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 2/25: Специалист по машинному обучению
+2026-01-27 20:56:36.910 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 3/25: C# .NET разработчик (full-time)
+2026-01-27 20:56:38.144 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 4/25: Java-разработчик
+2026-01-27 20:56:39.159 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 5/25: Senior Backend Developer (Golang)
+2026-01-27 20:56:40.184 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 6/25: Golang Developer
+2026-01-27 20:56:41.286 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 7/25: React Native Developer
+2026-01-27 20:56:42.379 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 8/25: Frontend Разработчик
+2026-01-27 20:56:43.357 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 9/25: Разработчик PHP (MDM-система)
+2026-01-27 20:56:44.404 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 10/25: Middle Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-27 20:56:45.472 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 11/25: Аналитик-разработчик (команда Intelligent Search)
+2026-01-27 20:56:46.491 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 12/25: Scala Backend разработчик
+2026-01-27 20:56:47.489 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 13/25: Java разработчик
+2026-01-27 20:56:48.626 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 14/25: Java разработчик в Сервисы Безопасности Яндекс 360
+2026-01-27 20:56:49.707 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 15/25: Директор проектов 1С
+2026-01-27 20:56:50.724 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 16/25: Функциональный архитектор 1С
+2026-01-27 20:56:51.859 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 17/25: PHP-разработчик (senior)
+2026-01-27 20:56:57.839 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 18/25: Руководитель проекта внедрения 1С ERP
+2026-01-27 20:56:58.832 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 19/25: Функциональный архитектор 1С
+2026-01-27 20:56:59.744 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 20/25: Разработчик 1С
+2026-01-27 20:57:00.830 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 21/25: Android‑разработчик в Толк, senior
+2026-01-27 20:57:02.044 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 22/25: Application security engineer
+2026-01-27 20:57:03.124 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 23/25: Стажёр в отдел проверки персонала
+2026-01-27 20:57:04.678 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 24/25: Руководитель группы разработки распределённой сборки в DevTools
+2026-01-27 20:57:05.881 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 25/25: Руководитель группы разработки Автосборки в DevTools
+2026-01-27 20:57:07.384 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 5/5...
+2026-01-27 20:57:09.784 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 1/25: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-01-27 20:57:10.899 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 2/25: Специалист инфраструктурной безопасности
+2026-01-27 20:57:12.392 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 3/25: Специалист по информационной безопасности
+2026-01-27 20:57:13.623 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 4/25: Системный программист С/C++ (ОС Astra Linux)
+2026-01-27 20:57:14.675 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 5/25: AppSec-инженер
+2026-01-27 20:57:15.770 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 6/25: Системный аналитик (ОС Astra Linux)
+2026-01-27 20:57:16.834 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 7/25: Инженер по тестированию (ОС Astra Linux)
+2026-01-27 20:57:18.331 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 8/25: Customer Support manager
+2026-01-27 20:57:19.460 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 9/25: Архитектор программного обеспечения (Java)
+2026-01-27 20:57:20.443 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 10/25: Пресейл по информационной безопасности
+2026-01-27 20:57:21.712 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 11/25: Project Manager / Менеджер IT-продукта (SaaS, B2B)
+2026-01-27 20:57:22.769 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 12/25: Специалист по созданию YouTube-видео с помощью AI
+2026-01-27 20:57:23.852 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 13/25: Руководитель проектов 1С (кадровые системы)
+2026-01-27 20:57:24.822 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 14/25: Стажер бизнес-аналитик
+2026-01-27 20:57:26.056 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 15/25: Vibe coder mobile/fullstack разработчик
+2026-01-27 20:57:27.084 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 16/25: Application Security инженер/DevSecOps
+2026-01-27 20:57:28.751 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 17/25: Middle+ Flutter Developer (мобильное приложение)
+2026-01-27 20:57:29.791 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 18/25: Аналитик продаж
+2026-01-27 20:57:30.822 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 19/25: Аналитик по планированию продаж
+2026-01-27 20:57:32.110 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 20/25: LEAD AI/ML ENGINEER
+2026-01-27 20:57:33.237 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 21/25: Старший Go-разработчик в команду Сообществ
+2026-01-27 20:57:34.305 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 22/25: Golang Team Lead
+2026-01-27 20:57:35.321 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 23/25: Системный аналитик
+2026-01-27 20:57:36.452 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 24/25: React Native Engineer (Startup, MVP)
+2026-01-27 20:57:37.585 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 25/25: IOS-разработчик в Маркетплейс
+2026-01-27 20:57:38.087 | INFO     | app.parser:parse_habr_vacancies:126 - Парсинг завершен. Найдено вакансий: 125
+2026-01-27 20:57:38.087 | INFO     | app.routes.parser:parse_vacancies:25 - Успешно обработано 125 вакансий.
+2026-01-27 20:57:38.199 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-27 20:57:38.300 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик данных
+2026-01-27 20:57:38.352 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Эксперт по валидации моделей
+2026-01-27 20:57:38.487 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Scientist
+2026-01-27 20:57:38.531 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Экономист (сопровождение кредитных сделок)
+2026-01-27 20:57:38.555 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажер Аналитик
+2026-01-27 20:57:38.608 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Python Backend Developer
+2026-01-27 20:57:38.609 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик CRM
+2026-01-27 20:57:38.734 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Middle Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-27 20:57:38.792 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Application security engineer
+2026-01-27 20:57:38.793 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажёр в отдел проверки персонала
+2026-01-27 20:57:38.855 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Project Manager / Менеджер IT-продукта (SaaS, B2B)
+2026-01-27 20:57:38.856 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист по созданию YouTube-видео с помощью AI
+2026-01-27 20:57:38.860 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажер бизнес-аналитик
+2026-01-27 20:57:38.861 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Vibe coder mobile/fullstack разработчик
+2026-01-27 20:57:38.861 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Application Security инженер/DevSecOps
+2026-01-27 20:57:38.862 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Middle+ Flutter Developer (мобильное приложение)
+2026-01-27 20:57:38.862 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик продаж
+2026-01-27 20:57:38.862 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик по планированию продаж
+2026-01-27 20:57:38.863 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: LEAD AI/ML ENGINEER
+2026-01-27 20:57:38.863 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Старший Go-разработчик в команду Сообществ
+2026-01-27 20:57:38.864 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Golang Team Lead
+2026-01-27 20:57:38.864 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-27 20:57:38.865 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: React Native Engineer (Startup, MVP)
+2026-01-27 20:57:38.865 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: IOS-разработчик в Маркетплейс
+2026-01-27 20:57:38.865 | INFO     | app.routes.parser:parse_vacancies:49 - Всего дублей: 25
+2026-01-28 08:49:27.030 | INFO     | app.parser:parse_habr_vacancies:112 - Запуск парсинга: уровень=all, страниц=5
+2026-01-28 08:49:27.031 | INFO     | app.parser:parse_habr_vacancies:113 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-01-28 08:49:27.031 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 1/5...
+2026-01-28 08:49:32.103 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 1/25: Старший разработчик в инфраструктуру Облака
+2026-01-28 08:49:33.244 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 2/25: QA Fullstack (автоматизация на C#, начинающий LEAD)
+2026-01-28 08:49:34.534 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 3/25: DevOps-инженер
+2026-01-28 08:49:35.641 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 4/25: DevOps инженер
+2026-01-28 08:49:36.683 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 5/25: Старший менеджер продуктов
+2026-01-28 08:49:38.111 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 6/25: Архитектор корпоративного хранилища данных
+2026-01-28 08:49:39.290 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 7/25: Data Scientist middle (NLP/ LLM)
+2026-01-28 08:49:40.338 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 8/25: Системный аналитик
+2026-01-28 08:49:41.367 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 9/25: Менеджер проекта (поддержка запуска тарифных акций в контактных центрах)
+2026-01-28 08:49:42.455 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 10/25: Главный специалист отдела оценки качества кредитов
+2026-01-28 08:49:43.575 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 11/25: Главный аналитик (Корпоративный бизнес)
+2026-01-28 08:49:44.916 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 12/25: Менеджер проектов (Центр стратегического развития)
+2026-01-28 08:49:46.006 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 13/25: AI - тренер GigaChat
+2026-01-28 08:49:47.365 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 14/25: Экономист (расчетные операции)
+2026-01-28 08:49:48.498 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 15/25: Главный специалист (Центр консолидированного анализа рисков и проектов развития)
+2026-01-28 08:49:49.930 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 16/25: Руководитель по аналитике и методологии образовательных программ
+2026-01-28 08:49:51.073 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 17/25: Software Lead в команду HD Maps
+2026-01-28 08:49:52.193 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 18/25: Управляющий менеджер по финансовому мониторингу юридических лиц
+2026-01-28 08:49:53.205 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 19/25: AppSec/DevSecOps
+2026-01-28 08:49:54.354 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 20/25: Senior backend разработчик (Golang, Python)
+2026-01-28 08:49:55.470 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 21/25: PR-менеджер (федеральные СМИ)
+2026-01-28 08:49:56.584 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 22/25: Инженер мониторинга Zabbix
+2026-01-28 08:49:57.711 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 23/25: Менеджер маркетинговых проектов (стратегический маркетинг)
+2026-01-28 08:49:58.924 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 24/25: Руководитель группы разработки в команду развития опенсорс-технологий DevTools
+2026-01-28 08:49:59.911 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 1, вакансия 25/25: Программист Delphi/C++
+2026-01-28 08:50:01.415 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 2/5...
+2026-01-28 08:50:02.970 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 1/25: Аналитик данных
+2026-01-28 08:50:03.948 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 2/25: Аналитик SOC (L2)
+2026-01-28 08:50:05.088 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 3/25: Руководитель группы разработчиков бэкенда Arc в DevTools
+2026-01-28 08:50:06.102 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 4/25: Пентестер/Ведущий инженер по анализу уязвимостей
+2026-01-28 08:50:07.234 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 5/25: Руководитель группы разработки Sandbox в DevTools
+2026-01-28 08:50:08.279 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 6/25: ML Engineer (TTS Text-to-speech)
+2026-01-28 08:50:09.280 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 7/25: Менеджер по продажам
+2026-01-28 08:50:10.273 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 8/25: Архитектор сервисных платформ
+2026-01-28 08:50:11.399 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 9/25: Кредитный аналитик СМБ
+2026-01-28 08:50:12.450 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 10/25: Cетевой инженер ЦОД
+2026-01-28 08:50:13.597 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 11/25: Эксперт по валидации моделей
+2026-01-28 08:50:14.685 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 12/25: DevOps Engineer
+2026-01-28 08:50:15.763 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 13/25: Менеджер в отдел спонсорства и благотворительности
+2026-01-28 08:50:16.812 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 14/25: Robotics Software Engineer
+2026-01-28 08:50:17.984 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 15/25: Python Developer (Центр Искусственного интеллекта)
+2026-01-28 08:50:18.915 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 16/25: Специалист по ИТ-инфраструктуре в ЦОД
+2026-01-28 08:50:19.868 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 17/25: Программист С++
+2026-01-28 08:50:20.847 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 18/25: Системный инженер Linux
+2026-01-28 08:50:21.912 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 19/25: Главный менеджер управления поддержки продаж сети
+2026-01-28 08:50:23.222 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 20/25: Ведущий менеджер (Аналитик маркетинговых компаний)
+2026-01-28 08:50:24.212 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 21/25: Заместитель генерального директора по цифровизации
+2026-01-28 08:50:25.211 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 22/25: Data Scientist
+2026-01-28 08:50:26.132 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 23/25: Senior email - маркетолог
+2026-01-28 08:50:27.077 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 24/25: PHP-разработчик для AI-first проекта
+2026-01-28 08:50:28.021 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 2, вакансия 25/25: Middle+ Java Backend Developer
+2026-01-28 08:50:29.525 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 3/5...
+2026-01-28 08:50:31.402 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 1/25: Embedded - программист
+2026-01-28 08:50:32.520 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 2/25: Экономист (сопровождение кредитных сделок)
+2026-01-28 08:50:33.581 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 3/25: Ведущий C++ разработчик (Центр Квантовых технологий)
+2026-01-28 08:50:34.674 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 4/25: Системный Аналитик
+2026-01-28 08:50:35.803 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 5/25: Стажер Аналитик
+2026-01-28 08:50:36.832 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 6/25: Веб дизайнер (иллюстратор)
+2026-01-28 08:50:37.839 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 7/25: DL engineer (Центр Робототехники Сбера)
+2026-01-28 08:50:38.792 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 8/25: DevOps/Database Engineer
+2026-01-28 08:50:39.795 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 9/25: Аналитик 1С ERP
+2026-01-28 08:50:40.758 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 10/25: Разработчик 1С ERP
+2026-01-28 08:50:41.914 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 11/25: C++ Разработчик
+2026-01-28 08:50:42.927 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 12/25: Java разработчик
+2026-01-28 08:50:43.914 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 13/25: Python Backend Developer
+2026-01-28 08:50:44.915 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 14/25: Аналитик CRM
+2026-01-28 08:50:46.081 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 15/25: Администратор баз данных PostgreSQL
+2026-01-28 08:50:47.173 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 16/25: Разработчик систем компьютерного зрения C++/Rust/Python
+2026-01-28 08:50:48.294 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 17/25: QA Automation (Java)
+2026-01-28 08:50:49.295 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 18/25: Data Engineer (Hadoop)
+2026-01-28 08:50:50.293 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 19/25: Data Scientist (Classic ML)
+2026-01-28 08:50:51.438 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 20/25: Senior Project Manager (BigData)
+2026-01-28 08:50:52.404 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 21/25: Kotlin developer (KMM/KMP) IOS, Android, SDK mobile
+2026-01-28 08:50:53.522 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 22/25: Инженер контроля качества [ИРТЕЯ]
+2026-01-28 08:50:54.593 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 23/25: Senior Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-28 08:50:55.691 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 24/25: Разработчик Java
+2026-01-28 08:50:57.241 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 3, вакансия 25/25: Разработчик ЦФТ-Банк (Oracle, PL/SQL / PL PLUS)
+2026-01-28 08:50:58.744 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 4/5...
+2026-01-28 08:51:00.793 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 1/25: Системный аналитик
+2026-01-28 08:51:01.927 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 2/25: Специалист технической поддержки
+2026-01-28 08:51:02.980 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 3/25: Специалист по машинному обучению
+2026-01-28 08:51:04.134 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 4/25: C# .NET разработчик (full-time)
+2026-01-28 08:51:05.132 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 5/25: Java-разработчик
+2026-01-28 08:51:06.326 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 6/25: Senior Backend Developer (Golang)
+2026-01-28 08:51:07.450 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 7/25: Golang Developer
+2026-01-28 08:51:08.521 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 8/25: React Native Developer
+2026-01-28 08:51:09.599 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 9/25: Frontend Разработчик
+2026-01-28 08:51:10.678 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 10/25: Разработчик PHP (MDM-система)
+2026-01-28 08:51:11.791 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 11/25: Middle Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-28 08:51:12.883 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 12/25: Аналитик-разработчик (команда Intelligent Search)
+2026-01-28 08:51:14.461 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 13/25: Scala Backend разработчик
+2026-01-28 08:51:15.443 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 14/25: Java разработчик
+2026-01-28 08:51:16.568 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 15/25: Java разработчик в Сервисы Безопасности Яндекс 360
+2026-01-28 08:51:17.721 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 16/25: Директор проектов 1С
+2026-01-28 08:51:18.788 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 17/25: Функциональный архитектор 1С
+2026-01-28 08:51:20.092 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 18/25: PHP-разработчик (senior)
+2026-01-28 08:51:21.313 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 19/25: Руководитель проекта внедрения 1С ERP
+2026-01-28 08:51:22.517 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 20/25: Функциональный архитектор 1С
+2026-01-28 08:51:23.710 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 21/25: Разработчик 1С
+2026-01-28 08:51:24.789 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 22/25: Android‑разработчик в Толк, senior
+2026-01-28 08:51:25.985 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 23/25: Application security engineer
+2026-01-28 08:51:27.112 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 24/25: Стажёр в отдел проверки персонала
+2026-01-28 08:51:28.317 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 4, вакансия 25/25: Руководитель группы разработки распределённой сборки в DevTools
+2026-01-28 08:51:29.821 | INFO     | app.parser:parse_habr_vacancies:117 - Парсинг страницы 5/5...
+2026-01-28 08:51:32.323 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 1/25: Руководитель группы разработки Автосборки в DevTools
+2026-01-28 08:51:33.647 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 2/25: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-01-28 08:51:34.672 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 3/25: Специалист инфраструктурной безопасности
+2026-01-28 08:51:36.079 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 4/25: Специалист по информационной безопасности
+2026-01-28 08:51:37.153 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 5/25: Системный программист С/C++ (ОС Astra Linux)
+2026-01-28 08:51:38.221 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 6/25: AppSec-инженер
+2026-01-28 08:51:39.329 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 7/25: Системный аналитик (ОС Astra Linux)
+2026-01-28 08:51:40.438 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 8/25: Инженер по тестированию (ОС Astra Linux)
+2026-01-28 08:51:41.516 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 9/25: Customer Support manager
+2026-01-28 08:51:42.780 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 10/25: Архитектор программного обеспечения (Java)
+2026-01-28 08:51:43.849 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 11/25: Пресейл по информационной безопасности
+2026-01-28 08:51:44.922 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 12/25: Project Manager / Менеджер IT-продукта (SaaS, B2B)
+2026-01-28 08:51:45.950 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 13/25: Специалист по созданию YouTube-видео с помощью AI
+2026-01-28 08:51:47.029 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 14/25: Руководитель проектов 1С (кадровые системы)
+2026-01-28 08:51:48.105 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 15/25: Стажер бизнес-аналитик
+2026-01-28 08:51:49.117 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 16/25: Vibe coder mobile/fullstack разработчик
+2026-01-28 08:51:50.301 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 17/25: Application Security инженер/DevSecOps
+2026-01-28 08:51:51.389 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 18/25: Middle+ Flutter Developer (мобильное приложение)
+2026-01-28 08:51:52.893 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 19/25: Аналитик продаж
+2026-01-28 08:51:53.985 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 20/25: Аналитик по планированию продаж
+2026-01-28 08:51:55.158 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 21/25: LEAD AI/ML ENGINEER
+2026-01-28 08:51:56.468 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 22/25: Старший Go-разработчик в команду Сообществ
+2026-01-28 08:51:57.512 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 23/25: Golang Team Lead
+2026-01-28 08:51:58.548 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 24/25: Системный аналитик
+2026-01-28 08:51:59.567 | INFO     | app.parser:_fetch_vacancies_page:157 - Страница 5, вакансия 25/25: React Native Engineer (Startup, MVP)
+2026-01-28 08:52:00.070 | INFO     | app.parser:parse_habr_vacancies:126 - Парсинг завершен. Найдено вакансий: 125
+2026-01-28 08:52:00.070 | INFO     | app.routes.parser:parse_vacancies:25 - Успешно обработано 125 вакансий.
+2026-01-28 08:52:00.103 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: QA Fullstack (автоматизация на C#, начинающий LEAD)
+2026-01-28 08:52:00.104 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DevOps-инженер
+2026-01-28 08:52:00.105 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DevOps инженер
+2026-01-28 08:52:00.106 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Старший менеджер продуктов
+2026-01-28 08:52:00.106 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Архитектор корпоративного хранилища данных
+2026-01-28 08:52:00.107 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Scientist middle (NLP/ LLM)
+2026-01-28 08:52:00.107 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-28 08:52:00.108 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер проекта (поддержка запуска тарифных акций в контактных центрах)
+2026-01-28 08:52:00.109 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Главный специалист отдела оценки качества кредитов
+2026-01-28 08:52:00.109 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Главный аналитик (Корпоративный бизнес)
+2026-01-28 08:52:00.110 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер проектов (Центр стратегического развития)
+2026-01-28 08:52:00.111 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: AI - тренер GigaChat
+2026-01-28 08:52:00.111 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Экономист (расчетные операции)
+2026-01-28 08:52:00.112 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Главный специалист (Центр консолидированного анализа рисков и проектов развития)
+2026-01-28 08:52:00.113 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель по аналитике и методологии образовательных программ
+2026-01-28 08:52:00.114 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Software Lead в команду HD Maps
+2026-01-28 08:52:00.114 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Управляющий менеджер по финансовому мониторингу юридических лиц
+2026-01-28 08:52:00.115 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: AppSec/DevSecOps
+2026-01-28 08:52:00.115 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Senior backend разработчик (Golang, Python)
+2026-01-28 08:52:00.116 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: PR-менеджер (федеральные СМИ)
+2026-01-28 08:52:00.116 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Инженер мониторинга Zabbix
+2026-01-28 08:52:00.117 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер маркетинговых проектов (стратегический маркетинг)
+2026-01-28 08:52:00.117 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель группы разработки в команду развития опенсорс-технологий DevTools
+2026-01-28 08:52:00.118 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Программист Delphi/C++
+2026-01-28 08:52:00.118 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик данных
+2026-01-28 08:52:00.119 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик SOC (L2)
+2026-01-28 08:52:00.119 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель группы разработчиков бэкенда Arc в DevTools
+2026-01-28 08:52:00.120 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Пентестер/Ведущий инженер по анализу уязвимостей
+2026-01-28 08:52:00.120 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель группы разработки Sandbox в DevTools
+2026-01-28 08:52:00.121 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: ML Engineer (TTS Text-to-speech)
+2026-01-28 08:52:00.121 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер по продажам
+2026-01-28 08:52:00.122 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Архитектор сервисных платформ
+2026-01-28 08:52:00.122 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Кредитный аналитик СМБ
+2026-01-28 08:52:00.123 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Cетевой инженер ЦОД
+2026-01-28 08:52:00.123 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Эксперт по валидации моделей
+2026-01-28 08:52:00.124 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DevOps Engineer
+2026-01-28 08:52:00.124 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Менеджер в отдел спонсорства и благотворительности
+2026-01-28 08:52:00.124 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Robotics Software Engineer
+2026-01-28 08:52:00.125 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Python Developer (Центр Искусственного интеллекта)
+2026-01-28 08:52:00.125 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист по ИТ-инфраструктуре в ЦОД
+2026-01-28 08:52:00.126 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Программист С++
+2026-01-28 08:52:00.126 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный инженер Linux
+2026-01-28 08:52:00.127 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Главный менеджер управления поддержки продаж сети
+2026-01-28 08:52:00.127 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Ведущий менеджер (Аналитик маркетинговых компаний)
+2026-01-28 08:52:00.128 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Заместитель генерального директора по цифровизации
+2026-01-28 08:52:00.128 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Scientist
+2026-01-28 08:52:00.129 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Senior email - маркетолог
+2026-01-28 08:52:00.129 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: PHP-разработчик для AI-first проекта
+2026-01-28 08:52:00.130 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Middle+ Java Backend Developer
+2026-01-28 08:52:00.130 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Embedded - программист
+2026-01-28 08:52:00.131 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Экономист (сопровождение кредитных сделок)
+2026-01-28 08:52:00.131 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Ведущий C++ разработчик (Центр Квантовых технологий)
+2026-01-28 08:52:00.132 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный Аналитик
+2026-01-28 08:52:00.132 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажер Аналитик
+2026-01-28 08:52:00.132 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Веб дизайнер (иллюстратор)
+2026-01-28 08:52:00.133 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DL engineer (Центр Робототехники Сбера)
+2026-01-28 08:52:00.133 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: DevOps/Database Engineer
+2026-01-28 08:52:00.134 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик 1С ERP
+2026-01-28 08:52:00.134 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик 1С ERP
+2026-01-28 08:52:00.135 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: C++ Разработчик
+2026-01-28 08:52:00.135 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик
+2026-01-28 08:52:00.136 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Python Backend Developer
+2026-01-28 08:52:00.136 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик CRM
+2026-01-28 08:52:00.137 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Администратор баз данных PostgreSQL
+2026-01-28 08:52:00.138 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик систем компьютерного зрения C++/Rust/Python
+2026-01-28 08:52:00.138 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: QA Automation (Java)
+2026-01-28 08:52:00.139 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Engineer (Hadoop)
+2026-01-28 08:52:00.139 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Data Scientist (Classic ML)
+2026-01-28 08:52:00.140 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Senior Project Manager (BigData)
+2026-01-28 08:52:00.140 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Kotlin developer (KMM/KMP) IOS, Android, SDK mobile
+2026-01-28 08:52:00.141 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Инженер контроля качества [ИРТЕЯ]
+2026-01-28 08:52:00.141 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Senior Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-28 08:52:00.142 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик Java
+2026-01-28 08:52:00.142 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик ЦФТ-Банк (Oracle, PL/SQL / PL PLUS)
+2026-01-28 08:52:00.143 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-28 08:52:00.143 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист технической поддержки
+2026-01-28 08:52:00.144 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист по машинному обучению
+2026-01-28 08:52:00.144 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: C# .NET разработчик (full-time)
+2026-01-28 08:52:00.145 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java-разработчик
+2026-01-28 08:52:00.145 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Senior Backend Developer (Golang)
+2026-01-28 08:52:00.146 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Golang Developer
+2026-01-28 08:52:00.146 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: React Native Developer
+2026-01-28 08:52:00.146 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Frontend Разработчик
+2026-01-28 08:52:00.147 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик PHP (MDM-система)
+2026-01-28 08:52:00.147 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Middle Java/Kotlin разработчик [Платформа ВЭД, МТС Веб Сервисы]
+2026-01-28 08:52:00.148 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик-разработчик (команда Intelligent Search)
+2026-01-28 08:52:00.148 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Scala Backend разработчик
+2026-01-28 08:52:00.149 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик
+2026-01-28 08:52:00.149 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Java разработчик в Сервисы Безопасности Яндекс 360
+2026-01-28 08:52:00.149 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Директор проектов 1С
+2026-01-28 08:52:00.150 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Функциональный архитектор 1С
+2026-01-28 08:52:00.150 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: PHP-разработчик (senior)
+2026-01-28 08:52:00.151 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель проекта внедрения 1С ERP
+2026-01-28 08:52:00.151 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Функциональный архитектор 1С
+2026-01-28 08:52:00.152 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик 1С
+2026-01-28 08:52:00.152 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Android‑разработчик в Толк, senior
+2026-01-28 08:52:00.153 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Application security engineer
+2026-01-28 08:52:00.153 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажёр в отдел проверки персонала
+2026-01-28 08:52:00.154 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель группы разработки распределённой сборки в DevTools
+2026-01-28 08:52:00.154 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель группы разработки Автосборки в DevTools
+2026-01-28 08:52:00.155 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-01-28 08:52:00.155 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист инфраструктурной безопасности
+2026-01-28 08:52:00.156 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист по информационной безопасности
+2026-01-28 08:52:00.156 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный программист С/C++ (ОС Astra Linux)
+2026-01-28 08:52:00.157 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: AppSec-инженер
+2026-01-28 08:52:00.157 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик (ОС Astra Linux)
+2026-01-28 08:52:00.157 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Инженер по тестированию (ОС Astra Linux)
+2026-01-28 08:52:00.158 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Customer Support manager
+2026-01-28 08:52:00.158 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Архитектор программного обеспечения (Java)
+2026-01-28 08:52:00.159 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Пресейл по информационной безопасности
+2026-01-28 08:52:00.159 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Project Manager / Менеджер IT-продукта (SaaS, B2B)
+2026-01-28 08:52:00.160 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Специалист по созданию YouTube-видео с помощью AI
+2026-01-28 08:52:00.160 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Руководитель проектов 1С (кадровые системы)
+2026-01-28 08:52:00.161 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Стажер бизнес-аналитик
+2026-01-28 08:52:00.161 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Vibe coder mobile/fullstack разработчик
+2026-01-28 08:52:00.162 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Application Security инженер/DevSecOps
+2026-01-28 08:52:00.162 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Middle+ Flutter Developer (мобильное приложение)
+2026-01-28 08:52:00.163 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик продаж
+2026-01-28 08:52:00.163 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Аналитик по планированию продаж
+2026-01-28 08:52:00.164 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: LEAD AI/ML ENGINEER
+2026-01-28 08:52:00.164 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Старший Go-разработчик в команду Сообществ
+2026-01-28 08:52:00.164 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Golang Team Lead
+2026-01-28 08:52:00.165 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: Системный аналитик
+2026-01-28 08:52:00.165 | INFO     | app.routes.parser:parse_vacancies:47 - Дубликат пропущен: React Native Engineer (Startup, MVP)
+2026-01-28 08:52:00.165 | INFO     | app.routes.parser:parse_vacancies:49 - Всего дублей: 124

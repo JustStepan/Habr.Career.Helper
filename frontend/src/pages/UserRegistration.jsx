@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import RegForm from '@/components/RegForm/RegForm';
+import axiosInstance from '@/utils/axios';
+import RegForm from '@/components/AuthForm/RegForm';
+import { delay } from '@/utils/helpers';
+
 
 function UserRegistration() {
     const navigate = useNavigate();
@@ -23,20 +25,30 @@ function UserRegistration() {
             };
             
             console.log('Payload для бэкенда:', requestData);
-            const response = await axios.post('http://localhost:8000/api/auth/register', requestData);
-            
-            setNewUser(response.data);
-            setLoading(false);
-            setShowMessage(true);
-            await new Promise(resolve => setTimeout(resolve, 3000));
-            // await setTimeout(() => {
-            //     setShowMessage(false);
-            // }, 3000);
+            const response = await axiosInstance.post('api/auth/register', requestData);
 
-            navigate('/login');
+            // Сохраняем токен
+            localStorage.setItem('access_token', response.data.access_token);
+
+            // Получаем данные пользователя
+            const userResponse = await axiosInstance.get('api/auth/me', {
+                headers: {
+                    'Authorization': `Bearer ${response.data.access_token}`
+                }
+            });
+
+            setNewUser(userResponse.data);  // { id, email, username }
+            setShowMessage(true);
+            await delay(3000);
+
+            navigate('/');
+
         } catch (error) {
-            setError(error.message);
-            console.error('Ошибка', error);
+            if (error.response?.status === 409) {
+                setError('Email или username уже заняты');
+            } else {
+                setError(error.response?.data?.detail || error.message);
+            }
         } finally {
             setLoading(false);
         }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '@/utils/axios';
 import SearchForm from '@/components/parser/SearchForm';
 import VacancyList from '@/components/parser/VacancyList';
 
@@ -14,7 +14,7 @@ function ParseVacancies() {
         setError(null);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/parse', {
+            const response = await axiosInstance.post('api/parse', {
                 level,
                 maxPages,
                 searchQuery
