@@ -45,7 +45,7 @@ function CheckboxForm() {
                     Отправить
                 </button>
                 <button
-                type="button" // Важно. поскольку кнопка в форме указывать "button" тип необходимо. 
+                type="button" // Важно! поскольку кнопка в форме указывать "button" тип необходимо. 
                     onClick={refresh}
                     className="px-6 py-2 bg-blue-500 text-white rounded disabled:bg-gray-300"
                     // disabled:bg-gray-300 = серый фон если кнопка disabled
