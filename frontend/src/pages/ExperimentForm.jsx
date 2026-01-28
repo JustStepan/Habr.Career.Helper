@@ -15,8 +15,8 @@ function ExperimentForm() {
             {/* ✅ py-8 = отступ сверху и снизу */}
             
             <h1 className="text-3xl font-bold mb-6 text-center">
-                {/* ✅ text-center = текст по центру */}
-                Тестирование форм ввода.
+                {/* ✅  text-center - размещаем текст по центру */}
+                Тестирование форм ввода
             </h1>
             
             <TextForm />
