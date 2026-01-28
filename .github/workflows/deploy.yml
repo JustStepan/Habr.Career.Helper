@@ -29,14 +29,14 @@ jobs:
       - name: Build Backend Image
         run: |
           cd backend
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:latest .
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:${{ github.sha }} .
+          docker buildx build --platform linux/amd64 -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:latest .
+          docker buildx build --platform linux/amd64 -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.BACKEND_IMAGE }}:${{ github.sha }} .
       
       - name: Build Frontend Image
         run: |
           cd frontend
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:latest .
-          docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:${{ github.sha }} .
+          docker buildx build --platform linux/amd64 -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:latest .
+          docker buildx build --platform linux/amd64 -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.FRONTEND_IMAGE }}:${{ github.sha }} .
       
       - name: Push Backend Images
         run: |
