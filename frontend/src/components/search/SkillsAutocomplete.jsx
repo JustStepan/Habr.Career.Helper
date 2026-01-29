@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import axiosInstance from '@/utils/axios';
 
-function SkillsAutocomplete({ value, onChange }) {
+function SkillsAutocomplete({ value = '', onChange }) {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -36,8 +36,8 @@ function SkillsAutocomplete({ value, onChange }) {
         const timer = setTimeout(async () => {
             setLoading(true);
             try {
-                const response = await axios.get(
-                    `http://localhost:8000/api/skills/search?query=${lastWord}`
+                const response = await axiosInstance.get(
+                    `skills/search?query=${lastWord}`
                 );
                 setSuggestions(response.data);
                 setShowSuggestions(response.data.length > 0);
