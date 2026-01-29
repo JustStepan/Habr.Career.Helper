@@ -8,6 +8,7 @@ app = FastAPI(
     title="Habr Career Parser API",
     description="API для парсинга вакансий с Habr Career",
     version="1.0.0",
+    root_path="/habr-vacancies/api",  # ← Добавь root_path!
 )
 
 # Маршруты
