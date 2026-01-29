@@ -70,7 +70,7 @@ jobs:
             cd /home/stefan/habr-vacancies-helper
 
             # Останавливаем старые контейнеры
-            docker compose -f docker-compose.prod.yml down || true
+            docker-compose -f docker-compose.prod.yml down || true
 
             # Скачиваем docker-compose.prod.yml
             curl -o docker-compose.prod.yml https://raw.githubusercontent.com/juststepan/Habr.Career.Helper/main/docker-compose.prod.yml
@@ -80,10 +80,10 @@ jobs:
             docker rmi stepandko/habr-parser-frontend:latest || true
 
             # Подтягиваем новые образы
-            docker compose -f docker-compose.prod.yml pull
+            docker-compose -f docker-compose.prod.yml pull
 
             # Запускаем контейнеры
-            docker compose -f docker-compose.prod.yml up -d
+            docker-compose -f docker-compose.prod.yml up -d
 
             # Чистим неиспользуемые образы
             docker image prune -af
