@@ -14,7 +14,7 @@ function ParseVacancies() {
         setError(null);
 
         try {
-            const response = await axiosInstance.post('api/parse', {
+            const response = await axiosInstance.post('parse', {
                 level,
                 maxPages,
                 searchQuery

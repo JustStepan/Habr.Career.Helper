@@ -32,7 +32,7 @@ function SearchVacancyies() {
             
             console.log('Payload для бэкенда:', requestData);
             
-            const response = await axiosInstance.post('api/vacancies', requestData);
+            const response = await axiosInstance.post('vacancies', requestData);
             
             console.log('Получены данные с БД');
             setVacancies(response.data);

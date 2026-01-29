@@ -25,13 +25,13 @@ function UserRegistration() {
             };
             
             console.log('Payload для бэкенда:', requestData);
-            const response = await axiosInstance.post('api/auth/register', requestData);
+            const response = await axiosInstance.post('auth/register', requestData);
 
             // Сохраняем токен
             localStorage.setItem('access_token', response.data.access_token);
 
             // Получаем данные пользователя
-            const userResponse = await axiosInstance.get('api/auth/me', {
+            const userResponse = await axiosInstance.get('auth/me', {
                 headers: {
                     'Authorization': `Bearer ${response.data.access_token}`
                 }

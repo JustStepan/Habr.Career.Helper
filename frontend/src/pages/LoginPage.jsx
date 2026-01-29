@@ -23,7 +23,7 @@ function UserLogin() {
             };
             
             console.log('Payload для бэкенда:', requestData);
-            const response = await axiosInstance.post('api/auth/login', requestData);
+            const response = await axiosInstance.post('auth/login', requestData);
 
             // Сохраняем токен
             localStorage.setItem('access_token', response.data.access_token);

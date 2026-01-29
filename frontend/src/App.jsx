@@ -19,7 +19,7 @@ function App() {
             }
 
             try {
-                const response = await axiosInstance.get('/api/auth/me');
+                const response = await axiosInstance.get('auth/me');
                 setUser(response.data);  // { id, email, username }
             } catch (error) {
                 console.error('Ошибка загрузки пользователя:', error);

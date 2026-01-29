@@ -8,7 +8,7 @@ function ProfilePage() {
     useEffect(() => {
         const loadUser = async () => {
             try {
-                const response = await axiosInstance.get('/api/auth/me');
+                const response = await axiosInstance.get('auth/me');
                 setUser(response.data);
             } catch (error) {
                 console.error('Ошибка загрузки профиля:', error);

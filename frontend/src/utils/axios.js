@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // Базовый URL для всех запросов
 const axiosInstance = axios.create({
-    baseURL: '/habr-vacancies/api'  // ← Теперь можно писать '/api/auth/me' вместо 'http://localhost:8000/api/auth/me'
+    baseURL: import.meta.env.DEV 
+        ? 'http://localhost:8000/api'           // Локально
+        : '/habr-vacancies/api'                 // Production
 });
 
 // REQUEST INTERCEPTOR (добавляем токен)
