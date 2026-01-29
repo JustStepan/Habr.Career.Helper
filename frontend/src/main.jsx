@@ -16,7 +16,7 @@ import ProtectedRoute from '@/components/ProtectedRoute'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/habr-vacancies">
         <Routes>
             {/* Публичные */}
             <Route path="/login" element={<LoginPage />} />

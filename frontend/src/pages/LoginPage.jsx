@@ -25,12 +25,8 @@ function UserLogin() {
             console.log('Payload для бэкенда:', requestData);
             const response = await axiosInstance.post('api/auth/login', requestData);
 
-            // Сохраняем токен (с проверкой)
-            if (response.data?.access_token) {
-                localStorage.setItem('access_token', response.data.access_token);
-            } else {
-                throw new Error('Токен не получен от сервера');
-            }
+            // Сохраняем токен
+            localStorage.setItem('access_token', response.data.access_token);
 
             setShowMessage(true);
             await delay(3000);
