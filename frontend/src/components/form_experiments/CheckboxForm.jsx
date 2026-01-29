@@ -18,7 +18,7 @@ function CheckboxForm() {
         <div className="max-w-2xl mx-auto p-8">
             <h4 className="font-bold tracking-tight text-slate-400 text-2xl mb-4">
                 {/* text-2xl = размер 24px, mb-4 = отступ снизу */}
-                Тестируем checkbox
+                Тестируем checkbox. 
             </h4>
             
             <form onSubmit={handleSubmit} className="space-y-4">
