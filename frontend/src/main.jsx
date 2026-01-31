@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from '@/App'  // ✅ Импортируем App
 
 import HomePage from '@/pages/HomePage'
-import ParseVacancies from '@/pages/ParseVacancies'
+// import ParseVacancies from '@/pages/ParseVacancies'
 import SearchVacansy from '@/pages/SearchVacansy'
 import ExperimentForm from '@/pages/ExperimentForm'
 import UserRegistration from '@/pages/UserRegistration'
@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             {/* С Navbar */}
             <Route path="/" element={<App />}>
                 <Route index element={<HomePage />} />
-                <Route path="parser" element={<ParseVacancies />} />
+                {/* <Route path="parser" element={<ParseVacancies />} /> */}
                 <Route path="search" element={<SearchVacansy />} />
                 <Route path="experiments" element={<ExperimentForm />} />
             {/* Защищенные */}

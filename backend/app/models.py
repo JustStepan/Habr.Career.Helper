@@ -2,6 +2,8 @@ from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional
 from datetime import datetime, date
 
+from app.db_models import ParseStatus
+
 
 class SkillResponse(BaseModel):
     id: int
@@ -22,6 +24,7 @@ class VacancySearchFilter(BaseModel):
             from datetime import datetime
             return datetime.strptime(value, "%d.%m.%Y").date()
         return value
+
 
 class ParsedVacancy(BaseModel):
     """Данные из парсера (до сохранения в БД)"""
@@ -60,3 +63,14 @@ class VacanciesDBRequest(BaseModel):
     level: str
     skills: Optional[str] = None
     date_limit: Optional[date] = None
+
+
+class ParsingStatusResponse(BaseModel):
+    status: ParseStatus
+    last_updated: Optional[datetime] = None
+    vacancies_added: int = 0
+    total_vacancies: int = 0
+    error_message: Optional[str] = None
+    
+    class Config:
+        from_attributes = True

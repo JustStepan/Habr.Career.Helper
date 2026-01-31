@@ -5,7 +5,6 @@ from fastapi import APIRouter, HTTPException, Depends, Path, Query
 from app.database import get_db
 from app.crud import get_vacancy_by_id
 from app.models import VacancyResponse, VacanciesDBRequest
-from app.logger_config import logger
 from app.db_models import Vacancy, Skill
 
 from sqlalchemy.ext.asyncio import AsyncSession

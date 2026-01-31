@@ -57,15 +57,15 @@ function App() {
                     }>
                         Главная
                     </NavLink>
-                    <NavLink to="/parser" className={({ isActive }) => 
+                    {/* <NavLink to="/parser" className={({ isActive }) => 
                         isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Парсить вакансии
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="/search" className={({ isActive }) => 
                         isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
-                        Подобрать вакансии (Habr)
+                        Подобрать вакансии
                     </NavLink>
                 </div>
 

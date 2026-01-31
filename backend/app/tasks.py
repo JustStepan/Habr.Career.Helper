@@ -1,0 +1,95 @@
+from datetime import datetime, timezone
+from typing import List
+
+import asyncio
+import httpx
+
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.logger_config import logger
+from app.database import SessionLocal
+from app.parser import parse_habr_vacancies
+from app.crud import create_vacancy_with_skills, create_parsing_job, get_latest_vacancy_urls
+from app.db_models import ParseStatus
+from app.models import ParsedVacancy
+
+
+async def scheduled_parsing_task():
+    """Фоновая задача парсинга по расписанию"""
+    
+    async with SessionLocal() as db:
+        # 1. Создаем запись о начале парсинга
+        job = await create_parsing_job(db)
+        print(job)
+        
+        try:
+            # 2. Получаем последние URL для проверки дубликатов
+            known_urls = await get_latest_vacancy_urls(db, limit=20)  # limit=20 Сколько берем последних url для проверки
+            print(known_urls)
+            # 3. Парсим с retry логикой
+            vacancies = await parse_with_retry(known_urls)
+            for v in vacancies:
+                print(v.title, v.published_date, v.skills, '\n')
+            # 4. Сохраняем в БД
+            saved_count = await save_vacancies(db, vacancies)
+            
+            # 5. Обновляем статус
+            job.status = ParseStatus.SUCCESS
+            job.completed_at = datetime.now(timezone.utc)
+            job.added_vacancies = saved_count
+            await db.commit()
+            logger.info(f"Новых вакансий в БД = {saved_count}")
+            
+        except Exception as e:
+            # 6. Ошибка - записываем в job
+            job.status = ParseStatus.ERROR
+            job.completed_at = datetime.now(timezone.utc)
+            job.error_message = str(e)
+            await db.commit()
+            logger.error(f"Ошибка парсинга: {e}")
+
+
+async def parse_with_retry(known_urls: List[str]) -> List[ParsedVacancy]:
+    """Парсинг с retry логикой"""
+    max_retries = 3
+    retry_delay = 20 * 60  # 20 минут
+    
+    for attempt in range(max_retries):
+        try:
+            return await parse_habr_vacancies(
+                level="all",
+                max_pages=2,
+                search_query="",
+                known_urls=known_urls  # ← Передаем для остановки при дубликате
+            )
+        except httpx.HTTPError as e:
+            if attempt < max_retries - 1:
+                logger.warning(f"Попытка {attempt + 1} неудачна, retry через 20 минут")
+                await asyncio.sleep(retry_delay)
+            else:
+                raise  # Последняя попытка - пробрасываем ошибку
+
+
+async def save_vacancies(db: AsyncSession, vacancies: List[ParsedVacancy]) -> int:
+    """Сохраняет вакансии в БД, возвращает количество новых"""
+    logger.info(f'Начинаем сохранение в БД. Всего вакансий: {len(vacancies)}')
+    saved_count = 0
+    
+    for i, vac in enumerate(vacancies, 1):
+        try:
+            vac_dict = vac.model_dump(exclude={'skills'})
+            skills_list = vac.skills
+            
+            vacancy = await create_vacancy_with_skills(db, vac_dict, skills_list)
+            
+            if vacancy:
+                saved_count += 1
+                logger.info(f"✅ Вакансия {i} сохранена: {vac.title}")
+            else:
+                logger.info(f"⏭️ Вакансия {i} - дубликат: {vac.title}")
+                
+        except Exception as e:
+            logger.error(f"❌ Ошибка при сохранении вакансии {i}: {e}")
+            logger.exception(e)  # Полный traceback
+    
+    logger.info(f"Сохранение завершено. Сохранено {saved_count} из {len(vacancies)}")
+    return saved_count

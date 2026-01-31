@@ -86,20 +86,13 @@ SPECIALIZATIONS = {
 # =============================================================================
 
 async def parse_habr_vacancies(
-    level: str = "junior",
+    level: str = "all",
     max_pages: int = 2,
-    search_query: str = 'python+backend'
+    search_query: str = '',
+    known_urls: List[str] = []
 ) -> List[ParsedVacancy]:
     """
     Основная функция парсинга вакансий с Хабр Карьеры.
-
-    Args:
-        level: Уровень квалификации (intern/junior/middle/senior/lead/all)
-        max_pages: Количество страниц для парсинга (1-10)
-        search_query: Поисковый запрос
-
-    Returns:
-        Список ParsedVacancy
     """
     level_lower = level.lower()
 
@@ -113,17 +106,36 @@ async def parse_habr_vacancies(
     logger.info(f"URL: {query_url}")
 
     all_vacancies = []
+    stop_parsing = False
+
     for page in range(1, max_pages + 1):
         logger.info(f"Парсинг страницы {page}/{max_pages}...")
         url = f"{query_url}&page={page}"
 
         vacancies_list = await _fetch_vacancies_page(url, level, page)
-        all_vacancies.extend(vacancies_list)
-
+        
+        for vacancy in vacancies_list:
+            if stop_parsing:
+                break
+            
+            if vacancy.url in known_urls:
+                logger.info(f"Дубликат на странице {page}: {vacancy.title} ({vacancy.url})")
+                stop_parsing = True
+            else:
+                all_vacancies.append(vacancy)
+        
+        # Лог по завершении страницы
+        logger.info(f"Страница {page}: добавлено {len([v for v in vacancies_list if v.url not in known_urls and v in all_vacancies])} вакансий")
+        
+        # Если нашли дубликат - прекращаем загрузку следующих страниц
+        if stop_parsing:
+            logger.info(f"Парсинг остановлен на странице {page} - найден дубликат")
+            break
+        
         if page < max_pages:
             await asyncio.sleep(DELAY_BETWEEN_PAGES)
 
-    logger.info(f"Парсинг завершен. Найдено вакансий: {len(all_vacancies)}")
+    logger.info(f"Парсинг завершен. Найдено новых вакансий: {len(all_vacancies)}")
     return all_vacancies
 
 

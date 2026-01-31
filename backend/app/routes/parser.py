@@ -11,6 +11,8 @@ from app.logger_config import logger
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.scheduler import run_parsing_now
+
 
 router = APIRouter(tags=["parser"])
 
@@ -48,3 +50,12 @@ async def parse_vacancies(
 
     logger.info(f"Всего дублей: {len(vacancies) - len(saved_vacancies)}")
     return saved_vacancies
+
+@router.post("/parse/manual")
+async def manual_parse():
+    """Запустить парсинг вручную (для тестирования)"""
+    try:
+        await run_parsing_now()
+        return {"status": "success", "message": "Парсинг запущен"}
+    except Exception as e:
+        raise HTTPException(500, detail=str(e))

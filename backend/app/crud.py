@@ -1,9 +1,11 @@
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select
-from sqlalchemy.orm import selectinload
-from app.db_models import Vacancy, Skill
 from typing import List, Optional
 
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import desc, select
+from sqlalchemy.orm import selectinload
+
+from app.db_models import ParsingJob, Vacancy, Skill
+from app.logger_config import logger
 
 
 async def get_or_create_skill(db: AsyncSession, skill_name: str) -> Skill:
@@ -30,20 +32,28 @@ async def get_vacancy_by_id(db: AsyncSession, vac_id: int):
     result = await db.execute(query)
     return result.scalar_one_or_none()
 
-async def vacancy_url_exists(db: AsyncSession, url: str) -> bool:
+async def get_vacancy_by_url_or_none(db: AsyncSession, url: str) -> Vacancy | None:
     """Проверить, существует ли вакансия с таким URL"""
     result = await db.execute(
-        select(Vacancy.id).where(Vacancy.url == url)
+        select(Vacancy).where(Vacancy.url == url)
     )
-    return result.scalar_one_or_none() is not None
+    return result.scalar_one_or_none()
 
-# async def vacancy_exists(db: AsyncSession, url: str) -> bool:
-#     """Проверить, существует ли вакансия с таким URL"""
-#     result = await db.execute(
-#         select(Vacancy.id).where(Vacancy.url == url)
-#     )
-#     return result.scalar_one_or_none() is not None
 
+async def update_vacancy_if_changed(db: AsyncSession, vacancy: Vacancy, new_vacancy_data: dict) -> bool:
+    """Обновляет вакансию если данные изменились. Возвращает True если были изменения."""
+
+    changed = False
+
+    for key, value in new_vacancy_data.items():
+        if hasattr(vacancy, key) and getattr(vacancy, key) != value:
+            logger.info(f'Vacancy is changed for field {key}:\n{getattr(vacancy, key)} --> {value}')
+            setattr(vacancy, key, value)
+            changed = True
+    if changed:
+        await db.commit() 
+        
+    return changed
 
 async def create_vacancy_with_skills(
     db: AsyncSession,
@@ -51,15 +61,21 @@ async def create_vacancy_with_skills(
     skills_list: List[str]
 ) -> Optional[Vacancy]:
     """Создать вакансию со скиллами. Возвращает None если вакансия уже существует."""
+    logger.info(f"Создание вакансии: {vacancy_data.get('title')}")
 
     # 1. Проверяем, есть ли уже такая вакансия
-    if await vacancy_url_exists(db, vacancy_data['url']):
+    is_vacancy = await get_vacancy_by_url_or_none(db, vacancy_data['url'])
+    if is_vacancy:
+        if not await update_vacancy_if_changed(db, is_vacancy, vacancy_data):  # фиксируем были ли в ней изменения? ДА, время размещения по крайней мере.
+            logger.info(f"Ваканссия {is_vacancy.id}:'{is_vacancy.title}' уже в БД.")
         return None
 
+    logger.info(f"Проверка на вакансию пройдена. Создаем вакансию(экземпляр)")
     # 3. Создаём вакансию
     vacancy = Vacancy(**vacancy_data)
     db.add(vacancy)
     await db.flush()
+    logger.info(f"Проверка на вакансию пройдена. Создана боолканка {vacancy.id}")
 
     # 4. Собираем скиллы
     skill_objects = []
@@ -73,10 +89,69 @@ async def create_vacancy_with_skills(
     # 6. Присваиваем скиллы
     vacancy.skills = skill_objects
 
+    logger.info(f"Вакансия теперь со скилами. {vacancy.skills}")
     # 7. Коммитим
     await db.commit()
-
-    # 8. Загружаем relationship из БД
-    # await db.refresh(vacancy, attribute_names=['skills'])
+    logger.info(f'Вакансия сохранена в БД: {vacancy.title}')
 
     return vacancy
+
+
+async def create_parsing_job(db: AsyncSession) -> ParsingJob:
+    """Создает запись о начале парсинга"""
+    parse_job = ParsingJob()
+    db.add(parse_job)
+    await db.commit()
+    await db.refresh(parse_job)
+    return parse_job
+
+
+async def get_latest_parsing_job(db: AsyncSession) -> Optional[ParsingJob]:
+    """Получает последнюю запись о парсинге"""
+    result = await db.execute(
+        select(ParsingJob)
+        .order_by(desc(ParsingJob.started_at))
+        .limit(1)
+    )
+    return result.scalar_one_or_none()
+
+
+async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 20) -> List[str]:
+    """Получает URL последних N вакансий"""
+    result = await db.execute(
+        select(Vacancy.url)
+        .order_by(desc(Vacancy.published_date))
+        .limit(limit)
+    )
+    return result.scalars().all()
+
+
+# async def update_parsing_job(
+#     db: AsyncSession,
+#     job_id: int,
+#     status: ParseStatus,
+#     added_vacancies: int,
+#     error_message: Optional[str] = None
+# ) -> ParsingJob:
+    
+#     query = select(ParsingJob).where(ParsingJob.id == job_id)
+#     result = await db.execute(query)
+#     job = result.scalar_one_or_none()
+#     job.status = status
+#     job.completed_at = datetime.now(timezone.utc)
+#     job.added_vacancies = added_vacancies
+#     job.error_message = error_message
+
+#     await db.commit()
+#     await db.refresh(job)
+#     return job
+
+# async def get_latest_parsing_job(db: AsyncSession) -> Optional[ParsingJob]:
+#     query = select(ParsingJob).order_by(desc(ParsingJob.started_at)).limit(1)
+#     result = await db.execute(query)
+#     job = result.scalar_one_or_none()
+
+# async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 2) -> List[str]:
+#     query = select(Vacancy).order_by(desc(Vacancy.published_date)).limit(limit)
+#     result = await db.execute(query)
+#     return [v.url for v in result.scalars().all()]

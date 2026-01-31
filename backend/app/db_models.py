@@ -1,6 +1,18 @@
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, Text, text, Table, ForeignKey
+from enum import Enum as PythonEnum
+
+from sqlalchemy import Enum as SQLAEnum, Column, Integer, String, DateTime, Boolean, Text, text, Table, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
+
+from pytz import timezone
+
+moscow_tz = timezone('Europe/Moscow')
+
+
+class ParseStatus(str, PythonEnum):  # ← Наследуем от str
+    RUNNING = "running"
+    SUCCESS = "success"
+    ERROR = "error"
 
 # Промежуточная таблица (многие-ко-многим)
 vacancy_skills = Table(
@@ -105,3 +117,14 @@ class Skill(Base):
         secondary=favorite_vacancy_skills,
         back_populates="skills"
     )
+
+
+class ParsingJob(Base):
+    __tablename__ = "parsing_jobs"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    started_at = Column(DateTime(timezone=True), server_default=text("CURRENT_TIMESTAMP"), index=True)
+    completed_at = Column(DateTime(timezone=True), nullable=True)
+    added_vacancies = Column(Integer, default=0)
+    status = Column(SQLAEnum(ParseStatus), nullable=False, default=ParseStatus.RUNNING)
+    error_message = Column(Text, nullable=True)
