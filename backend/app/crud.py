@@ -55,8 +55,8 @@ async def update_vacancy_if_changed(db: AsyncSession, vacancy: Vacancy, new_vaca
                 setattr(vacancy, key, value)
             changed = True
     if changed:
-        vacancy.publish_count += 1
-        logger.info(f'Вакансия {vacancy.id} опубликована снова (счетчик: {vacancy.publish_count})')
+        vacancy.republish_count += 1
+        logger.info(f'Вакансия {vacancy.id} опубликована снова (счетчик: {vacancy.republish_count})')
         await db.commit() 
         
     return changed
