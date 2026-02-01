@@ -16,14 +16,11 @@ COPY ./app ./app
 COPY alembic.ini .
 COPY ./alembic ./alembic
 
-# Открываем порт
+
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh  # ← Делаем исполняемым
+
 EXPOSE 8000
 
-# Запускаем через uv
-# --workers 4 — количество процессов (для production)
-# --log-level info — логирование
-CMD ["uv", "run", "uvicorn", "app.main:app", \
-     "--host", "0.0.0.0", \
-     "--port", "8000", \
-     "--workers", "4", \
-     "--log-level", "info"]
+# Используем entrypoint вместо CMD
+ENTRYPOINT ["./entrypoint.sh"]

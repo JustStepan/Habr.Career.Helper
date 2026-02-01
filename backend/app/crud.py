@@ -47,10 +47,16 @@ async def update_vacancy_if_changed(db: AsyncSession, vacancy: Vacancy, new_vaca
 
     for key, value in new_vacancy_data.items():
         if hasattr(vacancy, key) and getattr(vacancy, key) != value:
-            logger.info(f'Vacancy is changed for field {key}:\n{getattr(vacancy, key)} --> {value}')
-            setattr(vacancy, key, value)
+            if key == 'description':
+                logger.info(f'Вакансия изменилась. Новый параметр - {key}:\n{getattr(vacancy, key)[:100]} --> {value[:100]}')
+                setattr(vacancy, key, value)
+            else:
+                logger.info(f'Вакансия изменилась. Новый параметр - {key}:\n{getattr(vacancy, key)} --> {value}')
+                setattr(vacancy, key, value)
             changed = True
     if changed:
+        vacancy.publish_count += 1
+        logger.info(f'Вакансия {vacancy.id} опубликована снова (счетчик: {vacancy.publish_count})')
         await db.commit() 
         
     return changed
@@ -67,15 +73,14 @@ async def create_vacancy_with_skills(
     is_vacancy = await get_vacancy_by_url_or_none(db, vacancy_data['url'])
     if is_vacancy:
         if not await update_vacancy_if_changed(db, is_vacancy, vacancy_data):  # фиксируем были ли в ней изменения? ДА, время размещения по крайней мере.
-            logger.info(f"Ваканссия {is_vacancy.id}:'{is_vacancy.title}' уже в БД.")
+            logger.info(f"Ваканссия {is_vacancy.id}: '{is_vacancy.title}' уже в БД(пролный повтор).")
         return None
 
-    logger.info(f"Проверка на вакансию пройдена. Создаем вакансию(экземпляр)")
+    logger.info(f"Проверка на вакансию пройдена. Приступаем к созданию вакансии.")
     # 3. Создаём вакансию
     vacancy = Vacancy(**vacancy_data)
     db.add(vacancy)
     await db.flush()
-    logger.info(f"Проверка на вакансию пройдена. Создана болванка Vacancy c ID: {vacancy.id}")
 
     # 4. Собираем скиллы
     skill_objects = []
@@ -123,34 +128,3 @@ async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 20) -> List[str
         .limit(limit)
     )
     return result.scalars().all()
-
-
-# async def update_parsing_job(
-#     db: AsyncSession,
-#     job_id: int,
-#     status: ParseStatus,
-#     added_vacancies: int,
-#     error_message: Optional[str] = None
-# ) -> ParsingJob:
-    
-#     query = select(ParsingJob).where(ParsingJob.id == job_id)
-#     result = await db.execute(query)
-#     job = result.scalar_one_or_none()
-#     job.status = status
-#     job.completed_at = datetime.now(timezone.utc)
-#     job.added_vacancies = added_vacancies
-#     job.error_message = error_message
-
-#     await db.commit()
-#     await db.refresh(job)
-#     return job
-
-# async def get_latest_parsing_job(db: AsyncSession) -> Optional[ParsingJob]:
-#     query = select(ParsingJob).order_by(desc(ParsingJob.started_at)).limit(1)
-#     result = await db.execute(query)
-#     job = result.scalar_one_or_none()
-
-# async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 2) -> List[str]:
-#     query = select(Vacancy).order_by(desc(Vacancy.published_date)).limit(limit)
-#     result = await db.execute(query)
-#     return [v.url for v in result.scalars().all()]

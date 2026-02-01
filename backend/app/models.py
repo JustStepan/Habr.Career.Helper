@@ -46,6 +46,7 @@ class VacancyResponse(BaseModel):
     salary: str
     description: str
     published_date: Optional[datetime] = None
+    publish_count: int
     skills: List[SkillResponse]  # ← Список скиллов
     
     class Config:

@@ -19,23 +19,23 @@ async def scheduled_parsing_task():
     async with SessionLocal() as db:
         # 1. Создаем запись о начале парсинга
         job = await create_parsing_job(db)
-        print(job)
         
         try:
             # 2. Получаем последние URL для проверки дубликатов
-            known_urls = await get_latest_vacancy_urls(db, limit=20)  # limit=20 Сколько берем последних url для проверки
-            print(known_urls)
+            known_urls = await get_latest_vacancy_urls(db, limit=25)  # limit=25 Сколько берем последних url для проверки (одна страница)
+
             # 3. Парсим с retry логикой
             vacancies = await parse_with_retry(known_urls)
-            for v in vacancies:
-                print(v.title, v.published_date, v.skills, '\n')
+
             # 4. Сохраняем в БД
-            saved_count = await save_vacancies(db, vacancies)
+            if len(vacancies) > 0:
+                logger.info(f'Начинаем процесс сохрания вакансий в БД.\nВсего вакансий: {len(vacancies)}')
+                saved_count = await save_vacancies(db, vacancies)
             
             # 5. Обновляем статус
             job.status = ParseStatus.SUCCESS
             job.completed_at = datetime.now(timezone.utc)
-            job.added_vacancies = saved_count
+            job.added_vacancies = saved_count # по умолчанию 0 в БД
             await db.commit()
             logger.info(f"Новых вакансий в БД = {saved_count}")
             
@@ -57,7 +57,7 @@ async def parse_with_retry(known_urls: List[str]) -> List[ParsedVacancy]:
         try:
             return await parse_habr_vacancies(
                 level="all",
-                max_pages=2,
+                max_pages=20,
                 search_query="",
                 known_urls=known_urls  # ← Передаем для остановки при дубликате
             )
@@ -71,7 +71,6 @@ async def parse_with_retry(known_urls: List[str]) -> List[ParsedVacancy]:
 
 async def save_vacancies(db: AsyncSession, vacancies: List[ParsedVacancy]) -> int:
     """Сохраняет вакансии в БД, возвращает количество новых"""
-    logger.info(f'Начинаем сохранение в БД. Всего вакансий: {len(vacancies)}')
     saved_count = 0
     
     for i, vac in enumerate(vacancies, 1):
@@ -83,9 +82,9 @@ async def save_vacancies(db: AsyncSession, vacancies: List[ParsedVacancy]) -> in
             
             if vacancy:
                 saved_count += 1
-                logger.info(f"✅ Вакансия {i} сохранена: {vac.title}")
+                logger.info(f"Вакансия {i} сохранена: {vac.title}")
             else:
-                logger.info(f"⏭️ Вакансия {i} - дубликат: {vac.title}")
+                logger.info(f"Вакансия {i} - дубликат: {vac.title}")
                 
         except Exception as e:
             logger.error(f"❌ Ошибка при сохранении вакансии {i}: {e}")
