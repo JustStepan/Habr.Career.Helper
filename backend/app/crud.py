@@ -75,7 +75,7 @@ async def create_vacancy_with_skills(
     vacancy = Vacancy(**vacancy_data)
     db.add(vacancy)
     await db.flush()
-    logger.info(f"Проверка на вакансию пройдена. Создана боолканка {vacancy.id}")
+    logger.info(f"Проверка на вакансию пройдена. Создана болванка Vacancy c ID: {vacancy.id}")
 
     # 4. Собираем скиллы
     skill_objects = []
@@ -89,10 +89,9 @@ async def create_vacancy_with_skills(
     # 6. Присваиваем скиллы
     vacancy.skills = skill_objects
 
-    logger.info(f"Вакансия теперь со скилами. {vacancy.skills}")
     # 7. Коммитим
     await db.commit()
-    logger.info(f'Вакансия сохранена в БД: {vacancy.title}')
+    logger.info(f'Вакансия {vacancy.title} ({vacancy.id}) сохранена в БД.')
 
     return vacancy
 

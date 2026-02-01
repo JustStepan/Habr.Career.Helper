@@ -13,6 +13,8 @@ RUN uv sync --frozen --no-dev
 
 # Копируем код приложения
 COPY ./app ./app
+COPY alembic.ini .
+COPY ./alembic ./alembic
 
 # Открываем порт
 EXPOSE 8000
