@@ -74,7 +74,7 @@ class FavoriteVacancy(Base):
     
     # Связь с пользователем
     owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
-    
+    # original_vacancy_id = Column(Integer, nullable=False)
     # КОПИЯ полей из оригинальной вакансии
     level = Column(String(50), nullable=False)
     title = Column(String(100), nullable=False)
