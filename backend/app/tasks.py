@@ -28,6 +28,7 @@ async def scheduled_parsing_task():
             vacancies = await parse_with_retry(known_urls)
 
             # 4. Сохраняем в БД
+            saved_count = 0
             if len(vacancies) > 0:
                 logger.info(f'Начинаем процесс сохрания вакансий в БД.\nВсего вакансий: {len(vacancies)}')
                 saved_count = await save_vacancies(db, vacancies)
