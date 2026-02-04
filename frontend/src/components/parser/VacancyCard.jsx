@@ -1,9 +1,14 @@
 import { useState } from "react";
+import axiosInstance from '@/utils/axios';
+
 
 function VacancyCard({ vacancy }) {
     // Функция форматирования даты
     const token = localStorage.getItem('access_token');
-    const [isFavorite, setIsFavorite] = useState(false)
+    const [isFavorite, setIsFavorite] = useState(false);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+
 
     function formatDate(dateString) {
         if (!dateString) return 'Дата не указана';
@@ -20,10 +25,24 @@ function VacancyCard({ vacancy }) {
         return date.toLocaleDateString('ru-RU', options);
     }
     
-    function HandleAddToFavorites (id) {
-        setIsFavorite(true);
-        console.log('Вакансия добавлена в избранное ID = ', id);
+    const HandleAddToFavorites = async (favorite_id) => {
+        setError(null);
+        setLoading(true);
+
+        try {
+            const response = await axiosInstance.post('favorite', {favorite_id});
+            console.log('response --> ', response)
+            setIsFavorite(true)
+        } catch (error) {
+            setError(error.message);
+            console.error('Ошибка', error);
+        } finally {
+            setLoading(false);
+        }
+
+        console.log('Вакансия добавлена в избранное ID = ', favorite_id);
     }
+
 
     return (
         <div className="bg-white p-6 rounded-lg shadow border border-gray-200 hover:shadow-lg transition">

@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes import auth, parser, crud
+from app.routes import auth, parser, crud, favorite_crud
 from app.scheduler import scheduler, configure_scheduler
 from app.logger_config import logger
 
@@ -32,7 +32,7 @@ app = FastAPI(
 )
 
 # Маршруты
-routers = [auth.router, parser.router, crud.router]
+routers = [auth.router, parser.router, crud.router, favorite_crud.router]
 for router in routers:
     app.include_router(router, prefix="/api")
 

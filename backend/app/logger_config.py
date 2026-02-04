@@ -1,9 +1,7 @@
 import sys
 from loguru import logger
 
-# 1. Удаляем стандартный вывод, чтобы задать свой
 logger.remove()
-
 
 logger.add(
     sys.stdout,

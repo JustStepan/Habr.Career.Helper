@@ -79,20 +79,14 @@ async def get_current_user(
     
     token = credentials.credentials
     
-    payload = decode_access_token(token)
-    if not payload:
-        raise HTTPException(401, "Невалидный токен")
-    
-    user_id = payload.get("user_id")
-    if not user_id:
+    if not (payload := decode_access_token(token)) or not (user_id := payload.get("user_id")):
         raise HTTPException(401, "Невалидный токен")
 
     result = await db.execute(
         select(User).where(User.id == user_id)
     )
-    user = result.scalar_one_or_none()
-    
-    if not user:
+ 
+    if not (user := result.scalar_one_or_none()):
         raise HTTPException(401, "Пользователь не найден")
     
     return user

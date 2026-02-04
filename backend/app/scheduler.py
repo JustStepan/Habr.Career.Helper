@@ -18,7 +18,7 @@ def configure_scheduler():
     scheduler.add_job(
         func=scheduled_parsing_task,
         trigger=CronTrigger(
-            hour='8,10,12,14,16,18,20,4',
+            hour='8,9,10,11,12,14,15,16,17,18,19,20,22,4',
             minute=0,
             timezone=moscow_tz
         ),

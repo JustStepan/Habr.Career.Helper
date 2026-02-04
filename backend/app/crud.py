@@ -128,3 +128,43 @@ async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 20) -> List[str
         .limit(limit)
     )
     return result.scalars().all()
+
+async def create_favorite_vacancy_with_skills(
+    db: AsyncSession,
+    user_id: int,
+    vacancy_data: dict,
+    skills_list: List[str]
+) -> Optional[Vacancy]:
+    """Создать вакансию со скиллами. Возвращает None если вакансия уже существует."""
+    logger.info(f"Создание вакансии: {vacancy_data.get('title')}")
+
+    # 1. Проверяем, есть ли уже такая вакансия
+    is_vacancy = await get_vacancy_by_url_or_none(db, vacancy_data['url'])
+    if is_vacancy:
+        if not await update_vacancy_if_changed(db, is_vacancy, vacancy_data):  # фиксируем были ли в ней изменения? ДА, время размещения по крайней мере.
+            logger.info(f"Ваканссия {is_vacancy.id}: '{is_vacancy.title}' уже в БД(пролный повтор).")
+        return None
+
+    logger.info(f"Проверка на вакансию пройдена. Приступаем к созданию вакансии.")
+    # 3. Создаём вакансию
+    vacancy = Vacancy(**vacancy_data)
+    db.add(vacancy)
+    await db.flush()
+
+    # 4. Собираем скиллы
+    skill_objects = []
+    for skill_name in skills_list:
+        skill = await get_or_create_skill(db, skill_name.strip())
+        skill_objects.append(skill)
+
+    # 5. Загружаем vacancy с relationship, чтобы избежать lazy load
+    await db.refresh(vacancy, attribute_names=['skills'])
+
+    # 6. Присваиваем скиллы
+    vacancy.skills = skill_objects
+
+    # 7. Коммитим
+    await db.commit()
+    logger.info(f'Вакансия {vacancy.title} ({vacancy.id}) сохранена в БД.')
+
+    return vacancy
