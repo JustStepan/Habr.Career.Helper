@@ -1100,3 +1100,487 @@
 2026-02-05 14:50:49.298 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 910 найдена начинаем процесс копирования
 2026-02-05 14:50:49.318 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 19 создана в БД.
 2026-02-05 14:51:12.160 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 18 удалена.
+2026-02-05 18:00:00.055 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
+2026-02-05 18:00:00.056 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-05 18:00:00.056 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
+2026-02-05 18:00:01.592 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 1/25: Системный администратор
+2026-02-05 18:00:02.485 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 2/25: Программист
+2026-02-05 18:00:03.426 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 3/25: Ведущий инженер L3
+2026-02-05 18:00:04.464 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 4/25: Тимлид сетевого отдела
+2026-02-05 18:00:05.387 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 5/25: MLOps специалист
+2026-02-05 18:00:06.293 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 6/25: Golang разработчик
+2026-02-05 18:00:07.206 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 7/25: NLP инженер
+2026-02-05 18:00:08.226 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 8/25: Flutter Developer
+2026-02-05 18:00:09.175 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 9/25: Lead Full Stack Developer (Django + React) / CTO
+2026-02-05 18:00:10.222 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 10/25: Android developer
+2026-02-05 18:00:11.191 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 11/25: Lead System Analyst
+2026-02-05 18:00:12.121 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 12/25: Ведущий менеджер по продажам (строительство, промышленность, ИИ)
+2026-02-05 18:00:13.066 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 13/25: Ведущий сетевой инженер (системная интеграция)
+2026-02-05 18:00:14.089 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 14/25: Системный архитектор (системная интеграция)
+2026-02-05 18:00:15.115 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 15/25: Ведущий инженер (сетевая безопасность)
+2026-02-05 18:00:16.019 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 16/25: Разработчик 1С
+2026-02-05 18:00:17.918 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 17/25: Архитектор по ИБ (системная интеграция)
+2026-02-05 18:00:18.906 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 18/25: Fullstack аналитик
+2026-02-05 18:00:19.839 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 19/25: Ведущий инженер-проектировщик АСДУ
+2026-02-05 18:00:20.693 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 20/25: Директор по развитию бизнеса
+2026-02-05 18:00:21.546 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 21/25: DevOps инженер (трайб Lending)
+2026-02-05 18:00:22.411 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 22/25: Embedded - программист
+2026-02-05 18:00:23.297 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 23/25: Старший LLM-разработчик в сервис Нейроюрист
+2026-02-05 18:00:24.209 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 24/25: Инженер технической поддержки (Красная Пахра, Троицк)
+2026-02-05 18:00:25.103 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 25/25: UX-редактор
+2026-02-05 18:00:25.607 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 25 вакансий
+2026-02-05 18:00:26.608 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 2/20...
+2026-02-05 18:00:27.812 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 1/25: Программист 1С Документооборот (бухгалтерский контур)
+2026-02-05 18:00:28.650 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 2/25: QA Engineer / Инженер тестирования в Единый личный кабинет
+2026-02-05 18:00:29.656 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 3/25: Эксперт антифрода
+2026-02-05 18:00:30.572 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 4/25: Архитектор информационной безопасности
+2026-02-05 18:00:31.630 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 5/25: Главный инженер - Data Science
+2026-02-05 18:00:32.566 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 6/25: Архитектор (кибербезопасность)
+2026-02-05 18:00:33.460 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 7/25: QA Engineer / Инженер тестирования в Массовые кредитные продукты
+2026-02-05 18:00:34.448 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 8/25: Архитектор по использованию программных СКЗИ
+2026-02-05 18:00:35.348 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 9/25: Аналитик данных (Команда "Smart Collection")
+2026-02-05 18:00:36.287 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 10/25: Data Engineer
+2026-02-05 18:00:37.163 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 11/25: Десктоп разработчик
+2026-02-05 18:00:38.058 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 12/25: Data Scientist / ML Engineer
+2026-02-05 18:00:39.109 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 13/25: Middle / Senior Разработчик C/C++ (драйвера под Windows)
+2026-02-05 18:00:40.170 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 14/25: Ведущий специалист по администрированию СУБД Oracle
+2026-02-05 18:00:41.039 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 15/25: Главный администратор баз данных
+2026-02-05 18:00:41.931 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 16/25: SRE
+2026-02-05 18:00:42.816 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 17/25: Solution Architect  / Архитектор решений в Сервисную команду
+2026-02-05 18:00:43.678 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 18/25: Тестировщик, middle+
+2026-02-05 18:00:44.665 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 19/25: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-05 18:00:45.632 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 20/25: Системный аналитик
+2026-02-05 18:00:46.571 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 21/25: Администратор проектов ЦОД
+2026-02-05 18:00:47.504 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 22/25: Middle+/Senior iOS Developer
+2026-02-05 18:00:48.342 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 23/25: Программист 1С ERP
+2026-02-05 18:00:49.378 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 24/25: Администратор баз данных (DBA MongoDB)
+2026-02-05 18:00:50.263 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 25/25: Менеджер по активным продажам DevOps
+2026-02-05 18:00:50.767 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 2: добавлено 25 вакансий
+2026-02-05 18:00:51.769 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 3/20...
+2026-02-05 18:00:53.036 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 1/25: Мобильный разработчик (IOS, Android)
+2026-02-05 18:00:53.958 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 2/25: Специалист по защите искусственного интеллекта (MlSecOps)
+2026-02-05 18:00:55.013 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 3/25: Старший системный инженер Microsoft
+2026-02-05 18:00:55.979 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 4/25: DevSecOps инженер (DevOps)
+2026-02-05 18:00:56.849 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 5/25: Руководитель проектов 1С
+2026-02-05 18:00:57.817 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 6/25: Сетевой инженер
+2026-02-05 18:00:58.837 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 7/25: Data analyst/BI-аналитик (Senior)
+2026-02-05 18:00:59.833 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 8/25: System analyst / Системный аналитик (финтех)
+2026-02-05 18:01:00.768 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 9/25: Product manager
+2026-02-05 18:01:01.679 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 10/25: Senior Backend Engineer
+2026-02-05 18:01:02.629 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 11/25: Системный Аналитик 1С
+2026-02-05 18:01:03.607 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 12/25: Deep Learning Engineer в команду ML Planning
+2026-02-05 18:01:04.621 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 13/25: Администратор Hadoop
+2026-02-05 18:01:05.594 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 14/25: iOS Developer
+2026-02-05 18:01:06.512 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 15/25: 1С Администратор
+2026-02-05 18:01:07.463 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 16/25: Программист 1С
+2026-02-05 18:01:08.343 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 17/25: Reverse-инженер
+2026-02-05 18:01:09.309 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 18/25: Разработчик баз данных PL/SQL
+2026-02-05 18:01:10.268 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 19/25: Разработчик Clickhouse
+2026-02-05 18:01:11.333 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 20/25: Системный аналитик
+2026-02-05 18:01:12.511 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 21/25: Аналитик SOC L1
+2026-02-05 18:01:13.535 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 22/25: Методолог бизнес-процессов (продукт Sber Private)
+2026-02-05 18:01:14.570 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 23/25: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-02-05 18:01:15.580 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 24/25: Аналитик сопровождения
+2026-02-05 18:01:16.661 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 25/25: Data аналитик (Рекомендательная платформа)
+2026-02-05 18:01:17.164 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 3: 1С Администратор (https://career.habr.com/vacancies/1000164747)
+2026-02-05 18:01:17.166 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 3: добавлено 14 вакансий
+2026-02-05 18:01:17.167 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 3 - найден дубликат
+2026-02-05 18:01:17.167 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 64
+2026-02-05 18:01:17.167 | INFO     | app.tasks:scheduled_parsing_task:33 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 64
+2026-02-05 18:01:17.167 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный администратор
+2026-02-05 18:01:17.174 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 14:59:52+00:00 --> 2026-02-05 17:59:42+03:00
+2026-02-05 18:01:17.174 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 11 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.180 | INFO     | app.tasks:save_vacancies:88 - Вакансия 1 - дубликат: Системный администратор
+2026-02-05 18:01:17.180 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Программист
+2026-02-05 18:01:17.182 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.213 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Программист (915) сохранена в БД.
+2026-02-05 18:01:17.213 | INFO     | app.tasks:save_vacancies:86 - Вакансия 2 сохранена: Программист
+2026-02-05 18:01:17.213 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий инженер L3
+2026-02-05 18:01:17.215 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 14:46:34+00:00 --> 2026-02-05 17:46:33+03:00
+2026-02-05 18:01:17.215 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 17 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.217 | INFO     | app.tasks:save_vacancies:88 - Вакансия 3 - дубликат: Ведущий инженер L3
+2026-02-05 18:01:17.217 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Тимлид сетевого отдела
+2026-02-05 18:01:17.219 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 14:27:52+00:00 --> 2026-02-05 17:27:51+03:00
+2026-02-05 18:01:17.219 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 14 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.221 | INFO     | app.tasks:save_vacancies:88 - Вакансия 4 - дубликат: Тимлид сетевого отдела
+2026-02-05 18:01:17.221 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: MLOps специалист
+2026-02-05 18:01:17.222 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.234 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия MLOps специалист (916) сохранена в БД.
+2026-02-05 18:01:17.234 | INFO     | app.tasks:save_vacancies:86 - Вакансия 5 сохранена: MLOps специалист
+2026-02-05 18:01:17.234 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Golang разработчик
+2026-02-05 18:01:17.236 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.249 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Golang разработчик (917) сохранена в БД.
+2026-02-05 18:01:17.249 | INFO     | app.tasks:save_vacancies:86 - Вакансия 6 сохранена: Golang разработчик
+2026-02-05 18:01:17.250 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: NLP инженер
+2026-02-05 18:01:17.251 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.266 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия NLP инженер (918) сохранена в БД.
+2026-02-05 18:01:17.266 | INFO     | app.tasks:save_vacancies:86 - Вакансия 7 сохранена: NLP инженер
+2026-02-05 18:01:17.266 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Flutter Developer
+2026-02-05 18:01:17.268 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 14:12:02+00:00 --> 2026-02-05 17:11:58+03:00
+2026-02-05 18:01:17.268 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 18 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.271 | INFO     | app.tasks:save_vacancies:88 - Вакансия 8 - дубликат: Flutter Developer
+2026-02-05 18:01:17.271 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Lead Full Stack Developer (Django + React) / CTO
+2026-02-05 18:01:17.273 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.288 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Lead Full Stack Developer (Django + React) / CTO (919) сохранена в БД.
+2026-02-05 18:01:17.288 | INFO     | app.tasks:save_vacancies:86 - Вакансия 9 сохранена: Lead Full Stack Developer (Django + React) / CTO
+2026-02-05 18:01:17.288 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Android developer
+2026-02-05 18:01:17.289 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.298 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Android developer (920) сохранена в БД.
+2026-02-05 18:01:17.299 | INFO     | app.tasks:save_vacancies:86 - Вакансия 10 сохранена: Android developer
+2026-02-05 18:01:17.299 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Lead System Analyst
+2026-02-05 18:01:17.300 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 13:34:01+00:00 --> 2026-02-05 16:34:06+03:00
+2026-02-05 18:01:17.301 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 750 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.303 | INFO     | app.tasks:save_vacancies:88 - Вакансия 11 - дубликат: Lead System Analyst
+2026-02-05 18:01:17.303 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий менеджер по продажам (строительство, промышленность, ИИ)
+2026-02-05 18:01:17.304 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 13:27:04+00:00 --> 2026-02-05 16:27:08+03:00
+2026-02-05 18:01:17.305 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 751 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.306 | INFO     | app.tasks:save_vacancies:88 - Вакансия 12 - дубликат: Ведущий менеджер по продажам (строительство, промышленность, ИИ)
+2026-02-05 18:01:17.307 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий сетевой инженер (системная интеграция)
+2026-02-05 18:01:17.308 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 13:27:03+00:00 --> 2026-02-05 16:27:08+03:00
+2026-02-05 18:01:17.308 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 752 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.310 | INFO     | app.tasks:save_vacancies:88 - Вакансия 13 - дубликат: Ведущий сетевой инженер (системная интеграция)
+2026-02-05 18:01:17.310 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный архитектор (системная интеграция)
+2026-02-05 18:01:17.312 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 13:27:03+00:00 --> 2026-02-05 16:27:08+03:00
+2026-02-05 18:01:17.312 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 753 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.314 | INFO     | app.tasks:save_vacancies:88 - Вакансия 14 - дубликат: Системный архитектор (системная интеграция)
+2026-02-05 18:01:17.314 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий инженер (сетевая безопасность)
+2026-02-05 18:01:17.316 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:27:03+00:00 --> 2026-02-05 15:55:50+03:00
+2026-02-05 18:01:17.316 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 710 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.319 | INFO     | app.tasks:save_vacancies:88 - Вакансия 15 - дубликат: Ведущий инженер (сетевая безопасность)
+2026-02-05 18:01:17.319 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик 1С
+2026-02-05 18:01:17.320 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:55:35+00:00 --> 2026-02-05 15:55:50+03:00
+2026-02-05 18:01:17.320 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 709 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.322 | INFO     | app.tasks:save_vacancies:88 - Вакансия 16 - дубликат: Разработчик 1С
+2026-02-05 18:01:17.322 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор по ИБ (системная интеграция)
+2026-02-05 18:01:17.324 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:27:03+00:00 --> 2026-02-05 15:51:42+03:00
+2026-02-05 18:01:17.324 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 711 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.326 | INFO     | app.tasks:save_vacancies:88 - Вакансия 17 - дубликат: Архитектор по ИБ (системная интеграция)
+2026-02-05 18:01:17.326 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Fullstack аналитик
+2026-02-05 18:01:17.327 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:37:07+00:00 --> 2026-02-05 15:37:20+03:00
+2026-02-05 18:01:17.328 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 25 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.329 | INFO     | app.tasks:save_vacancies:88 - Вакансия 18 - дубликат: Fullstack аналитик
+2026-02-05 18:01:17.329 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий инженер-проектировщик АСДУ
+2026-02-05 18:01:17.331 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:27:02+00:00 --> 2026-02-05 15:33:17+03:00
+2026-02-05 18:01:17.331 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 712 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.333 | INFO     | app.tasks:save_vacancies:88 - Вакансия 19 - дубликат: Ведущий инженер-проектировщик АСДУ
+2026-02-05 18:01:17.334 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Директор по развитию бизнеса
+2026-02-05 18:01:17.336 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:27:02+00:00 --> 2026-02-05 15:30:49+03:00
+2026-02-05 18:01:17.336 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 713 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.338 | INFO     | app.tasks:save_vacancies:88 - Вакансия 20 - дубликат: Директор по развитию бизнеса
+2026-02-05 18:01:17.338 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: DevOps инженер (трайб Lending)
+2026-02-05 18:01:17.340 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:27:01+00:00 --> 2026-02-05 15:27:24+03:00
+2026-02-05 18:01:17.340 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 714 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.342 | INFO     | app.tasks:save_vacancies:88 - Вакансия 21 - дубликат: DevOps инженер (трайб Lending)
+2026-02-05 18:01:17.342 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Embedded - программист
+2026-02-05 18:01:17.344 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-27 12:33:53+00:00 --> 2026-02-05 15:27:03+03:00
+2026-02-05 18:01:17.344 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 546 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.346 | INFO     | app.tasks:save_vacancies:88 - Вакансия 22 - дубликат: Embedded - программист
+2026-02-05 18:01:17.346 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Старший LLM-разработчик в сервис Нейроюрист
+2026-02-05 18:01:17.347 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.359 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Старший LLM-разработчик в сервис Нейроюрист (921) сохранена в БД.
+2026-02-05 18:01:17.359 | INFO     | app.tasks:save_vacancies:86 - Вакансия 23 сохранена: Старший LLM-разработчик в сервис Нейроюрист
+2026-02-05 18:01:17.359 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер технической поддержки (Красная Пахра, Троицк)
+2026-02-05 18:01:17.360 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:23:51+00:00 --> 2026-02-05 15:23:56+03:00
+2026-02-05 18:01:17.360 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 27 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.362 | INFO     | app.tasks:save_vacancies:88 - Вакансия 24 - дубликат: Инженер технической поддержки (Красная Пахра, Троицк)
+2026-02-05 18:01:17.362 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: UX-редактор
+2026-02-05 18:01:17.363 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:21:55+00:00 --> 2026-02-05 15:22:02+03:00
+2026-02-05 18:01:17.363 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 28 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.365 | INFO     | app.tasks:save_vacancies:88 - Вакансия 25 - дубликат: UX-редактор
+2026-02-05 18:01:17.365 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Программист 1С Документооборот (бухгалтерский контур)
+2026-02-05 18:01:17.367 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.378 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Программист 1С Документооборот (бухгалтерский контур) (922) сохранена в БД.
+2026-02-05 18:01:17.378 | INFO     | app.tasks:save_vacancies:86 - Вакансия 26 сохранена: Программист 1С Документооборот (бухгалтерский контур)
+2026-02-05 18:01:17.378 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: QA Engineer / Инженер тестирования в Единый личный кабинет
+2026-02-05 18:01:17.379 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 12:00:15+00:00 --> 2026-02-05 15:00:27+03:00
+2026-02-05 18:01:17.380 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 29 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.381 | INFO     | app.tasks:save_vacancies:88 - Вакансия 27 - дубликат: QA Engineer / Инженер тестирования в Единый личный кабинет
+2026-02-05 18:01:17.381 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Эксперт антифрода
+2026-02-05 18:01:17.382 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:50:50+00:00 --> 2026-02-05 14:51:05+03:00
+2026-02-05 18:01:17.382 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 30 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.384 | INFO     | app.tasks:save_vacancies:88 - Вакансия 28 - дубликат: Эксперт антифрода
+2026-02-05 18:01:17.384 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор информационной безопасности
+2026-02-05 18:01:17.385 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:49:57+00:00 --> 2026-02-05 14:49:41+03:00
+2026-02-05 18:01:17.385 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 31 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.386 | INFO     | app.tasks:save_vacancies:88 - Вакансия 29 - дубликат: Архитектор информационной безопасности
+2026-02-05 18:01:17.387 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Главный инженер - Data Science
+2026-02-05 18:01:17.388 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:45:23+00:00 --> 2026-02-05 14:45:14+03:00
+2026-02-05 18:01:17.388 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 32 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.389 | INFO     | app.tasks:save_vacancies:88 - Вакансия 30 - дубликат: Главный инженер - Data Science
+2026-02-05 18:01:17.389 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор (кибербезопасность)
+2026-02-05 18:01:17.391 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:43:21+00:00 --> 2026-02-05 14:43:14+03:00
+2026-02-05 18:01:17.391 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 33 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.393 | INFO     | app.tasks:save_vacancies:88 - Вакансия 31 - дубликат: Архитектор (кибербезопасность)
+2026-02-05 18:01:17.393 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: QA Engineer / Инженер тестирования в Массовые кредитные продукты
+2026-02-05 18:01:17.394 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:39:06+00:00 --> 2026-02-05 14:39:09+03:00
+2026-02-05 18:01:17.394 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 34 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.396 | INFO     | app.tasks:save_vacancies:88 - Вакансия 32 - дубликат: QA Engineer / Инженер тестирования в Массовые кредитные продукты
+2026-02-05 18:01:17.396 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор по использованию программных СКЗИ
+2026-02-05 18:01:17.398 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:39:06+00:00 --> 2026-02-05 14:38:53+03:00
+2026-02-05 18:01:17.398 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 35 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.399 | INFO     | app.tasks:save_vacancies:88 - Вакансия 33 - дубликат: Архитектор по использованию программных СКЗИ
+2026-02-05 18:01:17.399 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик данных (Команда "Smart Collection")
+2026-02-05 18:01:17.401 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:35:29+00:00 --> 2026-02-05 14:35:23+03:00
+2026-02-05 18:01:17.401 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 36 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.403 | INFO     | app.tasks:save_vacancies:88 - Вакансия 34 - дубликат: Аналитик данных (Команда "Smart Collection")
+2026-02-05 18:01:17.403 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data Engineer
+2026-02-05 18:01:17.404 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 11:34:05+00:00 --> 2026-02-05 14:33:24+03:00
+2026-02-05 18:01:17.404 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 37 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.406 | INFO     | app.tasks:save_vacancies:88 - Вакансия 35 - дубликат: Data Engineer
+2026-02-05 18:01:17.406 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Десктоп разработчик
+2026-02-05 18:01:17.407 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.422 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Десктоп разработчик (923) сохранена в БД.
+2026-02-05 18:01:17.422 | INFO     | app.tasks:save_vacancies:86 - Вакансия 36 сохранена: Десктоп разработчик
+2026-02-05 18:01:17.422 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data Scientist / ML Engineer
+2026-02-05 18:01:17.423 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.429 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Data Scientist / ML Engineer (924) сохранена в БД.
+2026-02-05 18:01:17.429 | INFO     | app.tasks:save_vacancies:86 - Вакансия 37 сохранена: Data Scientist / ML Engineer
+2026-02-05 18:01:17.429 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Middle / Senior Разработчик C/C++ (драйвера под Windows)
+2026-02-05 18:01:17.430 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.440 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Middle / Senior Разработчик C/C++ (драйвера под Windows) (925) сохранена в БД.
+2026-02-05 18:01:17.440 | INFO     | app.tasks:save_vacancies:86 - Вакансия 38 сохранена: Middle / Senior Разработчик C/C++ (драйвера под Windows)
+2026-02-05 18:01:17.440 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий специалист по администрированию СУБД Oracle
+2026-02-05 18:01:17.442 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 07:00:26+00:00 --> 2026-02-05 14:02:15+03:00
+2026-02-05 18:01:17.442 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 703 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.444 | INFO     | app.tasks:save_vacancies:88 - Вакансия 39 - дубликат: Ведущий специалист по администрированию СУБД Oracle
+2026-02-05 18:01:17.444 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Главный администратор баз данных
+2026-02-05 18:01:17.445 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.456 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Главный администратор баз данных (926) сохранена в БД.
+2026-02-05 18:01:17.456 | INFO     | app.tasks:save_vacancies:86 - Вакансия 40 сохранена: Главный администратор баз данных
+2026-02-05 18:01:17.456 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: SRE
+2026-02-05 18:01:17.458 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:49:46+00:00 --> 2026-02-05 13:49:53+03:00
+2026-02-05 18:01:17.458 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 40 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.460 | INFO     | app.tasks:save_vacancies:88 - Вакансия 41 - дубликат: SRE
+2026-02-05 18:01:17.460 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Solution Architect  / Архитектор решений в Сервисную команду
+2026-02-05 18:01:17.461 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:45:02+00:00 --> 2026-02-05 13:45:00+03:00
+2026-02-05 18:01:17.462 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 42 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.463 | INFO     | app.tasks:save_vacancies:88 - Вакансия 42 - дубликат: Solution Architect  / Архитектор решений в Сервисную команду
+2026-02-05 18:01:17.463 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Тестировщик, middle+
+2026-02-05 18:01:17.465 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:34:40+00:00 --> 2026-02-05 13:35:07+03:00
+2026-02-05 18:01:17.465 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 44 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.467 | INFO     | app.tasks:save_vacancies:88 - Вакансия 43 - дубликат: Тестировщик, middle+
+2026-02-05 18:01:17.467 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-05 18:01:17.469 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:27:12+00:00 --> 2026-02-05 13:27:24+03:00
+2026-02-05 18:01:17.469 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 46 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.471 | INFO     | app.tasks:save_vacancies:88 - Вакансия 44 - дубликат: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-05 18:01:17.471 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный аналитик
+2026-02-05 18:01:17.474 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:27:03+00:00 --> 2026-02-05 13:27:21+03:00
+2026-02-05 18:01:17.474 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 683 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.476 | INFO     | app.tasks:save_vacancies:88 - Вакансия 45 - дубликат: Системный аналитик
+2026-02-05 18:01:17.476 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Администратор проектов ЦОД
+2026-02-05 18:01:17.478 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 10:27:03+00:00 --> 2026-02-05 13:27:21+03:00
+2026-02-05 18:01:17.478 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 684 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.479 | INFO     | app.tasks:save_vacancies:88 - Вакансия 46 - дубликат: Администратор проектов ЦОД
+2026-02-05 18:01:17.479 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Middle+/Senior iOS Developer
+2026-02-05 18:01:17.481 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
+Спортс''– не просто новостной сайт о спорте. Это технологическая платформа с десятками тысяч RPS, ми --> Спортс''– не просто новостной сайт о спорте. Это технологическая платформа с десятками тысяч RPS, ми
+2026-02-05 18:01:17.481 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-22 10:25:32+00:00 --> 2026-02-05 13:25:37+03:00
+2026-02-05 18:01:17.481 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 48 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.485 | INFO     | app.tasks:save_vacancies:88 - Вакансия 47 - дубликат: Middle+/Senior iOS Developer
+2026-02-05 18:01:17.486 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Программист 1С ERP
+2026-02-05 18:01:17.487 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.494 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Программист 1С ERP (927) сохранена в БД.
+2026-02-05 18:01:17.494 | INFO     | app.tasks:save_vacancies:86 - Вакансия 48 сохранена: Программист 1С ERP
+2026-02-05 18:01:17.494 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Администратор баз данных (DBA MongoDB)
+2026-02-05 18:01:17.495 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
+Наша команда занимается разработкой нового проекта- федеральной системы, обеспечивающей процессы, св --> Наша команда занимается разработкой нового проекта- федеральной системы, обеспечивающей процессы, св
+2026-02-05 18:01:17.496 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-22 09:54:20+00:00 --> 2026-02-05 12:54:18+03:00
+2026-02-05 18:01:17.496 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 54 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.498 | INFO     | app.tasks:save_vacancies:88 - Вакансия 49 - дубликат: Администратор баз данных (DBA MongoDB)
+2026-02-05 18:01:17.498 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Менеджер по активным продажам DevOps
+2026-02-05 18:01:17.500 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 09:27:06+00:00 --> 2026-02-05 12:41:36+03:00
+2026-02-05 18:01:17.500 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 686 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.501 | INFO     | app.tasks:save_vacancies:88 - Вакансия 50 - дубликат: Менеджер по активным продажам DevOps
+2026-02-05 18:01:17.502 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Мобильный разработчик (IOS, Android)
+2026-02-05 18:01:17.503 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - title:
+Frontend разработчик (Java-Script) --> Мобильный разработчик (IOS, Android)
+2026-02-05 18:01:17.503 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - salary:
+от 45 000 до 80 000 ₽ --> до 150 000 ₽
+2026-02-05 18:01:17.503 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
+
+О компании и команде
+
+КомпанияТОВЕКОзанимается разработкой программного обеспечения для бизнеса. На -->   * Товеко - агрегатор отзывов с AI аналитикой, основана в 2019– российская ИТ-компания в сфере упра
+2026-02-05 18:01:17.503 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-22 09:33:53+00:00 --> 2026-02-05 12:32:36+03:00
+2026-02-05 18:01:17.503 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 57 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.507 | INFO     | app.tasks:save_vacancies:88 - Вакансия 51 - дубликат: Мобильный разработчик (IOS, Android)
+2026-02-05 18:01:17.507 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Специалист по защите искусственного интеллекта (MlSecOps)
+2026-02-05 18:01:17.508 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-20 09:30:29+00:00 --> 2026-02-05 12:32:10+03:00
+2026-02-05 18:01:17.508 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 147 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.510 | INFO     | app.tasks:save_vacancies:88 - Вакансия 52 - дубликат: Специалист по защите искусственного интеллекта (MlSecOps)
+2026-02-05 18:01:17.510 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Старший системный инженер Microsoft
+2026-02-05 18:01:17.512 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 09:27:05+00:00 --> 2026-02-05 12:29:49+03:00
+2026-02-05 18:01:17.512 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 687 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.514 | INFO     | app.tasks:save_vacancies:88 - Вакансия 53 - дубликат: Старший системный инженер Microsoft
+2026-02-05 18:01:17.514 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: DevSecOps инженер (DevOps)
+2026-02-05 18:01:17.515 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 09:27:04+00:00 --> 2026-02-05 12:27:14+03:00
+2026-02-05 18:01:17.515 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 689 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.517 | INFO     | app.tasks:save_vacancies:88 - Вакансия 54 - дубликат: DevSecOps инженер (DevOps)
+2026-02-05 18:01:17.517 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель проектов 1С
+2026-02-05 18:01:17.519 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 09:27:05+00:00 --> 2026-02-05 12:27:14+03:00
+2026-02-05 18:01:17.519 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 688 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.520 | INFO     | app.tasks:save_vacancies:88 - Вакансия 55 - дубликат: Руководитель проектов 1С
+2026-02-05 18:01:17.520 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Сетевой инженер
+2026-02-05 18:01:17.522 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.537 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Сетевой инженер (928) сохранена в БД.
+2026-02-05 18:01:17.537 | INFO     | app.tasks:save_vacancies:86 - Вакансия 56 сохранена: Сетевой инженер
+2026-02-05 18:01:17.537 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data analyst/BI-аналитик (Senior)
+2026-02-05 18:01:17.539 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.549 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Data analyst/BI-аналитик (Senior) (929) сохранена в БД.
+2026-02-05 18:01:17.549 | INFO     | app.tasks:save_vacancies:86 - Вакансия 57 сохранена: Data analyst/BI-аналитик (Senior)
+2026-02-05 18:01:17.549 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: System analyst / Системный аналитик (финтех)
+2026-02-05 18:01:17.550 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.566 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия System analyst / Системный аналитик (финтех) (930) сохранена в БД.
+2026-02-05 18:01:17.566 | INFO     | app.tasks:save_vacancies:86 - Вакансия 58 сохранена: System analyst / Системный аналитик (финтех)
+2026-02-05 18:01:17.566 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Product manager
+2026-02-05 18:01:17.567 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.574 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Product manager (931) сохранена в БД.
+2026-02-05 18:01:17.574 | INFO     | app.tasks:save_vacancies:86 - Вакансия 59 сохранена: Product manager
+2026-02-05 18:01:17.574 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Senior Backend Engineer
+2026-02-05 18:01:17.575 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-29 08:26:26+00:00 --> 2026-02-05 11:26:31+03:00
+2026-02-05 18:01:17.575 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 693 опубликована снова (счетчик: 1)
+2026-02-05 18:01:17.577 | INFO     | app.tasks:save_vacancies:88 - Вакансия 60 - дубликат: Senior Backend Engineer
+2026-02-05 18:01:17.577 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный Аналитик 1С
+2026-02-05 18:01:17.578 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.585 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Системный Аналитик 1С (932) сохранена в БД.
+2026-02-05 18:01:17.585 | INFO     | app.tasks:save_vacancies:86 - Вакансия 61 сохранена: Системный Аналитик 1С
+2026-02-05 18:01:17.585 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Deep Learning Engineer в команду ML Planning
+2026-02-05 18:01:17.586 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.597 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Deep Learning Engineer в команду ML Planning (933) сохранена в БД.
+2026-02-05 18:01:17.597 | INFO     | app.tasks:save_vacancies:86 - Вакансия 62 сохранена: Deep Learning Engineer в команду ML Planning
+2026-02-05 18:01:17.597 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Администратор Hadoop
+2026-02-05 18:01:17.599 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.611 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Администратор Hadoop (934) сохранена в БД.
+2026-02-05 18:01:17.611 | INFO     | app.tasks:save_vacancies:86 - Вакансия 63 сохранена: Администратор Hadoop
+2026-02-05 18:01:17.611 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: iOS Developer
+2026-02-05 18:01:17.612 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-05 18:01:17.621 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия iOS Developer (935) сохранена в БД.
+2026-02-05 18:01:17.621 | INFO     | app.tasks:save_vacancies:86 - Вакансия 64 сохранена: iOS Developer
+2026-02-05 18:01:17.621 | INFO     | app.tasks:save_vacancies:94 - Сохранение завершено. Сохранено 21 из 64
+2026-02-05 18:01:17.625 | INFO     | app.tasks:scheduled_parsing_task:41 - Новых вакансий в БД = 21
+2026-02-05 18:05:07.225 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:07.227 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:08.173 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:08.173 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:08.174 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:08.780 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:08.780 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:09.529 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:09.529 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:09.530 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:14.988 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:14.988 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:15.735 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:15.735 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:15.735 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:16.243 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:16.243 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:16.970 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:16.971 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:16.971 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:20.509 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:20.509 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:21.263 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:21.263 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:21.264 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:22.377 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:22.378 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:23.111 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:23.112 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:23.112 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:26.654 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:26.654 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:27.361 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:27.362 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:27.362 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:49.394 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:49.396 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:50.111 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:50.111 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:50.112 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:51.426 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:51.427 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:52.168 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:52.169 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:52.169 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:05:56.313 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:05:56.314 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:05:57.009 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:05:57.010 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:05:57.010 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:04.498 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:04.499 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:05.237 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:05.237 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:05.238 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:15.043 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:15.045 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:15.932 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:15.932 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:15.933 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:42.831 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:42.831 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:45.528 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:45.528 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:45.529 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:48.561 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:48.562 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:49.273 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:49.273 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:49.274 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:49.882 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:49.883 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:50.635 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:50.635 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:50.636 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:06:51.142 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-05 18:06:51.142 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-05 18:06:51.867 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-05 18:06:51.868 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-05 18:06:51.868 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-05 18:11:35.088 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 11 найдена начинаем процесс копирования
+2026-02-05 18:11:35.114 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 20 создана в БД.

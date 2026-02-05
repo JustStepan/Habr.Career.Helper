@@ -11,8 +11,6 @@ function SearchVacancyies() {
     const [error, setError] = useState(null);
     const [hasSearched, setHasSearched] = useState(false);
     const [originalVacancies, setOriginalVacancies] = useState([]);
-
-    const token = localStorage.getItem('access_token');
     
     const handleSearch = async (level, skills, date) => {
         setLoading(true);
@@ -28,10 +26,6 @@ function SearchVacancyies() {
             
             if (skills) {
                 requestData.skills = skills;
-            }
-            
-            if (token){
-                requestData.user_token = token;
             }
             
             if (date) {

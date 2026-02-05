@@ -10,6 +10,7 @@ from app.auth_utils import create_access_token, decode_access_token, hash_passwo
 
 
 security = HTTPBearer()
+security_optional = HTTPBearer(auto_error=False)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -92,10 +93,13 @@ async def get_current_user(
 
 
 async def get_current_user_soft_auth(
-        credentials: HTTPAuthorizationCredentials = Depends(security),
+        credentials: HTTPAuthorizationCredentials = Depends(security_optional), # ВАЖНО. ПОскольку по умолчанию вернется 403 если не поставить auto_error=False
         db: AsyncSession = Depends(get_db)
         ) -> User | None:
-    
+
+    if not credentials:
+        return None
+
     token = credentials.credentials
 
     if not (payload := decode_access_token(token)) or not (user_id := payload.get("user_id")):

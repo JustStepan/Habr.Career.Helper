@@ -1,7 +1,3 @@
-import { useState } from "react";
-
-
-
 function FavoriteVacancyCard({ vacancy, DeleteVacancy}) {
     
     function formatDate(dateString) {
