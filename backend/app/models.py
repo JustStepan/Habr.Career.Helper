@@ -37,6 +37,7 @@ class ParsedVacancy(BaseModel):
     published_date: Optional[datetime]
     skills: List[str]  # ← Скилы внутри модели
 
+
 class VacancyResponse(BaseModel):
     id: int
     level: str
@@ -52,6 +53,10 @@ class VacancyResponse(BaseModel):
     class Config:
         from_attributes = True
 
+
+class SearchVacanciesResponse(BaseModel):
+    vacancies: List[VacancyResponse]
+    original_vacancy_list: List[int] | None
 
 class FavoriteVacancyResponse(BaseModel):
     id: int
@@ -78,7 +83,7 @@ class ParseRequest(BaseModel):
 
 
 class FavoriteRequest(BaseModel):
-    favorite_id: int = Field(description="ID вакансии, добавляемой в избранное")
+    favorite_id: int = Field(description="ID вакансии")
 
 
 class VacanciesDBRequest(BaseModel):

@@ -2,10 +2,11 @@ import { useState } from "react";
 import axiosInstance from '@/utils/axios';
 
 
-function VacancyCard({ vacancy }) {
+function VacancyCard({ vacancy, origVacLst }) {
     // Функция форматирования даты
     const token = localStorage.getItem('access_token');
-    const [isFavorite, setIsFavorite] = useState(false);
+    // сразу находим в списке избранных вакансия или нет, чтобы обобразить правильный статус
+    const [isFavorite, setIsFavorite] = useState(() =>!!(origVacLst?.includes(vacancy.id)));
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 

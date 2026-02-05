@@ -2,6 +2,7 @@ import SearchVacanciesDBForm from '@/components/search/SearchVacanciesDBForm'
 import VacancyList from '@/components/parser/VacancyList';
 import { useState } from 'react';
 import axiosInstance from '@/utils/axios';
+import VacancyCard from '@/components/parser/VacancyCard';
 
 
 function SearchVacancyies() {
@@ -9,6 +10,9 @@ function SearchVacancyies() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [hasSearched, setHasSearched] = useState(false);
+    const [originalVacancies, setOriginalVacancies] = useState([]);
+
+    const token = localStorage.getItem('access_token');
     
     const handleSearch = async (level, skills, date) => {
         setLoading(true);
@@ -26,8 +30,13 @@ function SearchVacancyies() {
                 requestData.skills = skills;
             }
             
+            if (token){
+                requestData.user_token = token;
+            }
+            
             if (date) {
-                requestData.date_limit = date;  // ✅ Правильное имя!
+                requestData.date_limit = date;
+
             }
             
             console.log('Payload для бэкенда:', requestData);
@@ -35,7 +44,10 @@ function SearchVacancyies() {
             const response = await axiosInstance.post('vacancies', requestData);
             
             console.log('Получены данные с БД');
-            setVacancies(response.data);
+            console.log(response)
+            console.log(response.data)
+            setVacancies(response.data.vacancies);
+            setOriginalVacancies(response.data.original_vacancy_list);
             setHasSearched(true);
         } catch (error) {
             setError(error.message);
@@ -72,71 +84,10 @@ function SearchVacancyies() {
                 </div>
             )}
             
-            {hasSearched && <VacancyList vacancies={vacancies} />}
-            {/* ✅ Показываем список только если был хотя бы один запрос */}
+            {hasSearched && <VacancyList vacancies={vacancies} origVacLst={originalVacancies} CardComponent={VacancyCard} />}
         </div>
     );
 }
 
 
 export default SearchVacancyies;
-
-
-// @app.get("/api/vacancies", response_model=List[VacancyResponse])
-// async def get_vacancies(
-//     level: Optional[str] = None,
-//     skills: Optional[str] = Query(None, description="Через запятую: Python,FastAPI"),
-//     date_limit: Optional[datetime] = None,
-//     skip: int = 0,
-//     limit: int = 10,
-//     db: AsyncSession = Depends(get_db)
-// ):
-
-
-// import SearchForm from '@/components/parser/SearchForm';
-// import VacancyList from '@/components/parser/VacancyList';
-
-
-// function ParseVacancies() {
-//   const [vacancies, setVacancies] = useState([]);
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState(null);
-  
-//   const handleSearch = async (level, maxPages, searchQuery) => {
-//     setLoading(true)
-//     setError(null)
-
-//     try {
-//         const response = await axios.post('http://localhost:8000/api/parse', {
-//             level,
-//             maxPages,
-//             searchQuery
-//         });
-//         console.log('Получены данные с сайта Хабр')
-//         setVacancies(response.data)
-//     }   catch (error) {
-//         setError(error.message)
-//         console.error('Ошибка', error);
-//     } finally {
-//         setLoading(false);
-//     }
-//   };
-  
-//   return (
-//     <div className="App">
-//       <h1>Habr Career Parser</h1>
-
-//       <SearchForm onSearch={handleSearch}/>
-      
-//       {/* Отобрази состояние загрузки */}
-//       {loading && <p>Загрузка...</p>}
-      
-//       {/* Отобрази ошибку */}
-//       {error && <p style={{ color: 'red' }}>Ошибка: {error}</p>}
-      
-//       {<VacancyList vacancies={vacancies} />}
-//     </div>
-//   );
-// }
-
-// export default ParseVacancies;

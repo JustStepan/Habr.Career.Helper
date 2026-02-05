@@ -4,12 +4,14 @@ from fastapi import APIRouter, HTTPException, Depends, Path, Query
 
 from app.database import get_db
 from app.crud import get_vacancy_by_id
-from app.models import VacancyResponse, VacanciesDBRequest
-from app.db_models import Vacancy, Skill
+from app.models import SearchVacanciesResponse, VacancyResponse, VacanciesDBRequest
+from app.db_models import Vacancy, Skill, User, FavoriteVacancy
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import desc, select, func
 from sqlalchemy.orm import selectinload
+
+from app.routes.auth import get_current_user_soft_auth
 
 
 router = APIRouter(tags=["crud"])
@@ -26,13 +28,21 @@ async def get_vacancy(
     return vacancy
 
 
-@router.post("/vacancies", response_model=List[VacancyResponse])
+@router.post("/vacancies", response_model=SearchVacanciesResponse)
 async def get_vacancies(
     request: VacanciesDBRequest,
     skip: int = 0,
     limit: int = 20,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user: User | None = Depends(get_current_user_soft_auth)
 ):
+    # Ищем пользователя используем soft auth
+    original_vacancy_list = []
+    if user:
+        query = await db.execute(select(User).where(User.id == user.id).options(selectinload(User.favorite_vacancies)))
+        user = query.scalar_one_or_none()
+        original_vacancy_list = [u.original_vacancy_id for u in user.favorite_vacancies]
+
     # Базовый запрос
     query = select(Vacancy).options(selectinload(Vacancy.skills))
 
@@ -65,7 +75,8 @@ async def get_vacancies(
     
     result = await db.execute(query)
     vacancies = result.scalars().all()
-    return vacancies
+    return {'vacancies': vacancies,
+            'original_vacancy_list': original_vacancy_list}
 
 
 @router.get("/skills/search", response_model=List[str])

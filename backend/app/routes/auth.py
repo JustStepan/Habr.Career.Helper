@@ -55,7 +55,6 @@ async def registration(
         "token_type": "bearer"
     }
 
-
 @router.post("/login", response_model=Token)
 async def login(
     login_data: UserLogin,
@@ -73,9 +72,9 @@ async def login(
 
 
 async def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(security),
-    db: AsyncSession = Depends(get_db)
-) -> User:
+        credentials: HTTPAuthorizationCredentials = Depends(security),
+        db: AsyncSession = Depends(get_db)
+        ) -> User:
     
     token = credentials.credentials
     
@@ -89,6 +88,26 @@ async def get_current_user(
     if not (user := result.scalar_one_or_none()):
         raise HTTPException(401, "Пользователь не найден")
     
+    return user
+
+
+async def get_current_user_soft_auth(
+        credentials: HTTPAuthorizationCredentials = Depends(security),
+        db: AsyncSession = Depends(get_db)
+        ) -> User | None:
+    
+    token = credentials.credentials
+
+    if not (payload := decode_access_token(token)) or not (user_id := payload.get("user_id")):
+        return None
+
+    result = await db.execute(
+        select(User).where(User.id == user_id)
+    )
+
+    if not (user := result.scalar_one_or_none()):
+        return None
+ 
     return user
 
 @router.get("/me", response_model=UserResponse)

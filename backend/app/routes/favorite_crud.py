@@ -16,6 +16,28 @@ from app.routes.auth import get_current_user
 router = APIRouter(tags=["favorite_crud"])
 
 
+@router.delete("/favorite")
+async def delete_from_favorite(
+    request: FavoriteRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    print(request.favorite_id)
+    query = await db.execute(
+        select(FavoriteVacancy)
+        .options(selectinload(FavoriteVacancy.skills))
+        .where(FavoriteVacancy.id == request.favorite_id)
+    )
+    favorite_vacancy = query.scalar_one_or_none()
+
+    if not favorite_vacancy:
+        raise HTTPException(404, "Вакансия не найдена")
+
+    await db.delete(favorite_vacancy)
+    await db.commit()
+    logger.info(f"Вакансия {request.favorite_id} удалена.")
+
+    return {"result": True}
+
 @router.post("/favorite", response_model=FavoriteVacancyResponse, status_code=201)
 async def add_to_favorites(
     request: FavoriteRequest,

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axiosInstance from '@/utils/axios';
 import VacancyList from '@/components/parser/VacancyList';
+import FavoriteVacancyCard from '@/components/parser/FavoriteVacancyCard';
 
 function FavoritesPage() {
     const [favorites, setFavorites] = useState([]);
@@ -34,7 +35,7 @@ function FavoritesPage() {
 
             {loading && <p>Загрузка...</p>}
             {error && <p className="text-red-700">Ошибка: {error}</p>}
-            {!loading && <VacancyList vacancies={favorites} />}
+            {!loading && <VacancyList vacancies={favorites} CardComponent={FavoriteVacancyCard} />}
         </div>
     );
 }
