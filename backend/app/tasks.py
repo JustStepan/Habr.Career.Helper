@@ -1,15 +1,16 @@
 from datetime import datetime, timezone
-from typing import List
+from typing import Any, Dict, List
 
 import asyncio
 import httpx
 
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.logger_config import logger
 from app.database import SessionLocal
 from app.parser import parse_habr_vacancies
 from app.crud import create_vacancy_with_skills, create_parsing_job, get_latest_vacancy_urls
-from app.db_models import ParseStatus
+from app.db_models import ParseStatus, Vacancy
 from app.models import ParsedVacancy
 
 
@@ -93,3 +94,41 @@ async def save_vacancies(db: AsyncSession, vacancies: List[ParsedVacancy]) -> in
     
     logger.info(f"Сохранение завершено. Сохранено {saved_count} из {len(vacancies)}")
     return saved_count
+
+
+async def check_page_status(url: str) -> Dict[str, Any]:
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            response = await client.get(url)
+            if response.status_code == 404:
+                return {"status": "not found", "code": 404}
+            return {"status": "ok", "code": response.status_code}
+    except Exception as e:
+        return {"status": "error", "message": str(e), "code": 500}
+
+
+async def check_vacancies_availability(db_session_factory):
+    """Проверка вакансий на доступность. Если недоступно (404) флаг в модели is_active = False
+        ВАЖНО === Нужно потом будет установить лимит запросов, чтобы не дергать все вакансии
+    """
+    async with db_session_factory() as db:
+        # Берем только активные вакансии
+        result = await db.execute(select(Vacancy).where(Vacancy.is_active == True))
+        vacancies = result.scalars().all()
+        
+        logger.info(f"Начинем проверку {len(vacancies)} вакансий на 404...")
+
+        for i in range(0, len(vacancies), 10):  # Проверяем пачками по 10 штук
+            chunk = vacancies[i:i + 10]
+            tasks = [check_page_status(v.url) for v in chunk]
+            
+            # Выполняем 10 запросов параллельно
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            for v, res in zip(chunk, results):
+                if isinstance(res, dict) and res.get('code') == 404:
+                    v.is_active = False
+                    logger.info(f"Вакансия {v.id} (404) помечена как неактивная")
+            
+            await db.commit()  # Сохраняем результат после каждой пачки
+            await asyncio.sleep(1)  # Небольшая пауза, чтобы не спамить сайт

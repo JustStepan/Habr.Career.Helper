@@ -11,7 +11,7 @@ from app.logger_config import logger
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.scheduler import run_parsing_now
+from app.scheduler import run_parsing_now, run_vacancies_404_check
 
 
 router = APIRouter(tags=["parser"])
@@ -56,6 +56,16 @@ async def manual_parse():
     """Запустить парсинг вручную (для тестирования)"""
     try:
         await run_parsing_now()
+        return {"status": "success", "message": "Парсинг запущен"}
+    except Exception as e:
+        raise HTTPException(500, detail=str(e))
+
+
+@router.post("/parse/404_check")
+async def manual_404_check():
+    """Запустить парсинг вручную (для тестирования)"""
+    try:
+        await run_vacancies_404_check()
         return {"status": "success", "message": "Парсинг запущен"}
     except Exception as e:
         raise HTTPException(500, detail=str(e))

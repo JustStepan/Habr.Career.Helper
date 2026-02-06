@@ -2,7 +2,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from pytz import timezone
 
-from app.tasks import scheduled_parsing_task
+from app.database import SessionLocal
+from app.tasks import check_vacancies_availability, scheduled_parsing_task
 from app.logger_config import logger
 
 # Создаем экземпляр планировщика
@@ -18,18 +19,31 @@ def configure_scheduler():
     scheduler.add_job(
         func=scheduled_parsing_task,
         trigger=CronTrigger(
-            hour='8,9,10,11,12,14,15,16,17,18,19,20,22,4',
+            hour='8,9,10,11,12,14,15,16,17,18,19,20,22',
             minute=0,
             timezone=moscow_tz
         ),
         id='parse_vacancies',
         replace_existing=True
     )
-    
     logger.info("Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)")
 
+    scheduler.add_job(
+        func=check_vacancies_availability,
+        args=[SessionLocal], # Передаем фабрику сессий
+        trigger=CronTrigger(hour=5, minute=0, timezone=moscow_tz),
+        id='check_404_status',
+        replace_existing=True
+    )
+    logger.info("Scheduler настроен: проверка вакансий (404) 05:00")
+    
 
 async def run_parsing_now():
     """Запустить парсинг немедленно (для тестирования)"""
     logger.info("Запуск парсинга вручную")
     await scheduled_parsing_task()
+
+
+async def run_vacancies_404_check():
+    logger.info("Запуск парсинга вручную")
+    await check_vacancies_availability(SessionLocal)

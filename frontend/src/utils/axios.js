@@ -38,7 +38,7 @@ axiosInstance.interceptors.response.use(
         // Обработка ошибки 401 (токен истёк или невалиден)
         if (error.response?.status === 401) {
             localStorage.removeItem('access_token');
-            window.location.href = '/login';
+            window.location.href = '/habr-vacancies/search'; // Это важная строка. Это редирект внутри браузера Interceptor НЕ зависит от basename="/habr-vacancies в main.jsx
         }
         
         return Promise.reject(error);

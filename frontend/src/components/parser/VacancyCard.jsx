@@ -99,14 +99,18 @@ function VacancyCard({ vacancy, origVacLst }) {
                 </p>
             </div>
             <div className="flex items-start justify-between gap-4 mb-2">
-                <a 
+                {!vacancy.is_active 
+                ? (<a 
                     href={vacancy.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className=" text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition"
                 >
                     Подробнее →
-                </a>
+                </a>) : (
+                    <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-gray-500 text-white rounded"
+                    >Удалена</p>
+                )}
                 {token && (isFavorite ? (
                     <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-green-500 text-white rounded"
                     >В избранном</p>
