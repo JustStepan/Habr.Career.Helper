@@ -57,7 +57,7 @@ class Vacancy(Base):
     salary = Column(String(200), nullable=False)
     description = Column(Text, nullable=False)
     published_date = Column(DateTime(timezone=True), server_default=text("CURRENT_TIMESTAMP"), nullable=True)
-    is_active = Column(Boolean, default=True)
+    is_active = Column(Boolean, default=True, server_default=text('true'))
     republish_count = Column(Integer, default=0, nullable=False)
     # Связь многие-ко-многим
     skills = relationship(
