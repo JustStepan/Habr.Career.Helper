@@ -918,3 +918,33 @@ Cбер продолжает реализовывать масштабный п�
 2026-02-06 15:32:59.807 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
 2026-02-06 15:32:59.807 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
 2026-02-06 15:32:59.807 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-06 15:37:58.464 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-06 15:37:58.465 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-06 15:37:58.909 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-06 15:37:58.909 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-06 15:37:58.909 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-06 15:37:58.909 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-06 15:39:44.989 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-06 15:39:44.990 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-06 15:39:45.446 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-06 15:39:45.446 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-06 15:39:45.446 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-06 15:39:45.447 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-06 15:39:46.862 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-06 15:39:46.863 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-06 15:39:47.218 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-06 15:39:47.218 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-06 15:39:47.218 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-06 15:39:47.218 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-06 15:42:16.331 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-06 15:42:16.332 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-06 15:42:16.775 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-06 15:42:16.775 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-06 15:42:16.775 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-06 15:42:16.776 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-06 15:42:22.130 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-06 15:42:22.131 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-06 15:42:22.492 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-06 15:42:22.492 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-06 15:42:22.492 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-06 15:42:22.493 | INFO     | app.main:lifespan:16 - Scheduler запущен
