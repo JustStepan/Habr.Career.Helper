@@ -5,9 +5,9 @@ function TextForm() {
     const [displayedText, setDisplayedText] = useState('');
 
     function handleSubmit(e) {
-        e.preventDefault();  // ✅ Предотвращаем перезагрузку
-        setDisplayedText(inputText);  // Копируем текст для отображения
-        setInputText('');  // Очищаем input (опционально)
+        e.preventDefault();  // ✅  Предотвращаем перезагрузку
+        setDisplayedText(inputText);  //  Копируем текст для отображения
+        setInputText('');  // Очищаем input  (опционально)
     }
 
     return (
