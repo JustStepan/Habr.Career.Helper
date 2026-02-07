@@ -3,7 +3,7 @@ import FavoriteVacancyCard from "./FavoriteVacancyCard";
 import VacancyCard from "./VacancyCard";
 import axiosInstance from '@/utils/axios';
 
-function VacancyList({ vacancies, origVacLst, CardComponent = VacancyCard }) {
+function VacancyList({ vacancies, favoritesMap, CardComponent = VacancyCard }) {
 
     const [workVacancies, setWorkVacancies] = useState(vacancies);
     const [error, setError] = useState(null);
@@ -53,7 +53,7 @@ function VacancyList({ vacancies, origVacLst, CardComponent = VacancyCard }) {
                 <CardComponent 
                     key={vacancy.id} 
                     vacancy={vacancy} 
-                    origVacLst={origVacLst} 
+                    favoritesMap={favoritesMap} 
                     DeleteVacancy={DeleteVacancy}
                 />
             ))}

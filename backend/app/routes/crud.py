@@ -37,11 +37,11 @@ async def get_vacancies(
     user: User | None = Depends(get_current_user_soft_auth)
 ):
     # Ищем пользователя используем soft auth
-    original_vacancy_list = []
+    favorites_map = {}
     if user:
         query = await db.execute(select(User).where(User.id == user.id).options(selectinload(User.favorite_vacancies)))
         user = query.scalar_one_or_none()
-        original_vacancy_list = [u.original_vacancy_id for u in user.favorite_vacancies]
+        favorites_map = {u.original_vacancy_id: u.id for u in user.favorite_vacancies}
 
     # Базовый запрос
     query = select(Vacancy).options(selectinload(Vacancy.skills))
@@ -76,7 +76,7 @@ async def get_vacancies(
     result = await db.execute(query)
     vacancies = result.scalars().all()
     return {'vacancies': vacancies,
-            'original_vacancy_list': original_vacancy_list}
+            'favorites_map': favorites_map}
 
 
 @router.get("/skills/search", response_model=List[str])

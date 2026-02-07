@@ -1,14 +1,18 @@
 import { useState } from "react";
 import axiosInstance from '@/utils/axios';
+import { useNavigate } from 'react-router-dom';
 
 
-function VacancyCard({ vacancy, origVacLst }) {
+function VacancyCard({ vacancy, favoritesMap }) {
     // Функция форматирования даты
     const token = localStorage.getItem('access_token');
     // сразу находим в списке избранных вакансия или нет, чтобы обобразить правильный статус
-    const [isFavorite, setIsFavorite] = useState(() =>!!(origVacLst?.includes(vacancy.id)));
+    const [isFavorite, setIsFavorite] = useState(() => vacancy.id in (favoritesMap || {}));
+    const [favoriteVacId, setFavoriteVacId] = useState(() => favoritesMap?.[vacancy.id] || null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+
+    const navigate = useNavigate();
 
 
     function formatDate(dateString) {
@@ -33,7 +37,10 @@ function VacancyCard({ vacancy, origVacLst }) {
         try {
             const response = await axiosInstance.post('favorite', {favorite_id});
             console.log('response --> ', response)
+            console.log('ddddd', response.data.id)
+            setFavoriteVacId(response.data.id)
             setIsFavorite(true)
+
         } catch (error) {
             setError(error.message);
             console.error('Ошибка', error);
@@ -43,6 +50,14 @@ function VacancyCard({ vacancy, origVacLst }) {
 
         console.log('Вакансия добавлена в избранное ID = ', favorite_id);
     }
+
+    const handleVacancyClick = () => {
+        // в зависимости от isFavorite формируем маршрут. 
+        const route = isFavorite ? `/favorite/${favoriteVacId}` : `/vacancy/${vacancy.id}`;
+        navigate(route, { 
+            state: { vacancy }
+        });
+    };
 
 
     return (
@@ -106,13 +121,21 @@ function VacancyCard({ vacancy, origVacLst }) {
                     rel="noopener noreferrer"
                     className=" text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition"
                 >
-                    Подробнее →
+                    На Хабр →
                 </a>) : (
                     <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-gray-500 text-white rounded"
                     >Удалена</p>
                 )}
+                <div 
+                    onClick={handleVacancyClick}  // ← Привязываем обработчик. Все тоже самое делаем для избранных вакансий
+                    className="cursor-pointer hover:shadow-lg"
+                >
+                    <p className=" transition text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-green-500 text-white rounded">
+                        Детали →
+                    </p>
+                </div>
                 {token && (isFavorite ? (
-                    <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-green-500 text-white rounded"
+                    <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-gray-500 text-white rounded"
                     >В избранном</p>
                 ) : (
                     <button 
@@ -120,7 +143,7 @@ function VacancyCard({ vacancy, origVacLst }) {
                         onClick={() => HandleAddToFavorites(vacancy.id)}
                         className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition"
                     >
-                        В избранное
+                        В избранное →
                     </button>
                 )
                 )}

@@ -54,13 +54,10 @@ class VacancyResponse(BaseModel):
         from_attributes = True
 
 
-class SearchVacanciesResponse(BaseModel):
-    vacancies: List[VacancyResponse]
-    original_vacancy_list: List[int] | None
-
 class FavoriteVacancyResponse(BaseModel):
     id: int
     owner_id: int
+    user_notes: str
     original_vacancy_id: int
     level: str
     title: str
@@ -74,6 +71,10 @@ class FavoriteVacancyResponse(BaseModel):
     class Config:
         from_attributes = True
 
+
+class SearchVacanciesResponse(BaseModel):
+    vacancies: List[VacancyResponse] | List[FavoriteVacancyResponse]
+    favorites_map: dict[int, int] | None  # {original_vacancy_id: favorite_vacancy_id}
 
 class ParseRequest(BaseModel):
     """Запрос на парсинг"""
@@ -102,3 +103,6 @@ class ParsingStatusResponse(BaseModel):
     class Config:
         from_attributes = True
 
+
+class PatchRequest(BaseModel):
+    user_notes: str = Field(..., max_length=5000, description="Заметки пользователя")

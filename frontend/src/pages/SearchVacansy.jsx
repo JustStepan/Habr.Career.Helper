@@ -10,7 +10,7 @@ function SearchVacancyies() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [hasSearched, setHasSearched] = useState(false);
-    const [originalVacancies, setOriginalVacancies] = useState([]);
+    const [favoritesMap, setFavoritesMap] = useState({});
     
     const handleSearch = async (level, skills, date) => {
         setLoading(true);
@@ -41,7 +41,7 @@ function SearchVacancyies() {
             console.log(response)
             console.log(response.data)
             setVacancies(response.data.vacancies);
-            setOriginalVacancies(response.data.original_vacancy_list);
+            setFavoritesMap(response.data.favorites_map);
             setHasSearched(true);
         } catch (error) {
             setError(error.message);
@@ -78,7 +78,7 @@ function SearchVacancyies() {
                 </div>
             )}
             
-            {hasSearched && <VacancyList vacancies={vacancies} origVacLst={originalVacancies} CardComponent={VacancyCard} />}
+            {hasSearched && <VacancyList vacancies={vacancies} favoritesMap={favoritesMap} CardComponent={VacancyCard} />}
         </div>
     );
 }

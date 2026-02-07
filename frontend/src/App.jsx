@@ -35,7 +35,7 @@ function App() {
     const handleLogout = () => {
         localStorage.removeItem('access_token');
         setUser(null);  // ← Очистить данные пользователя
-        navigate('/login');
+        navigate('/search');
     };
 
     // Показываем индикатор загрузки

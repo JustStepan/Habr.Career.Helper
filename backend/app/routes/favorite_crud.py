@@ -4,7 +4,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
 from app.database import get_db
-from app.models import FavoriteRequest, FavoriteVacancyResponse
+from app.models import FavoriteRequest, FavoriteVacancyResponse, PatchRequest
 from app.logger_config import logger
 
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -37,6 +37,40 @@ async def delete_from_favorite(
     logger.info(f"Вакансия {request.favorite_id} удалена.")
 
     return {"result": True}
+
+from app.models import PatchRequest, FavoriteVacancyResponse
+
+@router.patch("/favorite/{id}", response_model=FavoriteVacancyResponse)
+async def patch_edit_favorite_vacancy(
+    id: int,
+    patch_data: PatchRequest,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    print(patch_data.user_notes, id)
+    logger.info(f'Добавляем заметку пользователя{current_user.username}: {patch_data.user_notes}\nдля избранной вакансии {id}')
+    query = (
+        select(FavoriteVacancy)
+        .options(selectinload(FavoriteVacancy.skills))
+        .where(FavoriteVacancy.id == id)
+    )
+    result = await db.execute(query)
+    favorite_vacancy = result.scalar_one_or_none()
+
+    if not favorite_vacancy:
+        raise HTTPException(404, "Вакансия не найдена")
+    
+    if favorite_vacancy.owner_id != current_user.id:
+        raise HTTPException(403, "Нет прав для редактирования")
+
+    favorite_vacancy.user_notes = patch_data.user_notes
+
+    await db.commit()
+    await db.refresh(favorite_vacancy)
+    logger.info(f'Заметка о вакансии успешно создана')
+
+    return favorite_vacancy
+
 
 @router.post("/favorite", response_model=FavoriteVacancyResponse, status_code=201)
 async def add_to_favorites(
