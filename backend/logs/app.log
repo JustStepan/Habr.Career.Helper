@@ -1,1360 +1,215 @@
-2026-02-07 13:29:12.612 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 13:29:12.653 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 22 создана в БД.
-2026-02-07 13:33:43.134 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:33:43.136 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:33:44.071 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:33:44.071 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:33:44.071 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:33:44.072 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:33:48.420 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:33:48.420 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:33:49.145 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:33:49.146 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:33:49.146 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:33:49.147 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:33:51.979 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:33:51.979 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:33:52.679 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:33:52.679 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:33:52.680 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:33:52.680 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:33:58.541 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:33:58.541 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:33:59.261 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:33:59.262 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:33:59.262 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:33:59.262 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:34:04.011 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:34:04.011 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:34:04.735 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:34:04.736 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:34:04.736 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:34:04.736 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:34:05.344 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:34:05.345 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:34:09.468 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:34:09.468 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:34:09.468 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:34:09.469 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:34:10.987 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:34:10.987 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:34:21.490 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:34:21.492 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:34:21.492 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:34:21.492 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:35:11.672 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 22 удалена.
-2026-02-07 13:40:22.203 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 110 найдена начинаем процесс копирования
-2026-02-07 13:40:22.222 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 23 создана в БД.
-2026-02-07 13:40:46.215 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 947 найдена начинаем процесс копирования
-2026-02-07 13:40:46.230 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 24 создана в БД.
-2026-02-07 13:41:04.076 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 13:41:04.096 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 25 создана в БД.
-2026-02-07 13:41:05.093 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 284 найдена начинаем процесс копирования
-2026-02-07 13:41:05.106 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 26 создана в БД.
-2026-02-07 13:41:06.560 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 952 найдена начинаем процесс копирования
-2026-02-07 13:41:06.575 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 27 создана в БД.
-2026-02-07 13:41:07.425 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 297 найдена начинаем процесс копирования
-2026-02-07 13:41:07.439 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 28 создана в БД.
-2026-02-07 13:42:31.877 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 57 найдена начинаем процесс копирования
-2026-02-07 13:42:31.904 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 29 создана в БД.
-2026-02-07 13:42:32.576 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 918 найдена начинаем процесс копирования
-2026-02-07 13:42:32.595 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 30 создана в БД.
-2026-02-07 13:42:34.008 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 796 найдена начинаем процесс копирования
-2026-02-07 13:42:34.023 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 31 создана в БД.
-2026-02-07 13:42:34.858 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 298 найдена начинаем процесс копирования
-2026-02-07 13:42:34.877 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 32 создана в БД.
-2026-02-07 13:42:36.207 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 803 найдена начинаем процесс копирования
-2026-02-07 13:42:36.224 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 33 создана в БД.
-2026-02-07 13:42:36.922 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 801 найдена начинаем процесс копирования
-2026-02-07 13:42:36.931 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 34 создана в БД.
-2026-02-07 13:46:12.622 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:46:12.623 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:46:13.462 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:46:13.463 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:46:13.463 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:46:13.464 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:46:16.397 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 13:46:16.397 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 13:46:17.103 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 13:46:17.104 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 13:46:17.104 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 13:46:17.104 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 13:53:01.794 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 34 удалена.
-2026-02-07 13:53:02.132 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 33 удалена.
-2026-02-07 13:53:02.293 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 32 удалена.
-2026-02-07 13:53:02.458 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 31 удалена.
-2026-02-07 13:53:02.626 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 30 удалена.
-2026-02-07 13:53:02.789 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 29 удалена.
-2026-02-07 13:53:02.959 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 28 удалена.
-2026-02-07 13:53:03.107 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 27 удалена.
-2026-02-07 13:53:03.271 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 26 удалена.
-2026-02-07 13:53:03.426 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 25 удалена.
-2026-02-07 13:53:03.608 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 24 удалена.
-2026-02-07 13:53:03.756 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 23 удалена.
-2026-02-07 13:53:12.313 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 13:53:12.341 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 35 создана в БД.
-2026-02-07 14:00:00.043 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
-2026-02-07 14:00:00.044 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
-2026-02-07 14:00:00.044 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
-2026-02-07 14:00:30.359 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 1: 
-2026-02-07 14:00:30.360 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 0 вакансий
-2026-02-07 14:00:31.361 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 2/20...
-2026-02-07 14:00:32.650 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 1/25: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:33.660 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 2/25: Инженер по балансировке
-2026-02-07 14:00:34.794 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 3/25: Выездной инженер технической поддержки
-2026-02-07 14:00:36.018 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 4/25: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:37.047 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 5/25: FullStack QA Engineer (Java)
-2026-02-07 14:00:37.959 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 6/25: Выездной инженер технической поддержки
-2026-02-07 14:00:38.900 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 7/25: Выездной инженер технической поддержки
-2026-02-07 14:00:39.908 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 8/25: Выездной инженер технической поддержки
-2026-02-07 14:00:40.929 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 9/25: Специалист технической поддержки (первая линия)
-2026-02-07 14:00:41.962 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 10/25: 1С Программист
-2026-02-07 14:00:42.903 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 11/25: Системный аналитик
-2026-02-07 14:00:43.905 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 12/25: Network Security Engineer
-2026-02-07 14:00:45.036 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 13/25: Главный системный администратор Linux
-2026-02-07 14:00:46.008 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 14/25: Менеджер команды AI-тренеров GigaChat
-2026-02-07 14:00:46.976 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 15/25: Сервисный инженер
-2026-02-07 14:00:48.057 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 16/25: Системный аналитик
-2026-02-07 14:00:49.020 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 17/25: Инженер технической поддержки АРМ
-2026-02-07 14:00:49.941 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 18/25: Координатор заявок service desk
-2026-02-07 14:00:50.869 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 19/25: Специалист техподдержки (ServiceDesk 1L)
-2026-02-07 14:00:51.825 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 20/25: Middle/Senior Golang Developer
-2026-02-07 14:00:52.949 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 21/25: Ведущий специалист по администрированию СУБД Oracle
-2026-02-07 14:00:53.911 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 22/25: Разработчик [Android]
-2026-02-07 14:00:54.963 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 23/25: Эксперт по удаленному доступу (МСЭ)
-2026-02-07 14:00:55.986 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 24/25: Специалист технической поддержки
-2026-02-07 14:00:57.358 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 25/25: Middle/Senior Mobile Developer (Android, Kotlin Multiplatfrom)
-2026-02-07 14:00:57.860 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 2: Выездной инженер технической поддержки (https://career.habr.com/vacancies/1000161379)
-2026-02-07 14:00:57.861 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 2: добавлено 6 вакансий
-2026-02-07 14:00:57.861 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 2 - найден дубликат
-2026-02-07 14:00:57.861 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 6
-2026-02-07 14:00:57.861 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
-Всего вакансий: 6
-2026-02-07 14:00:57.861 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:57.867 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст --> 
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст
-2026-02-07 14:00:57.867 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-21 14:27:37+00:00 --> 2026-02-06 17:27:23+03:00
-2026-02-07 14:00:57.867 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 88 опубликована снова (счетчик: 1)
-2026-02-07 14:00:57.874 | INFO     | app.tasks:save_vacancies:89 - Вакансия 1 - дубликат: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:57.874 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер по балансировке
-2026-02-07 14:00:57.877 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст --> 
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст
-2026-02-07 14:00:57.877 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-21 14:27:37+00:00 --> 2026-02-06 17:27:23+03:00
-2026-02-07 14:00:57.877 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 89 опубликована снова (счетчик: 1)
-2026-02-07 14:00:57.883 | INFO     | app.tasks:save_vacancies:89 - Вакансия 2 - дубликат: Инженер по балансировке
-2026-02-07 14:00:57.883 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Выездной инженер технической поддержки
-2026-02-07 14:00:57.885 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 14:27:07+00:00 --> 2026-02-06 17:27:23+03:00
-2026-02-07 14:00:57.886 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 90 опубликована снова (счетчик: 1)
-2026-02-07 14:00:57.890 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: Выездной инженер технической поддержки
-2026-02-07 14:00:57.890 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:57.893 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст --> 
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст
-2026-02-07 14:00:57.893 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-21 14:27:37+00:00 --> 2026-02-06 17:27:23+03:00
-2026-02-07 14:00:57.893 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 91 опубликована снова (счетчик: 1)
-2026-02-07 14:00:57.896 | INFO     | app.tasks:save_vacancies:89 - Вакансия 4 - дубликат: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 14:00:57.896 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: FullStack QA Engineer (Java)
-2026-02-07 14:00:57.899 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
-2026-02-07 14:00:57.923 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия FullStack QA Engineer (Java) (965) сохранена в БД.
-2026-02-07 14:00:57.924 | INFO     | app.tasks:save_vacancies:87 - Вакансия 5 сохранена: FullStack QA Engineer (Java)
-2026-02-07 14:00:57.924 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Выездной инженер технической поддержки
-2026-02-07 14:00:57.925 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 13:27:08+00:00 --> 2026-02-06 17:00:09+03:00
-2026-02-07 14:00:57.925 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 98 опубликована снова (счетчик: 1)
-2026-02-07 14:00:57.927 | INFO     | app.tasks:save_vacancies:89 - Вакансия 6 - дубликат: Выездной инженер технической поддержки
-2026-02-07 14:00:57.927 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 1 из 6
-2026-02-07 14:00:57.931 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 1
-2026-02-07 20:50:20.946 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 284 найдена начинаем процесс копирования
-2026-02-07 20:50:20.965 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 36 создана в БД.
-2026-02-07 20:50:23.143 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 947 найдена начинаем процесс копирования
-2026-02-07 20:50:23.162 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 37 создана в БД.
-2026-02-07 21:40:50.991 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 297 найдена начинаем процесс копирования
-2026-02-07 21:40:51.009 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 38 создана в БД.
-2026-02-07 21:44:53.634 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 305 найдена начинаем процесс копирования
-2026-02-07 21:44:53.653 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 39 создана в БД.
-2026-02-07 21:45:27.290 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 39 удалена.
-2026-02-07 21:45:27.486 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 38 удалена.
-2026-02-07 21:45:27.686 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 37 удалена.
-2026-02-07 21:45:27.853 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 36 удалена.
-2026-02-07 21:45:27.997 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 35 удалена.
-2026-02-07 21:45:28.187 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 21 удалена.
-2026-02-07 21:45:28.336 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 20 удалена.
-2026-02-07 21:45:28.503 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 19 удалена.
-2026-02-07 21:45:28.668 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 17 удалена.
-2026-02-07 21:45:45.833 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 90 найдена начинаем процесс копирования
-2026-02-07 21:45:45.857 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 40 создана в БД.
-2026-02-07 21:49:18.127 | INFO     | app.routes.favorite_crud:add_to_favorites:68 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 21:49:18.151 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Любимая вакансия 41 создана в БД.
-2026-02-07 21:52:43.431 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:52:43.433 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:52:44.316 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:52:44.316 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:52:44.316 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:52:44.317 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:52:47.345 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:52:47.346 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:52:48.051 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:52:48.051 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:52:48.051 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:52:48.052 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:52:51.287 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:52:51.288 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:52:55.419 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:52:55.420 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:52:55.420 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:52:55.420 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:52:56.533 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:52:56.533 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:08.124 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:08.124 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:08.124 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:08.125 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:10.148 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:10.148 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:10.850 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:10.851 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:10.851 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:10.851 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:11.459 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:11.459 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:12.169 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:12.170 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:12.170 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:12.170 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:13.182 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:13.183 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:13.907 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:13.908 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:13.908 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:13.908 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:15.425 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:15.425 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:16.131 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:16.131 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:16.131 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:16.132 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:19.669 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:19.670 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:20.380 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:20.380 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:20.380 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:20.381 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:22.101 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:22.101 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:53:22.805 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:53:22.805 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:53:22.805 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:53:22.806 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:53:25.437 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:53:25.438 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:58:06.894 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:58:06.894 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:58:06.895 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:58:06.895 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:58:59.663 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:58:59.663 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:00.569 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:00.569 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:00.569 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:00.570 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:08.147 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:08.148 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:17.715 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:17.716 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:17.716 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:17.716 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:21.960 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:21.961 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:25.900 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:25.901 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:25.901 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:25.901 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:26.913 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:26.913 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:27.634 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:27.634 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:27.635 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:27.635 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:28.242 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:28.243 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:28.936 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:28.936 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:28.936 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:28.937 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:31.970 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:31.970 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:32.682 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:32.683 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:32.683 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:32.683 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:44.002 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:44.003 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:44.705 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:44.705 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:44.705 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:44.706 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:45.313 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:45.313 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:46.027 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:46.027 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:46.027 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:46.028 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:46.635 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:46.635 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:47.333 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:47.333 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:47.333 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:47.334 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:47.941 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:47.941 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:48.653 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:48.654 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:48.654 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:48.654 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 21:59:56.739 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 21:59:56.740 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 21:59:57.445 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 21:59:57.446 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 21:59:57.446 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 21:59:57.446 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:00:00.125 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
-2026-02-07 22:00:00.125 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
-2026-02-07 22:00:00.125 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
-2026-02-07 22:00:00.682 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:00:00.683 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:00:01.381 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:00:01.382 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:00:01.382 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:00:01.382 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:00:02.799 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:00:02.800 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:00:03.523 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:00:03.523 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:00:03.523 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:00:03.524 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:00:05.040 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:00:05.040 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:00:33.292 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:00:33.293 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:00:33.293 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:00:33.294 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:00:34.812 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:00:34.812 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:00:35.508 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:00:35.508 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:00:35.508 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:00:35.509 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:01:41.614 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:01:41.615 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:01:44.951 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:01:44.952 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:01:44.952 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:01:44.953 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:01:46.269 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:01:46.269 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:01:46.997 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:01:46.997 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:01:46.997 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:01:46.998 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:01:47.807 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:01:47.808 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:01:52.379 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:01:52.379 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:01:52.379 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:01:52.380 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:02:04.409 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:02:04.410 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:02:05.125 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:02:05.126 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:02:05.126 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:02:05.127 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:02:06.542 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:02:06.542 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:02:07.242 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:02:07.242 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:02:07.243 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:02:07.243 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:02:17.351 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:02:17.351 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:02:27.864 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:02:27.865 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:02:27.865 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:02:27.865 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:02:31.505 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:02:31.505 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:02:32.280 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:02:32.281 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:02:32.281 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:02:32.281 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:02:33.293 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:02:33.293 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:03:37.338 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:03:37.338 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:03:37.338 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:03:37.339 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:03:43.808 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:03:43.808 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:03:49.846 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:03:49.846 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:03:49.846 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:03:49.847 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:06:03.260 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:06:03.260 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:06:39.585 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:06:39.585 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:06:39.585 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:06:39.586 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:06:44.036 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:06:44.036 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:06:44.744 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:06:44.745 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:06:44.745 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:06:44.745 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:06:45.554 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:06:45.554 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:06:46.292 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:06:46.293 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:06:46.293 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:06:46.293 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:06:47.405 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:06:47.406 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:06:48.111 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:06:48.111 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:06:48.111 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:06:48.112 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:02.870 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:02.872 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:03.578 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:03.579 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:03.579 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:03.579 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:27.237 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:27.237 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:27.945 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:27.945 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:27.945 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:27.946 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:29.060 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:29.060 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:29.755 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:29.755 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:29.755 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:29.756 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:35.818 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:35.818 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:42.193 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:42.193 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:42.193 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:42.194 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:45.735 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:45.735 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:48.283 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:48.283 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:48.283 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:48.284 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:53.239 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:53.239 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:07:53.930 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:07:53.931 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:07:53.931 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:07:53.931 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:07:56.562 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:07:56.562 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:01.732 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:01.733 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:01.733 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:01.734 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:07.699 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:07.700 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:08.393 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:08.393 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:08.393 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:08.394 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:15.464 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:15.465 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:16.164 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:16.165 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:16.165 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:16.165 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:17.480 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:17.481 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:19.336 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:19.336 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:19.336 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:19.337 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:21.964 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:21.965 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:26.103 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:26.104 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:26.104 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:26.104 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:27.116 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:27.116 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:27.815 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:27.815 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:27.815 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:27.816 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:29.635 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:29.635 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:30.355 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:30.355 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:30.355 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:30.356 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:31.367 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:31.368 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:32.086 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:32.086 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:32.086 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:32.087 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:33.504 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:33.504 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:36.504 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:36.504 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:36.504 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:36.505 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:40.857 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:40.857 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:41.573 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:41.574 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:41.574 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:41.574 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:08:42.181 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:08:42.181 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:08:42.873 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:08:42.874 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:08:42.874 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:08:42.874 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:10:55.791 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:10:55.792 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:10:56.618 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:10:56.619 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:10:56.619 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:10:56.620 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:10:59.350 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:10:59.350 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:11:00.061 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:11:00.062 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:11:00.062 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:11:00.062 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:15:43.179 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:15:43.179 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:15:44.100 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:15:44.101 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:15:44.101 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:15:44.102 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:11.590 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:11.591 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:16:12.520 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:16:12.520 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:16:12.521 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:16:12.521 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:14.643 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:14.643 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:16:15.474 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:16:15.474 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:16:15.475 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:16:15.475 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:19.416 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:19.416 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:16:20.111 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:16:20.111 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:16:20.111 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:16:20.112 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:34.061 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:34.061 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:16:34.794 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:16:34.794 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:16:34.794 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:16:34.795 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:42.179 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:42.179 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:16:42.951 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:16:42.951 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:16:42.951 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:16:42.952 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:16:59.035 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:16:59.036 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:17:15.279 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:17:15.280 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:17:15.280 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:17:15.281 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:17:42.470 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:17:42.472 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:17:43.313 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:17:43.314 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:17:43.314 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:17:43.315 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:39.014 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:39.014 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:39.846 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:39.847 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:39.847 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:39.847 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:46.215 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:46.215 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:46.919 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:46.919 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:46.920 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:46.920 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:49.245 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:49.245 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:49.945 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:49.945 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:49.945 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:49.946 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:52.473 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:52.473 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:53.202 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:53.203 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:53.203 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:53.204 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:55.328 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:55.328 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:56.043 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:56.043 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:56.044 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:56.044 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:18:58.369 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:18:58.369 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:18:59.108 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:18:59.108 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:18:59.109 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:18:59.109 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:00.930 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:00.931 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:01.643 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:01.643 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:01.643 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:01.644 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:03.364 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:03.365 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:04.101 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:04.102 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:04.102 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:04.103 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:05.115 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:05.115 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:05.825 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:05.825 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:05.825 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:05.826 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:07.747 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:07.748 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:08.488 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:08.488 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:08.488 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:08.489 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:10.512 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:10.512 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:11.212 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:11.213 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:11.213 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:11.213 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:19:12.731 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:19:12.731 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:19:13.475 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:19:13.475 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:19:13.475 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:19:13.476 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:20:00.169 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:20:00.169 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:20:01.025 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:20:01.025 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:20:01.026 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:20:01.026 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:22:43.295 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 41 удалена.
-2026-02-07 22:22:43.860 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 40 удалена.
-2026-02-07 22:22:49.282 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 22:22:49.308 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 42 создана в БД.
-2026-02-07 22:28:43.545 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 110 найдена начинаем процесс копирования
-2026-02-07 22:28:43.559 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 43 создана в БД.
-2026-02-07 22:28:47.387 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 947 найдена начинаем процесс копирования
-2026-02-07 22:28:47.403 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 44 создана в БД.
-2026-02-07 22:31:09.343 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 952 найдена начинаем процесс копирования
-2026-02-07 22:31:09.360 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 45 создана в БД.
-2026-02-07 22:33:42.921 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 284 найдена начинаем процесс копирования
-2026-02-07 22:33:42.939 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 46 создана в БД.
-2026-02-07 22:36:18.392 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 46 удалена.
-2026-02-07 22:36:18.515 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 45 удалена.
-2026-02-07 22:36:18.685 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 44 удалена.
-2026-02-07 22:36:18.854 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 43 удалена.
-2026-02-07 22:36:19.022 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 42 удалена.
-2026-02-07 22:36:24.502 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 22:36:24.526 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 47 создана в БД.
-2026-02-07 22:36:56.203 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 110 найдена начинаем процесс копирования
-2026-02-07 22:36:56.218 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 48 создана в БД.
-2026-02-07 22:39:06.921 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 947 найдена начинаем процесс копирования
-2026-02-07 22:39:06.940 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 49 создана в БД.
-2026-02-07 22:39:24.583 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 952 найдена начинаем процесс копирования
-2026-02-07 22:39:24.598 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 50 создана в БД.
-2026-02-07 22:40:21.035 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 297 найдена начинаем процесс копирования
-2026-02-07 22:40:21.049 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 51 создана в БД.
-2026-02-07 22:40:33.802 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 57 найдена начинаем процесс копирования
-2026-02-07 22:40:33.824 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 52 создана в БД.
-2026-02-07 22:40:47.685 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 52 удалена.
-2026-02-07 22:40:47.862 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 51 удалена.
-2026-02-07 22:40:48.013 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 50 удалена.
-2026-02-07 22:40:48.205 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 49 удалена.
-2026-02-07 22:40:48.384 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 48 удалена.
-2026-02-07 22:40:48.552 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 47 удалена.
-2026-02-07 22:40:52.692 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 110 найдена начинаем процесс копирования
-2026-02-07 22:40:52.702 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 53 создана в БД.
-2026-02-07 22:41:17.702 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 100 найдена начинаем процесс копирования
-2026-02-07 22:41:17.724 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 54 создана в БД.
-2026-02-07 22:43:03.746 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 284 найдена начинаем процесс копирования
-2026-02-07 22:43:03.761 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 55 создана в БД.
-2026-02-07 22:43:55.696 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:43:55.697 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:43:56.586 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:43:56.586 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:43:56.586 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:43:56.587 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:43:58.811 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:43:58.812 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:43:59.513 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:43:59.513 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:43:59.514 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:43:59.514 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:05.378 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:05.378 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:06.120 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:06.121 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:06.121 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:06.121 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:12.491 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:12.492 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:13.197 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:13.197 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:13.198 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:13.198 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:20.477 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:20.477 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:26.742 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:26.743 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:26.743 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:26.743 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:28.259 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:28.259 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:28.971 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:28.971 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:28.972 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:28.972 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:33.118 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:33.118 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:33.836 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:33.837 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:33.837 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:33.837 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:36.869 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:36.869 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:37.568 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:37.568 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:37.569 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:37.569 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:47.476 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:47.476 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:48.188 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:48.188 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:48.188 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:48.189 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:49.402 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:49.402 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:50.136 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:50.137 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:50.137 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:50.137 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:51.049 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:51.050 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:44:56.314 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:44:56.315 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:44:56.315 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:44:56.315 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:44:57.226 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:44:57.226 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:00.498 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:00.498 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:00.499 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:00.499 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:01.220 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:01.220 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:01.936 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:01.936 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:01.936 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:01.937 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:02.747 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:02.747 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:04.347 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:04.347 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:04.348 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:04.348 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:04.954 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:04.955 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:05.700 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:05.701 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:05.701 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:05.702 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:06.712 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:06.712 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:08.730 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:08.730 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:08.730 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:08.731 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:18.944 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:18.944 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:19.664 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:19.664 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:19.664 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:19.665 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:23.607 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:23.607 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:24.308 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:24.308 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:24.308 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:24.309 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:25.723 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:25.724 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:26.427 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:26.428 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:26.428 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:26.428 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:29.763 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:29.763 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:30.484 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:30.484 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:30.484 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:30.485 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:33.517 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:33.517 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:34.246 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:34.247 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:34.247 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:34.247 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:35.157 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:35.158 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:35.854 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:35.854 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:35.854 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:35.855 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:44.553 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:44.554 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:45.252 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:45.253 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:45.253 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:45.253 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:49.601 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:49.602 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:51.831 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:51.831 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:51.831 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:51.832 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:52.439 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:52.440 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:53.156 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:53.156 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:53.157 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:53.157 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:53.763 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:53.763 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:54.487 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:54.487 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:54.488 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:54.488 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:56.713 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:56.713 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:45:57.436 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:45:57.436 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:45:57.436 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:45:57.437 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:45:58.953 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:45:58.954 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:09.168 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:09.168 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:09.168 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:09.169 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:17.866 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:17.867 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:18.572 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:18.572 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:18.572 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:18.573 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:25.346 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:25.348 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:26.071 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:26.071 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:26.071 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:26.072 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:27.791 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:27.792 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:28.485 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:28.486 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:28.486 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:28.486 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:30.205 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:30.206 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:30.956 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:30.957 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:30.957 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:30.957 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:36.920 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:36.920 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:37.677 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:37.678 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:37.678 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:37.678 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:38.286 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:46:38.287 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:46:38.994 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:46:38.995 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:46:38.995 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:46:38.995 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:46:40.341 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:50 - Добавляем заметку пользователя: 
-для избранной вакансии 55 пользвателя root
-2026-02-07 22:46:40.360 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:69 - Заметка о вакансии успешно создана
-2026-02-07 22:58:01.214 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:58:01.214 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:58:02.094 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:58:02.095 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:58:02.095 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:58:02.096 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:58:15.235 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:58:15.236 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:58:16.089 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:58:16.090 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:58:16.090 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:58:16.091 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:58:17.304 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:58:17.304 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:58:18.003 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:58:18.003 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:58:18.003 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:58:18.004 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 22:59:26.743 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 22:59:26.744 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 22:59:57.267 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 22:59:57.268 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 22:59:57.268 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 22:59:57.268 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:03:14.398 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:03:14.399 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:03:16.439 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:03:16.439 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:03:16.439 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:03:16.440 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:03:51.325 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:03:51.327 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:03:52.118 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:03:52.118 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:03:52.118 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:03:52.119 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:03:55.354 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:03:55.354 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:03:56.119 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:03:56.119 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:03:56.119 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:03:56.120 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:06:03.327 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:06:03.329 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:06:04.209 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:06:04.210 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:06:04.210 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:06:04.211 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:06:05.089 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:06:05.089 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:06:05.090 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:06:05.090 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:07:42.631 | INFO     | app.routes.favorite_crud:add_to_favorites:101 - Вакансия 298 найдена начинаем процесс копирования
-2026-02-07 23:07:42.664 | INFO     | app.routes.favorite_crud:add_to_favorites:135 - Любимая вакансия 56 создана в БД.
-2026-02-07 23:09:04.623 | INFO     | app.scheduler:run_parsing_now:43 - Запуск парсинга вручную
-2026-02-07 23:09:04.662 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
-2026-02-07 23:09:04.662 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
-2026-02-07 23:09:04.662 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
-2026-02-07 23:09:34.985 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 1: 
-2026-02-07 23:09:34.986 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 0 вакансий
-2026-02-07 23:09:35.986 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 2/20...
-2026-02-07 23:09:37.424 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 1/25: Инженер данных (потоковая загрузка)
-2026-02-07 23:09:38.494 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 2/25: System С++ developer в команду General components
-2026-02-07 23:09:39.618 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 3/25: Разработчик сервиса агрегации LTE (General Components)
-2026-02-07 23:09:40.824 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 4/25: Руководитель проекта
-2026-02-07 23:09:41.918 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 5/25: QA Engineer Fullstack (Java/Kotlin)
-2026-02-07 23:09:42.882 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 6/25: SRE-инженер
-2026-02-07 23:09:43.916 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 7/25: Руководитель проекта
-2026-02-07 23:09:45.085 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 8/25: Системный аналитик
-2026-02-07 23:09:46.058 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 9/25: Linux администратор
-2026-02-07 23:09:47.082 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 10/25: Инженер ИБ / SOC
-2026-02-07 23:09:48.110 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 11/25: Fullstack разработчик
-2026-02-07 23:09:49.130 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 12/25: Android разработчик в музыкальный стартап
-2026-02-07 23:09:50.259 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 13/25: Аранжировщик со знанием python, улучшение midi базы песен
-2026-02-07 23:09:51.294 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 14/25: Backend Team Lead (PHP)
-2026-02-07 23:09:52.312 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 15/25: Fullstack Developer (Python / Django / DRF / JavaScript / Nuxt 3)
-2026-02-07 23:09:53.324 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 16/25: Lead account manager
-2026-02-07 23:09:54.390 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 17/25: Руководитель группы анализа защищенности приложений (Кибербезопасность)
-2026-02-07 23:09:55.287 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 18/25: Ведущий специалист инфраструктурной безопасности Linux
-2026-02-07 23:09:56.253 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 19/25: Product manager
-2026-02-07 23:09:57.201 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 20/25: Менеджер по развитию продаж / Будущий РОП (B2B, Construction Tech)
-2026-02-07 23:09:58.141 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 21/25: Сетевой инженер
-2026-02-07 23:09:59.294 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 22/25: Системный администратор Linux
-2026-02-07 23:10:00.610 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 23/25: Администратор СРК и СХД
-2026-02-07 23:10:01.583 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 24/25: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 23:10:02.651 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 2, вакансия 25/25: Инженер по балансировке
-2026-02-07 23:10:03.153 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 2: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ) (https://career.habr.com/vacancies/1000161386)
-2026-02-07 23:10:03.154 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 2: добавлено 23 вакансий
-2026-02-07 23:10:03.155 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 2 - найден дубликат
-2026-02-07 23:10:03.155 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 23
-2026-02-07 23:10:03.155 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
-Всего вакансий: 23
-2026-02-07 23:10:03.155 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер данных (потоковая загрузка)
-2026-02-07 23:10:03.161 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 09:27:17+00:00 --> 2026-02-07 12:27:11+03:00
-2026-02-07 23:10:03.162 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 256 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.171 | INFO     | app.tasks:save_vacancies:89 - Вакансия 1 - дубликат: Инженер данных (потоковая загрузка)
-2026-02-07 23:10:03.171 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: System С++ developer в команду General components
-2026-02-07 23:10:03.174 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:48:54+00:00 --> 2026-02-07 11:49:04+03:00
-2026-02-07 23:10:03.175 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 259 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.178 | INFO     | app.tasks:save_vacancies:89 - Вакансия 2 - дубликат: System С++ developer в команду General components
-2026-02-07 23:10:03.179 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик сервиса агрегации LTE (General Components)
-2026-02-07 23:10:03.182 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:35:06+00:00 --> 2026-02-07 11:35:02+03:00
-2026-02-07 23:10:03.182 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 261 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.185 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: Разработчик сервиса агрегации LTE (General Components)
-2026-02-07 23:10:03.186 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель проекта
-2026-02-07 23:10:03.188 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:27:47+00:00 --> 2026-02-07 11:27:34+03:00
-2026-02-07 23:10:03.189 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 262 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.192 | INFO     | app.tasks:save_vacancies:89 - Вакансия 4 - дубликат: Руководитель проекта
-2026-02-07 23:10:03.192 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: QA Engineer Fullstack (Java/Kotlin)
-2026-02-07 23:10:03.195 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:27:47+00:00 --> 2026-02-07 11:27:34+03:00
-2026-02-07 23:10:03.196 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 264 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.199 | INFO     | app.tasks:save_vacancies:89 - Вакансия 5 - дубликат: QA Engineer Fullstack (Java/Kotlin)
-2026-02-07 23:10:03.199 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: SRE-инженер
-2026-02-07 23:10:03.202 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:27:47+00:00 --> 2026-02-07 11:27:34+03:00
-2026-02-07 23:10:03.202 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 263 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.205 | INFO     | app.tasks:save_vacancies:89 - Вакансия 6 - дубликат: SRE-инженер
-2026-02-07 23:10:03.205 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель проекта
-2026-02-07 23:10:03.208 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 08:27:47+00:00 --> 2026-02-07 11:27:34+03:00
-2026-02-07 23:10:03.208 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 265 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.211 | INFO     | app.tasks:save_vacancies:89 - Вакансия 7 - дубликат: Руководитель проекта
-2026-02-07 23:10:03.212 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный аналитик
-2026-02-07 23:10:03.214 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 07:29:42+00:00 --> 2026-02-07 10:29:30+03:00
-2026-02-07 23:10:03.214 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 266 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.217 | INFO     | app.tasks:save_vacancies:89 - Вакансия 8 - дубликат: Системный аналитик
-2026-02-07 23:10:03.217 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Linux администратор
-2026-02-07 23:10:03.219 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 06:42:41+00:00 --> 2026-02-07 09:42:54+03:00
-2026-02-07 23:10:03.220 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 268 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.223 | INFO     | app.tasks:save_vacancies:89 - Вакансия 9 - дубликат: Linux администратор
-2026-02-07 23:10:03.223 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер ИБ / SOC
-2026-02-07 23:10:03.225 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 05:27:34+00:00 --> 2026-02-07 08:27:08+03:00
-2026-02-07 23:10:03.225 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 270 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.227 | INFO     | app.tasks:save_vacancies:89 - Вакансия 10 - дубликат: Инженер ИБ / SOC
-2026-02-07 23:10:03.227 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Fullstack разработчик
-2026-02-07 23:10:03.230 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-31 02:14:47+00:00 --> 2026-02-07 05:14:40+03:00
-2026-02-07 23:10:03.230 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 271 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.232 | INFO     | app.tasks:save_vacancies:89 - Вакансия 11 - дубликат: Fullstack разработчик
-2026-02-07 23:10:03.232 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Android разработчик в музыкальный стартап
-2026-02-07 23:10:03.234 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
-2026-02-07 23:10:03.261 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Android разработчик в музыкальный стартап (966) сохранена в БД.
-2026-02-07 23:10:03.261 | INFO     | app.tasks:save_vacancies:87 - Вакансия 12 сохранена: Android разработчик в музыкальный стартап
-2026-02-07 23:10:03.261 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аранжировщик со знанием python, улучшение midi базы песен
-2026-02-07 23:10:03.263 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - title:
-Мобильный тестировщик в музыкальном стартапе --> Аранжировщик со знанием python, улучшение midi базы песен
-2026-02-07 23:10:03.263 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-Я веду стартап, это мобильное приложение для обучения пению. В приложении вид --> 
-О компании и команде
-
-Я веду стартап, это мобильное приложение для обучения пению. В приложении вид
-2026-02-07 23:10:03.263 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-02-03 17:31:40+00:00 --> 2026-02-07 01:04:35+03:00
-2026-02-07 23:10:03.263 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 824 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.267 | INFO     | app.tasks:save_vacancies:89 - Вакансия 13 - дубликат: Аранжировщик со знанием python, улучшение midi базы песен
-2026-02-07 23:10:03.267 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Backend Team Lead (PHP)
-2026-02-07 23:10:03.268 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 16:02:00+00:00 --> 2026-02-06 19:02:05+03:00
-2026-02-07 23:10:03.269 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 198 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.270 | INFO     | app.tasks:save_vacancies:89 - Вакансия 14 - дубликат: Backend Team Lead (PHP)
-2026-02-07 23:10:03.270 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Fullstack Developer (Python / Django / DRF / JavaScript / Nuxt 3)
-2026-02-07 23:10:03.272 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - company:
-Род --> «Книга Рода»
-2026-02-07 23:10:03.272 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-«Род»— продуктовый стартап, который создаёт платформу для построения истории  --> 
-О компании и команде
-
-«Книга Рода»— продуктовый стартап, который создаёт платформу для построения и
-2026-02-07 23:10:03.272 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 16:00:29+00:00 --> 2026-02-06 19:00:39+03:00
-2026-02-07 23:10:03.272 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 167 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.280 | INFO     | app.tasks:save_vacancies:89 - Вакансия 15 - дубликат: Fullstack Developer (Python / Django / DRF / JavaScript / Nuxt 3)
-2026-02-07 23:10:03.280 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Lead account manager
-2026-02-07 23:10:03.282 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 15:27:05+00:00 --> 2026-02-06 18:30:56+03:00
-2026-02-07 23:10:03.282 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 76 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.285 | INFO     | app.tasks:save_vacancies:89 - Вакансия 16 - дубликат: Lead account manager
-2026-02-07 23:10:03.285 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель группы анализа защищенности приложений (Кибербезопасность)
-2026-02-07 23:10:03.287 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 15:27:04+00:00 --> 2026-02-06 18:27:29+03:00
-2026-02-07 23:10:03.287 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 77 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.289 | INFO     | app.tasks:save_vacancies:89 - Вакансия 17 - дубликат: Руководитель группы анализа защищенности приложений (Кибербезопасность)
-2026-02-07 23:10:03.289 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий специалист инфраструктурной безопасности Linux
-2026-02-07 23:10:03.290 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 15:27:07+00:00 --> 2026-02-06 18:27:29+03:00
-2026-02-07 23:10:03.290 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 79 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.293 | INFO     | app.tasks:save_vacancies:89 - Вакансия 18 - дубликат: Ведущий специалист инфраструктурной безопасности Linux
-2026-02-07 23:10:03.293 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Product manager
-2026-02-07 23:10:03.294 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
-2026-02-07 23:10:03.306 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Product manager (967) сохранена в БД.
-2026-02-07 23:10:03.306 | INFO     | app.tasks:save_vacancies:87 - Вакансия 19 сохранена: Product manager
-2026-02-07 23:10:03.306 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Менеджер по развитию продаж / Будущий РОП (B2B, Construction Tech)
-2026-02-07 23:10:03.309 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-02-02 16:19:31+00:00 --> 2026-02-06 17:33:28+03:00
-2026-02-07 23:10:03.309 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 781 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.311 | INFO     | app.tasks:save_vacancies:89 - Вакансия 20 - дубликат: Менеджер по развитию продаж / Будущий РОП (B2B, Construction Tech)
-2026-02-07 23:10:03.311 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Сетевой инженер
-2026-02-07 23:10:03.313 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
-
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст --> 
-О компании и команде
-
-Т1 — это стабильный и надёжный работодатель. Мы помогаем профессионально раст
-2026-02-07 23:10:03.314 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-21 14:32:19+00:00 --> 2026-02-06 17:32:30+03:00
-2026-02-07 23:10:03.314 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 86 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.317 | INFO     | app.tasks:save_vacancies:89 - Вакансия 21 - дубликат: Сетевой инженер
-2026-02-07 23:10:03.318 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный администратор Linux
-2026-02-07 23:10:03.319 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 14:27:08+00:00 --> 2026-02-06 17:32:30+03:00
-2026-02-07 23:10:03.319 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 87 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.321 | INFO     | app.tasks:save_vacancies:89 - Вакансия 22 - дубликат: Системный администратор Linux
-2026-02-07 23:10:03.322 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Администратор СРК и СХД
-2026-02-07 23:10:03.323 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
-2026-01-30 14:27:35+00:00 --> 2026-02-06 17:27:23+03:00
-2026-02-07 23:10:03.323 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 171 опубликована снова (счетчик: 1)
-2026-02-07 23:10:03.326 | INFO     | app.tasks:save_vacancies:89 - Вакансия 23 - дубликат: Администратор СРК и СХД
-2026-02-07 23:10:03.326 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 2 из 23
-2026-02-07 23:10:03.331 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 2
-2026-02-07 23:10:11.009 | INFO     | app.scheduler:run_parsing_now:43 - Запуск парсинга вручную
-2026-02-07 23:10:11.019 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
-2026-02-07 23:10:11.020 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
-2026-02-07 23:10:11.020 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
-2026-02-07 23:10:41.211 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 1: 
-2026-02-07 23:10:41.212 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 0 вакансий
-2026-02-07 23:10:42.213 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 2/20...
-2026-02-07 23:11:10.529 | INFO     | app.scheduler:run_vacancies_404_check:48 - Запуск парсинга вручную
-2026-02-07 23:11:10.581 | INFO     | app.tasks:check_vacancies_availability:119 - Начинем проверку 947 вакансий на 404...
-2026-02-07 23:11:12.394 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 2: 
-2026-02-07 23:11:12.394 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 2: добавлено 0 вакансий
-2026-02-07 23:11:13.396 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 3/20...
-2026-02-07 23:11:14.746 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 1/25: Выездной инженер технической поддержки
-2026-02-07 23:11:15.751 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 2/25: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 23:11:16.785 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 3/25: FullStack QA Engineer (Java)
-2026-02-07 23:11:17.879 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 4/25: Выездной инженер технической поддержки
-2026-02-07 23:11:19.137 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 5/25: Выездной инженер технической поддержки
-2026-02-07 23:11:20.220 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 6/25: Выездной инженер технической поддержки
-2026-02-07 23:11:22.202 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 7/25: Специалист технической поддержки (первая линия)
-2026-02-07 23:11:23.260 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 8/25: 1С Программист
-2026-02-07 23:11:24.422 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 9/25: Системный аналитик
-2026-02-07 23:11:25.340 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 10/25: Network Security Engineer
-2026-02-07 23:11:26.371 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 11/25: Главный системный администратор Linux
-2026-02-07 23:11:27.358 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 12/25: Менеджер команды AI-тренеров GigaChat
-2026-02-07 23:11:28.303 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 13/25: Сервисный инженер
-2026-02-07 23:11:29.491 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 14/25: Системный аналитик
-2026-02-07 23:11:30.683 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 15/25: Инженер технической поддержки АРМ
-2026-02-07 23:11:31.840 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 16/25: Координатор заявок service desk
-2026-02-07 23:11:32.821 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 17/25: Специалист техподдержки (ServiceDesk 1L)
-2026-02-07 23:11:33.785 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 18/25: Middle/Senior Golang Developer
-2026-02-07 23:11:34.706 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 19/25: Ведущий специалист по администрированию СУБД Oracle
-2026-02-07 23:11:35.941 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 20/25: Разработчик [Android]
-2026-02-07 23:11:37.059 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 21/25: Эксперт по удаленному доступу (МСЭ)
-2026-02-07 23:11:38.279 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 22/25: Специалист технической поддержки
-2026-02-07 23:11:39.178 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 23/25: Middle/Senior Mobile Developer (Android, Kotlin Multiplatfrom)
-2026-02-07 23:11:40.193 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 24/25: Дежурный инженер ЦОД
-2026-02-07 23:11:41.430 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 25/25: Маркетолог-стратег
-2026-02-07 23:11:41.932 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 3: Выездной инженер технической поддержки (https://career.habr.com/vacancies/1000161382)
-2026-02-07 23:11:41.932 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 3: добавлено 0 вакансий
-2026-02-07 23:11:41.933 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 3 - найден дубликат
-2026-02-07 23:11:41.933 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 0
-2026-02-07 23:11:41.940 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 0
-2026-02-07 23:22:19.604 | INFO     | app.routes.favorite_crud:add_to_favorites:101 - Вакансия 256 найдена начинаем процесс копирования
-2026-02-07 23:22:19.646 | INFO     | app.routes.favorite_crud:add_to_favorites:135 - Любимая вакансия 57 создана в БД.
-2026-02-07 23:22:54.026 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:50 - Добавляем заметку пользователя: 
-для избранной вакансии 57 пользвателя root
-2026-02-07 23:22:54.061 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:69 - Заметка о вакансии успешно создана
-2026-02-07 23:26:57.421 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:50 - Добавляем заметку пользователя: 
-для избранной вакансии 57 пользвателя root
-2026-02-07 23:26:57.445 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:69 - Заметка о вакансии успешно создана
-2026-02-07 23:28:15.733 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:28:15.733 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:28:15.733 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:28:15.734 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:28:28.025 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователя: 
-для избранной вакансии 57 пользвателя root
-2026-02-07 23:28:28.050 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:28:54.647 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:28:54.648 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:28:55.479 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:28:55.479 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:28:55.479 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:28:55.480 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:28:57.606 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:28:57.606 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:28:58.306 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:28:58.307 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:28:58.307 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:28:58.308 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:29:05.388 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:29:05.388 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:29:06.104 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:29:06.104 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:29:06.105 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:29:06.105 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:29:10.157 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ЧТоnfjrsds
-для избранной вакансии 57 пользвателя
-2026-02-07 23:29:10.180 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:29:20.769 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:29:20.769 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:29:21.517 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:29:21.517 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:29:21.517 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:29:21.518 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:29:39.207 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:29:39.208 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:29:39.955 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:29:39.956 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:29:39.956 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:29:39.957 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:29:43.421 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ЧТоnfjrsdscasac
-для избранной вакансии 57
-2026-02-07 23:29:43.444 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:30:24.461 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:30:24.461 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:30:26.126 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:30:26.126 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:30:26.126 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:30:26.127 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:30:33.254 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: FFFFFQQQQQ
-для избранной вакансии 57
-2026-02-07 23:30:33.276 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана FFFFFQQQQQ
-2026-02-07 23:30:41.492 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:30:41.494 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:30:42.215 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:30:42.215 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:30:42.215 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:30:42.216 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:31:20.253 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: FFFFFQQQQQs
-для избранной вакансии 57
-2026-02-07 23:31:20.276 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:31:32.056 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: FFFFFQQQQQscs
-для избранной вакансии 57
-2026-02-07 23:31:32.067 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:32:42.779 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: acsascascasca
-для избранной вакансии 57
-2026-02-07 23:32:42.797 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:32:47.683 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: acsascascasca
-для избранной вакансии 57
-2026-02-07 23:32:47.699 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:33:09.663 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ccc
-для избранной вакансии 54
-2026-02-07 23:33:09.677 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:34:19.226 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ccccscasc
-для избранной вакансии 54
-2026-02-07 23:34:19.244 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:35:04.835 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ccccscasccsscs
-для избранной вакансии 54
-2026-02-07 23:35:04.852 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:35:46.581 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:35:46.582 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:35:47.567 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:35:47.568 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:35:47.568 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:35:47.568 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:35:48.276 | INFO     | app.main:lifespan:21 - Остановка приложения...
-2026-02-07 23:35:48.276 | INFO     | app.main:lifespan:23 - Scheduler остановлен
-2026-02-07 23:35:55.191 | INFO     | app.main:lifespan:13 - Запуск приложения...
-2026-02-07 23:35:55.191 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
-2026-02-07 23:35:55.191 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
-2026-02-07 23:35:55.192 | INFO     | app.main:lifespan:16 - Scheduler запущен
-2026-02-07 23:36:03.101 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ccccscasccsscscs
-для избранной вакансии 54
-2026-02-07 23:36:03.128 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
-2026-02-07 23:37:46.788 | INFO     | app.scheduler:run_parsing_now:43 - Запуск парсинга вручную
-2026-02-07 23:37:46.823 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
-2026-02-07 23:37:46.823 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
-2026-02-07 23:37:46.823 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
-2026-02-07 23:38:17.042 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 1: 
-2026-02-07 23:38:17.044 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 0 вакансий
-2026-02-07 23:38:18.044 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 2/20...
-2026-02-07 23:38:34.836 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 86 найдена начинаем процесс копирования
-2026-02-07 23:38:34.853 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 58 создана в БД.
-2026-02-07 23:38:48.215 | ERROR    | app.parser:_fetch_vacancies_page:154 - Ошибка при запросе страницы 2: 
-2026-02-07 23:38:48.216 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 2: добавлено 0 вакансий
-2026-02-07 23:38:49.216 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 3/20...
-2026-02-07 23:38:51.738 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 1/25: Выездной инженер технической поддержки
-2026-02-07 23:38:52.859 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 2/25: Менеджер по качеству (эквайринг, терминалы, ККТ, банкоматы, АДМ)
-2026-02-07 23:38:54.556 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 3/25: FullStack QA Engineer (Java)
-2026-02-07 23:38:55.784 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 4/25: Выездной инженер технической поддержки
-2026-02-07 23:38:56.929 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 5/25: Выездной инженер технической поддержки
-2026-02-07 23:38:58.035 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 6/25: Выездной инженер технической поддержки
-2026-02-07 23:38:59.156 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 7/25: Специалист технической поддержки (первая линия)
-2026-02-07 23:39:00.134 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 8/25: 1С Программист
-2026-02-07 23:39:01.143 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 9/25: Системный аналитик
-2026-02-07 23:39:02.482 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 10/25: Network Security Engineer
-2026-02-07 23:39:03.670 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 11/25: Главный системный администратор Linux
-2026-02-07 23:39:04.803 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 12/25: Менеджер команды AI-тренеров GigaChat
-2026-02-07 23:39:06.016 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 13/25: Сервисный инженер
-2026-02-07 23:39:07.155 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 14/25: Системный аналитик
-2026-02-07 23:39:08.476 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 15/25: Инженер технической поддержки АРМ
-2026-02-07 23:39:09.603 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 16/25: Координатор заявок service desk
-2026-02-07 23:39:10.624 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 17/25: Специалист техподдержки (ServiceDesk 1L)
-2026-02-07 23:39:11.651 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 18/25: Middle/Senior Golang Developer
-2026-02-07 23:39:12.871 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 19/25: Ведущий специалист по администрированию СУБД Oracle
-2026-02-07 23:39:13.970 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 20/25: Разработчик [Android]
-2026-02-07 23:39:15.178 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 21/25: Эксперт по удаленному доступу (МСЭ)
-2026-02-07 23:39:16.590 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 22/25: Специалист технической поддержки
-2026-02-07 23:39:17.697 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 23/25: Middle/Senior Mobile Developer (Android, Kotlin Multiplatfrom)
-2026-02-07 23:39:19.018 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 24/25: Дежурный инженер ЦОД
-2026-02-07 23:39:20.151 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 3, вакансия 25/25: Маркетолог-стратег
-2026-02-07 23:39:20.653 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 3: Выездной инженер технической поддержки (https://career.habr.com/vacancies/1000161382)
-2026-02-07 23:39:20.653 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 3: добавлено 0 вакансий
-2026-02-07 23:39:20.653 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 3 - найден дубликат
-2026-02-07 23:39:20.653 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 0
-2026-02-07 23:39:20.661 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 0
-2026-02-07 23:44:17.404 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 58 удалена.
-2026-02-07 23:44:17.582 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 57 удалена.
-2026-02-07 23:44:17.770 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 56 удалена.
-2026-02-07 23:44:18.147 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 55 удалена.
-2026-02-07 23:44:18.316 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 54 удалена.
-2026-02-07 23:44:18.483 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 53 удалена.
+2026-02-09 10:00:00.028 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
+2026-02-09 10:00:00.033 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-09 10:00:00.033 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
+2026-02-09 10:00:02.399 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 1/25: Data Scientist
+2026-02-09 10:00:03.719 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 2/25: Data Analyst (Блок Финансы)
+2026-02-09 10:00:05.164 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 3/25: DevSecOps Engineer (Екатеринбург)
+2026-02-09 10:00:06.747 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 4/25: Blockchain  разработчик (Backend)
+2026-02-09 10:00:08.313 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 5/25: Senior Python developer (Django)
+2026-02-09 10:00:10.024 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 6/25: Frontend-разработчик (React)
+2026-02-09 10:00:11.612 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 7/25: Бизнес-аналитик в команду РКО
+2026-02-09 10:00:12.848 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 8/25: Бизнес-аналитик в команду Массовых кредитных продуктов
+2026-02-09 10:00:14.253 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 9/25: Associate Product Owner
+2026-02-09 10:00:15.907 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 10/25: Advanced Software Engineer разработчик
+2026-02-09 10:00:17.432 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 11/25: Customer Success Manager
+2026-02-09 10:00:18.710 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 12/25: Аналитик DWH
+2026-02-09 10:00:20.060 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 13/25: Java (Т-банк)
+2026-02-09 10:00:21.449 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 14/25: Android разработчик
+2026-02-09 10:00:23.631 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 15/25: iOS разработчик
+2026-02-09 10:00:25.004 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 16/25: QA Engineer Mobile fullstack (Java)
+2026-02-09 10:00:26.344 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 17/25: Java Developer eFX
+2026-02-09 10:00:28.312 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 18/25: Java разработчик (СОПББ)
+2026-02-09 10:00:29.651 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 19/25: Системный аналитик (НО БО)
+2026-02-09 10:00:30.835 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 20/25: Системный аналитик (СОПББ)
+2026-02-09 10:00:32.868 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 21/25: QA Manual
+2026-02-09 10:00:33.967 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 22/25: Junior Go Developer
+2026-02-09 10:00:35.634 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 23/25: Бизнес системный аналитик
+2026-02-09 10:00:37.250 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 24/25: Flutter-разработчик
+2026-02-09 10:00:38.595 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 25/25: Эксперт КИИ
+2026-02-09 10:00:39.096 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 1: Аналитик DWH (https://career.habr.com/vacancies/1000163914)
+2026-02-09 10:00:39.096 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 11 вакансий
+2026-02-09 10:00:39.097 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-09 10:00:39.097 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 11
+2026-02-09 10:00:39.097 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 11
+2026-02-09 10:00:39.097 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data Scientist
+2026-02-09 10:00:39.099 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 06:47:05+00:00 --> 2026-02-09 09:47:06+03:00
+2026-02-09 10:00:39.099 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 306 опубликована снова (счетчик: 2)
+2026-02-09 10:00:39.102 | INFO     | app.tasks:save_vacancies:89 - Вакансия 1 - дубликат: Data Scientist
+2026-02-09 10:00:39.102 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data Analyst (Блок Финансы)
+2026-02-09 10:00:39.104 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 06:42:58+00:00 --> 2026-02-09 09:43:03+03:00
+2026-02-09 10:00:39.104 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 307 опубликована снова (счетчик: 2)
+2026-02-09 10:00:39.107 | INFO     | app.tasks:save_vacancies:89 - Вакансия 2 - дубликат: Data Analyst (Блок Финансы)
+2026-02-09 10:00:39.107 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: DevSecOps Engineer (Екатеринбург)
+2026-02-09 10:00:39.109 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-31 06:27:15+00:00 --> 2026-02-09 09:27:03+03:00
+2026-02-09 10:00:39.109 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 267 опубликована снова (счетчик: 1)
+2026-02-09 10:00:39.111 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: DevSecOps Engineer (Екатеринбург)
+2026-02-09 10:00:39.111 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Blockchain  разработчик (Backend)
+2026-02-09 10:00:39.112 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 06:23:22+00:00 --> 2026-02-09 09:23:23+03:00
+2026-02-09 10:00:39.112 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 764 опубликована снова (счетчик: 1)
+2026-02-09 10:00:39.113 | INFO     | app.tasks:save_vacancies:89 - Вакансия 4 - дубликат: Blockchain  разработчик (Backend)
+2026-02-09 10:00:39.113 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Senior Python developer (Django)
+2026-02-09 10:00:39.114 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 10:00:39.126 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Senior Python developer (Django) (973) сохранена в БД.
+2026-02-09 10:00:39.126 | INFO     | app.tasks:save_vacancies:87 - Вакансия 5 сохранена: Senior Python developer (Django)
+2026-02-09 10:00:39.126 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Frontend-разработчик (React)
+2026-02-09 10:00:39.127 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 10:00:39.135 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Frontend-разработчик (React) (974) сохранена в БД.
+2026-02-09 10:00:39.135 | INFO     | app.tasks:save_vacancies:87 - Вакансия 6 сохранена: Frontend-разработчик (React)
+2026-02-09 10:00:39.135 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Бизнес-аналитик в команду РКО
+2026-02-09 10:00:39.136 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 06:08:53+00:00 --> 2026-02-09 09:08:46+03:00
+2026-02-09 10:00:39.137 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 367 опубликована снова (счетчик: 2)
+2026-02-09 10:00:39.138 | INFO     | app.tasks:save_vacancies:89 - Вакансия 7 - дубликат: Бизнес-аналитик в команду РКО
+2026-02-09 10:00:39.139 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Бизнес-аналитик в команду Массовых кредитных продуктов
+2026-02-09 10:00:39.140 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 06:05:44+00:00 --> 2026-02-09 09:05:43+03:00
+2026-02-09 10:00:39.140 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 368 опубликована снова (счетчик: 2)
+2026-02-09 10:00:39.141 | INFO     | app.tasks:save_vacancies:89 - Вакансия 8 - дубликат: Бизнес-аналитик в команду Массовых кредитных продуктов
+2026-02-09 10:00:39.141 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Associate Product Owner
+2026-02-09 10:00:39.142 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 10:00:39.161 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Associate Product Owner (975) сохранена в БД.
+2026-02-09 10:00:39.161 | INFO     | app.tasks:save_vacancies:87 - Вакансия 9 сохранена: Associate Product Owner
+2026-02-09 10:00:39.161 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Advanced Software Engineer разработчик
+2026-02-09 10:00:39.162 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 10:00:39.171 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Advanced Software Engineer разработчик (976) сохранена в БД.
+2026-02-09 10:00:39.171 | INFO     | app.tasks:save_vacancies:87 - Вакансия 10 сохранена: Advanced Software Engineer разработчик
+2026-02-09 10:00:39.171 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Customer Success Manager
+2026-02-09 10:00:39.172 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 10:00:39.186 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Customer Success Manager (977) сохранена в БД.
+2026-02-09 10:00:39.186 | INFO     | app.tasks:save_vacancies:87 - Вакансия 11 сохранена: Customer Success Manager
+2026-02-09 10:00:39.186 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 5 из 11
+2026-02-09 10:00:39.190 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 5
+2026-02-09 10:02:13.815 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 64 удалена.
+2026-02-09 10:03:18.283 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-09 10:03:18.285 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-09 10:03:20.042 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-09 10:03:20.042 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-09 10:03:20.043 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-09 10:03:20.043 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-09 10:03:37.924 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: счяясчячcx
+для избранной вакансии 63
+2026-02-09 10:03:37.946 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:07:02.606 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-09 10:07:02.608 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-09 10:07:03.925 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-09 10:07:03.925 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-09 10:07:03.925 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-09 10:07:03.925 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-09 10:07:18.940 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 307 найдена начинаем процесс копирования
+2026-02-09 10:07:18.956 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 68 создана в БД.
+2026-02-09 10:12:32.300 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-09 10:12:32.300 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-09 10:12:32.841 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-09 10:12:32.841 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-09 10:12:32.841 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-09 10:12:32.841 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-09 10:15:13.510 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: Это старая вакансия
+для избранной вакансии 68
+2026-02-09 10:15:13.527 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:15:40.204 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: с
+для избранной вакансии 68
+2026-02-09 10:15:40.216 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:15:54.807 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 68 удалена.
+2026-02-09 10:16:12.336 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: редактировать
+для избранной вакансии 67
+2026-02-09 10:16:12.356 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:16:36.386 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 67 удалена.
+2026-02-09 10:26:38.619 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 307 найдена начинаем процесс копирования
+2026-02-09 10:26:38.638 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 69 создана в БД.
+2026-02-09 10:26:40.320 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 977 найдена начинаем процесс копирования
+2026-02-09 10:26:40.334 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 70 создана в БД.
+2026-02-09 10:28:06.696 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: Эта вакансия слишком стара
+для избранной вакансии 69
+2026-02-09 10:28:06.709 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:28:56.978 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: ММММ
+для избранной вакансии 70
+2026-02-09 10:28:56.990 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 10:57:14.248 | INFO     | app.main:lifespan:21 - Остановка приложения...
+2026-02-09 10:57:14.249 | INFO     | app.main:lifespan:23 - Scheduler остановлен
+2026-02-09 10:57:15.627 | INFO     | app.main:lifespan:13 - Запуск приложения...
+2026-02-09 10:57:15.628 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-09 10:57:15.628 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-09 10:57:15.628 | INFO     | app.main:lifespan:16 - Scheduler запущен
+2026-02-09 10:57:53.352 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 306 найдена начинаем процесс копирования
+2026-02-09 10:57:53.365 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 71 создана в БД.
+2026-02-09 10:58:25.957 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 796 найдена начинаем процесс копирования
+2026-02-09 10:58:25.971 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 72 создана в БД.
+2026-02-09 10:58:26.707 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 918 найдена начинаем процесс копирования
+2026-02-09 10:58:26.720 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 73 создана в БД.
+2026-02-09 10:58:27.553 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 782 найдена начинаем процесс копирования
+2026-02-09 10:58:27.562 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 74 создана в БД.
+2026-02-09 10:58:36.175 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 303 найдена начинаем процесс копирования
+2026-02-09 10:58:36.200 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 75 создана в БД.
+2026-02-09 10:59:13.724 | INFO     | app.routes.favorite_crud:delete_from_favorite:37 - Вакансия 63 удалена.
+2026-02-09 10:59:31.190 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:51 - Добавляем заметку пользователяroot: Vjb pfvtnrb 'nj df;yj
+для избранной вакансии 75
+2026-02-09 10:59:31.203 | INFO     | app.routes.favorite_crud:patch_edit_favorite_vacancy:70 - Заметка о вакансии успешно создана
+2026-02-09 11:00:00.050 | INFO     | app.parser:parse_habr_vacancies:105 - Запуск парсинга: уровень=all, страниц=20
+2026-02-09 11:00:00.050 | INFO     | app.parser:parse_habr_vacancies:106 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-09 11:00:00.050 | INFO     | app.parser:parse_habr_vacancies:112 - Парсинг страницы 1/20...
+2026-02-09 11:00:05.503 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 1/25: SMM-менеджер
+2026-02-09 11:00:06.856 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 2/25: Разработчик бэкенда (Python/Django) в команду развития сотрудников
+2026-02-09 11:00:08.106 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 3/25: DevOps
+2026-02-09 11:00:09.183 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 4/25: КАМ / Менеджер по работе с ключевыми клиентами
+2026-02-09 11:00:10.339 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 5/25: Бизнес-аналитик в IT
+2026-02-09 11:00:11.544 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 6/25: Data Scientist
+2026-02-09 11:00:12.973 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 7/25: Data Analyst (Блок Финансы)
+2026-02-09 11:00:14.866 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 8/25: DevSecOps Engineer (Екатеринбург)
+2026-02-09 11:00:16.132 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 9/25: Blockchain  разработчик (Backend)
+2026-02-09 11:00:17.239 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 10/25: Senior Python developer (Django)
+2026-02-09 11:00:18.381 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 11/25: Frontend-разработчик (React)
+2026-02-09 11:00:19.553 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 12/25: Бизнес-аналитик в команду РКО
+2026-02-09 11:00:20.624 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 13/25: Бизнес-аналитик в команду Массовых кредитных продуктов
+2026-02-09 11:00:21.757 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 14/25: Associate Product Owner
+2026-02-09 11:00:22.921 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 15/25: Advanced Software Engineer разработчик
+2026-02-09 11:00:24.011 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 16/25: Customer Success Manager
+2026-02-09 11:00:25.178 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 17/25: Аналитик DWH
+2026-02-09 11:00:26.293 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 18/25: Java (Т-банк)
+2026-02-09 11:00:27.823 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 19/25: Android разработчик
+2026-02-09 11:00:29.001 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 20/25: iOS разработчик
+2026-02-09 11:00:30.167 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 21/25: QA Engineer Mobile fullstack (Java)
+2026-02-09 11:00:31.517 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 22/25: Java Developer eFX
+2026-02-09 11:00:32.792 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 23/25: Java разработчик (СОПББ)
+2026-02-09 11:00:33.888 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 24/25: Системный аналитик (НО БО)
+2026-02-09 11:00:35.107 | INFO     | app.parser:_fetch_vacancies_page:169 - Страница 1, вакансия 25/25: Системный аналитик (СОПББ)
+2026-02-09 11:00:35.609 | INFO     | app.parser:parse_habr_vacancies:122 - Дубликат на странице 1: Data Scientist (https://career.habr.com/vacancies/1000159249)
+2026-02-09 11:00:35.609 | INFO     | app.parser:parse_habr_vacancies:128 - Страница 1: добавлено 5 вакансий
+2026-02-09 11:00:35.609 | INFO     | app.parser:parse_habr_vacancies:132 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-09 11:00:35.609 | INFO     | app.parser:parse_habr_vacancies:138 - Парсинг завершен. Найдено новых вакансий: 5
+2026-02-09 11:00:35.609 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 5
+2026-02-09 11:00:35.609 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: SMM-менеджер
+2026-02-09 11:00:35.615 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 11:00:35.639 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия SMM-менеджер (978) сохранена в БД.
+2026-02-09 11:00:35.639 | INFO     | app.tasks:save_vacancies:87 - Вакансия 1 сохранена: SMM-менеджер
+2026-02-09 11:00:35.639 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик бэкенда (Python/Django) в команду развития сотрудников
+2026-02-09 11:00:35.641 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 07:29:51+00:00 --> 2026-02-09 10:29:55+03:00
+2026-02-09 11:00:35.641 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 362 опубликована снова (счетчик: 2)
+2026-02-09 11:00:35.644 | INFO     | app.tasks:save_vacancies:89 - Вакансия 2 - дубликат: Разработчик бэкенда (Python/Django) в команду развития сотрудников
+2026-02-09 11:00:35.644 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: DevOps
+2026-02-09 11:00:35.645 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-02 07:29:27+00:00 --> 2026-02-09 10:29:30+03:00
+2026-02-09 11:00:35.645 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 363 опубликована снова (счетчик: 2)
+2026-02-09 11:00:35.647 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: DevOps
+2026-02-09 11:00:35.647 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: КАМ / Менеджер по работе с ключевыми клиентами
+2026-02-09 11:00:35.648 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 11:00:35.657 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия КАМ / Менеджер по работе с ключевыми клиентами (979) сохранена в БД.
+2026-02-09 11:00:35.657 | INFO     | app.tasks:save_vacancies:87 - Вакансия 4 сохранена: КАМ / Менеджер по работе с ключевыми клиентами
+2026-02-09 11:00:35.657 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Бизнес-аналитик в IT
+2026-02-09 11:00:35.658 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-09 11:00:35.670 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Бизнес-аналитик в IT (980) сохранена в БД.
+2026-02-09 11:00:35.670 | INFO     | app.tasks:save_vacancies:87 - Вакансия 5 сохранена: Бизнес-аналитик в IT
+2026-02-09 11:00:35.670 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 3 из 5
+2026-02-09 11:00:35.673 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 3
+2026-02-09 11:14:38.683 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 363 найдена начинаем процесс копирования
+2026-02-09 11:14:38.692 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 76 создана в БД.
+2026-02-09 11:15:08.820 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 952 найдена начинаем процесс копирования
+2026-02-09 11:15:08.829 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 77 создана в БД.
+2026-02-09 11:15:32.121 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 191 найдена начинаем процесс копирования
+2026-02-09 11:15:32.133 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 78 создана в БД.

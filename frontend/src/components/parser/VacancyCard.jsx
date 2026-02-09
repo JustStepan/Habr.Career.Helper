@@ -14,6 +14,23 @@ function VacancyCard({ vacancy, favoritesMap }) {
 
     const navigate = useNavigate();
 
+    const getRepublishBadge = () => {
+        if (vacancy.republish_count === 0) {
+            return (
+                <span className="px-3 py-1 bg-gradient-to-r from-amber-200 to-amber-600 text-amber-900 text-xs font-bold rounded-full">
+                    NEW ✨
+                </span>
+            );
+        } else if (vacancy.republish_count >= 2) {
+            return (
+                <span className="px-3 py-1 bg-gray-200 text-gray-600 text-xs font-semibold rounded-full">
+                    OLD ♻️
+                </span>
+            );
+        }
+        return null;
+    };
+
 
     function formatDate(dateString) {
         if (!dateString) return 'Дата не указана';
@@ -61,95 +78,76 @@ function VacancyCard({ vacancy, favoritesMap }) {
 
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow border border-gray-200 hover:shadow-lg transition">
-            {/* Контейнер с заголовком и бейджем */}
-            <div className="flex items-start justify-between gap-4 mb-2">
-                {/* Заголовок */}
-                <h3 className="text-xl font-bold text-gray-800 flex-1">
-                    {vacancy.title}
-                </h3>
-                
-                {/* Бейдж справа */}
-                {vacancy.republish_count === 0 ? (
-                    <span className="
-                        px-2 py-1
-                        rounded-full 
-                        text-xs font-bold uppercase tracking-wider
-                        bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-600 
-                        text-amber-900 
-                        shadow-sm
-                        whitespace-nowrap
-                        flex-shrink-0
-                    ">
-                        NEW ✨
-                    </span>
-                ) : vacancy.republish_count >= 2 ? (
-                    <span className="
-                        px-2 py-1
-                        rounded-full 
-                        text-xs font-semibold
-                        bg-gray-200 
-                        text-gray-600
-                        whitespace-nowrap
-                        flex-shrink-0
-                    ">
-                        ♻️ OLD
-                    </span>
-                ) : null}
-            </div>
-            
-            <p className="text-lg text-gray-600 mb-3">
-                {vacancy.company}
-            </p>
-            
-            <div className="space-y-1 mb-4">
-                <p className="text-sm text-gray-500">
-                    📅 {formatDate(vacancy.published_date)}
-                </p>
-                <p className="text-sm text-gray-500">
-                    🎯 Уровень: {vacancy.level}
-                </p>
-                <p className="text-sm text-gray-500">
-                    💰 Зарплата: {vacancy.salary}
-                </p>
-            </div>
-            <div className="flex items-start justify-between gap-4 mb-2">
-                {!vacancy.is_active 
-                ? (<a 
-                    href={vacancy.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className=" text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition"
-                >
-                    На Хабр →
-                </a>) : (
-                    <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-gray-500 text-white rounded"
-                    >Удалена</p>
-                )}
-                <div 
-                    onClick={handleVacancyClick}  // ← Привязываем обработчик. Все тоже самое делаем для избранных вакансий
-                    className="cursor-pointer hover:shadow-lg"
-                >
-                    <p className=" transition text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-green-500 text-white rounded">
-                        Детали →
+        <div className="relative h-full min-h-[280px]">
+            {/* Вся карточка — это ссылка на Хабр */}
+            <a 
+                href={vacancy.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`
+                    flex flex-col justify-between h-full p-6 rounded-2xl border transition-all duration-300 group
+                    ${isFavorite 
+                        ? 'bg-slate-50 border-slate-200 saturate-[0.3] opacity-90' 
+                        : 'bg-blue-50/30 border-blue-100 hover:bg-blue-100/40 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5'
+                    }
+                `}
+            >
+                <div className="space-y-2">
+                    <div className="flex justify-between items-start gap-2">
+                        <h3 className="text-lg font-extrabold text-blue-900 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">
+                            {vacancy.title}
+                        </h3>
+                        {getRepublishBadge()}
+                    </div>
+                    <p className="text-sm font-semibold text-blue-700/60 truncate italic">
+                        {vacancy.company}
                     </p>
                 </div>
-                {token && (isFavorite ? (
-                    <p className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-gray-500 text-white rounded"
-                    >В избранном</p>
-                ) : (
+
+                <div className="flex flex-col gap-1.5 py-4 border-y border-blue-100/50 my-2">
+                    <div className="flex items-center gap-2 text-xs font-medium text-blue-800/70">
+                        <span className="w-4">📅</span> {formatDate(vacancy.published_date)}
+                    </div>
+                    <div className="flex items-center gap-2 text-xs font-medium text-blue-800/70">
+                        <span className="w-4">🎯</span> {vacancy.level}
+                    </div>
+                    <div className="flex items-center gap-2 text-sm font-bold text-blue-900">
+                        <span className="w-4 text-base">💰</span> {vacancy.salary}
+                    </div>
+                </div>
+
+                <div className="flex justify-end items-center gap-2 mt-auto">
                     <button 
-                        type="button"
-                        onClick={() => HandleAddToFavorites(vacancy.id)}
-                        className="text-xs font-bold uppercase tracking-wider inline-block px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition"
+                        onClick={(e) => {
+                            e.preventDefault(); // Чтобы не сработала ссылка на Хабр
+                            e.stopPropagation();
+                            handleVacancyClick();
+                        }}
+                        className="px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg transition-all"
                     >
-                        В избранное →
+                        Детали
                     </button>
-                )
-                )}
 
-            </div>
-
+                    {token && (
+                        <button 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                HandleAddToFavorites(vacancy.id);
+                            }}
+                            className={`
+                                px-4 py-2 rounded-lg font-bold text-[10px] uppercase tracking-widest transition-all shadow-sm
+                                ${isFavorite 
+                                    ? 'bg-slate-200 text-slate-500' 
+                                    : 'bg-white border border-blue-200 text-blue-600 hover:border-blue-600'
+                                }
+                            `}
+                        >
+                            {isFavorite ? '❤️ Сохранено' : '🤍 Избранное'}
+                        </button>
+                    )}
+                </div>
+            </a>
         </div>
     );
 }

@@ -1,12 +1,13 @@
 // DetailVacancyPage.jsx
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import axiosInstance from '@/utils/axios';
 
 function DetailVacancyPage({ type }) {
     const { id } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+
     
     const [isSaving, setIsSaving] = useState(false);
     const isFavorite = type === 'favorite';
@@ -27,10 +28,14 @@ function DetailVacancyPage({ type }) {
     const loadVacancy = async () => {
         setLoading(true);
         setError(null);
+        console.log('Vacansy not -->', id)
+        console.log('isFavorite', isFavorite)
 
         try {
-            const endpoint = isFavorite ? `/favorites/${id}` : `/vacancies/${id}`;
+            const endpoint = isFavorite ? `/favorite/${id}` : `/vacancy/${id}`;
+            console.log('endpoint', endpoint)
             const response = await axiosInstance.get(endpoint);
+            console.log('endpoint', response)
             setVacancy(response.data);
             setEditedNotes(response.data.user_notes || '');
         } catch (error) {
@@ -63,7 +68,7 @@ function DetailVacancyPage({ type }) {
         if (!window.confirm('Удалить из избранного?')) return;
         
         try {
-            await axiosInstance.delete(`/favorites/${id}`);
+            await axiosInstance.delete('/favorite', { data: { favorite_id: parseInt(id) } });
             navigate('/favorites');  // Вернуться к списку избранного
         } catch (error) {
             console.error('Ошибка удаления:', error);
@@ -144,7 +149,7 @@ function DetailVacancyPage({ type }) {
                                 onClick={() => setIsEditModalOpen(true)}
                                 className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg"
                             >
-                                Редактировать заметки
+                                Добавить заметку к вакансии
                             </button>
                             <button
                                 onClick={handleDelete}
@@ -189,12 +194,12 @@ function DetailVacancyPage({ type }) {
                         </div>
                         {isFavorite && vacancy.original_vacancy_id && (
                             <div>
-                                <a
-                                    href={`/vacancy/${vacancy.original_vacancy_id}`}
+                                <Link
+                                    to={`/vacancy/${vacancy.original_vacancy_id}`}
                                     className="text-blue-600 hover:underline"
                                 >
                                     → Оригинальная вакансия
-                                </a>
+                                </Link>
                             </div>
                         )}
                     </div>

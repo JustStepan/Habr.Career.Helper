@@ -1,47 +1,179 @@
+import { Link } from 'react-router-dom';
+
 function HomePage() {
+    const token = localStorage.getItem('access_token');
+
     return (
-        <div className="max-w-4xl mx-auto p-8">
-            {/* max-w-4xl = макс ширина, mx-auto = центрировать, p-8 = отступ внутри */}
-            
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
-                {/* text-4xl = размер 36px, font-bold = жирный, text-gray-800 = темно-серый, mb-4 = отступ снизу */}
-                Habr Career Parser
-            </h1>
-            
-            <p className="text-lg text-gray-600 mb-8">
-                {/* text-lg = размер 18px, text-gray-600 = серый, mb-8 = отступ снизу */}
-                Инструмент для парсинга и поиска вакансий на Habr Career
-            </p>
-            
-            <div className="grid grid-cols-1 gap-6">
-                {/* grid = сетка, grid-cols-1 = одна колонка, gap-6 = отступ между карточками */}
-                
-                <div className="bg-white p-6 rounded-lg shadow">
-                    {/* bg-white = белый фон, p-6 = отступ внутри, rounded-lg = скругленные углы, shadow = тень */}
-                    <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                        🔍 Парсинг вакансий
-                    </h2>
-                    <p className="text-gray-600">
-                        Спарсите вакансии с Habr Career по заданным параметрам: уровень, количество страниц, ключевые слова
-                    </p>
+        <div className="max-w-5xl mx-auto p-8">
+            {/* Заголовок */}
+            <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    Habr Career Parser
+                </h1>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Агрегатор вакансий с Habr Career. Автоматический сбор, хранение
+                    и удобный поиск вакансий для разработчиков.
+                </p>
+            </div>
+
+            {/* Основные возможности */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {/* Поиск вакансий */}
+                <Link
+                    to="/search"
+                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all"
+                >
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            Q
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                Поиск вакансий
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                Фильтрация по уровню (Junior, Middle, Senior), навыкам и дате публикации.
+                                База обновляется автоматически каждые 2 часа.
+                            </p>
+                        </div>
+                    </div>
+                </Link>
+
+                {/* Избранное */}
+                <Link
+                    to={token ? "/favorites" : "/login"}
+                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all"
+                >
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            *
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                Избранные вакансии
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                Сохраняйте интересные вакансии, добавляйте личные заметки.
+                                Вакансии хранятся даже после удаления с Habr.
+                            </p>
+                            {!token && (
+                                <p className="text-xs text-gray-400 mt-2">Требуется авторизация</p>
+                            )}
+                        </div>
+                    </div>
+                </Link>
+
+                {/* Детальный просмотр */}
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            i
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2">
+                                Детальный просмотр
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                Полное описание вакансии, список требуемых навыков, информация о компании.
+                                Быстрый переход на оригинал на Habr Career.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                        🎯 Подбор вакансий
-                    </h2>
-                    <p className="text-gray-600">
-                        Найдите подходящие вакансии из уже спарсенной базы данных
-                    </p>
+
+                {/* Регистрация */}
+                <Link
+                    to={token ? "/profile" : "/register"}
+                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all"
+                >
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            @
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                {token ? "Профиль" : "Регистрация"}
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                {token
+                                    ? "Управление аккаунтом и настройками."
+                                    : "Создайте аккаунт для сохранения вакансий в избранное и добавления заметок."
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+
+            {/* Будущие возможности */}
+            <div className="mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                    В разработке
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Статистика */}
+                    <div className="bg-gray-50 p-6 rounded-xl border border-dashed border-gray-300">
+                        <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 text-gray-400">
+                                #
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-gray-700 mb-2">
+                                    Статистика рынка
+                                </h3>
+                                <p className="text-gray-500 text-sm">
+                                    Аналитика по вакансиям: распределение по уровням, популярные технологии,
+                                    динамика зарплат, тренды языков программирования.
+                                    Инфографика на основе собранных данных.
+                                </p>
+                                <span className="inline-block mt-3 px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
+                                    Скоро
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* AI подбор */}
+                    <div className="bg-gray-50 p-6 rounded-xl border border-dashed border-gray-300">
+                        <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 text-gray-400">
+                                AI
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-gray-700 mb-2">
+                                    Подбор вакансий с помощью ИИ
+                                </h3>
+                                <p className="text-gray-500 text-sm">
+                                    Опишите свои навыки, опыт и пожелания к работе.
+                                    Языковая модель проанализирует базу вакансий и подберет
+                                    наиболее подходящие предложения с объяснением выбора.
+                                </p>
+                                <span className="inline-block mt-3 px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
+                                    Скоро
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                        🧪 Тестирование форм
-                    </h2>
-                    <p className="text-gray-600">
-                        Экспериментальная страница для тестирования различных форм ввода
-                    </p>
+            </div>
+
+            {/* Техническая информация */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Как это работает</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+                    <div>
+                        <p className="font-medium text-gray-800 mb-1">Сбор данных</p>
+                        <p>Парсер на Beautiful Soup собирает вакансии с Habr Career каждые 2 часа по расписанию.</p>
+                    </div>
+                    <div>
+                        <p className="font-medium text-gray-800 mb-1">Хранение</p>
+                        <p>Вакансии сохраняются в PostgreSQL. Автоматическая проверка актуальности ссылок.</p>
+                    </div>
+                    <div>
+                        <p className="font-medium text-gray-800 mb-1">API</p>
+                        <p>FastAPI бэкенд с JWT-авторизацией. React фронтенд. Деплой через Docker.</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SkillsAutocomplete from '@/components/search/SkillsAutocomplete';
 
-function SearchVacanciesDBForm({ onSearchDB }) {
-    const [level, setLevel] = useState('Junior');
-    const [skills, setSkills] = useState('');
-    const [date, setDate] = useState('');
+function SearchVacanciesDBForm({ onSearchDB, initialLevel = 'Junior', initialSkills = '', initialDate = '' }) {
+    const [level, setLevel] = useState(initialLevel);
+    const [skills, setSkills] = useState(initialSkills);
+    const [date, setDate] = useState(initialDate);
+
+    // Синхронизируем с начальными значениями при изменении (например, при navigate(-1))
+    useEffect(() => {
+        setLevel(initialLevel);
+        setSkills(initialSkills);
+        setDate(initialDate);
+    }, [initialLevel, initialSkills, initialDate]);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -23,7 +30,7 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                         onChange={(e) => setLevel(e.target.value)}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
-                        <option value="Intern">Стажёр</option>
+                        <option value="Intern">Стажер</option>
                         <option value="Junior">Junior</option>
                         <option value="Middle">Middle</option>
                         <option value="Senior">Senior</option>
@@ -36,7 +43,7 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                         Навыки (начните вводить текст)
                     </label>
-                    <SkillsAutocomplete 
+                    <SkillsAutocomplete
                         value={skills}
                         onChange={setSkills}
                     />
@@ -46,7 +53,7 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                         Дата публикации (от)
                     </label>
-                    <input 
+                    <input
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
@@ -54,7 +61,7 @@ function SearchVacanciesDBForm({ onSearchDB }) {
                     />
                 </div>
 
-                <button 
+                <button
                     type="submit"
                     className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-medium transition"
                 >
