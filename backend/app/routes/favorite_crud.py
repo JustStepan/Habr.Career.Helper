@@ -19,9 +19,9 @@ router = APIRouter(tags=["favorite_crud"])
 @router.delete("/favorite")
 async def delete_from_favorite(
     request: FavoriteRequest,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user)
 ):
-    print(request.favorite_id)
     query = await db.execute(
         select(FavoriteVacancy)
         .options(selectinload(FavoriteVacancy.skills))
@@ -32,13 +32,14 @@ async def delete_from_favorite(
     if not favorite_vacancy:
         raise HTTPException(404, "Вакансия не найдена")
 
+    if favorite_vacancy.owner_id != current_user.id:
+        raise HTTPException(403, "Нет доступа")
+
     await db.delete(favorite_vacancy)
     await db.commit()
     logger.info(f"Вакансия {request.favorite_id} удалена.")
 
     return {"result": True}
-
-from app.models import PatchRequest, FavoriteVacancyResponse
 
 @router.patch("/favorite/{id}", response_model=FavoriteVacancyResponse)
 async def patch_edit_favorite_vacancy(
@@ -47,7 +48,6 @@ async def patch_edit_favorite_vacancy(
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    print(patch_data.user_notes, id)
     logger.info(f'Добавляем заметку пользователя{current_user.username}: {patch_data.user_notes}\nдля избранной вакансии {id}')
     query = (
         select(FavoriteVacancy)

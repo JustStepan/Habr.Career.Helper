@@ -6,7 +6,7 @@ import App from '@/App'  // ✅ Импортируем App
 
 import HomePage from '@/pages/HomePage'
 // import ParseVacancies from '@/pages/ParseVacancies'
-import SearchVacansy from '@/pages/SearchVacansy'
+import SearchVacancies from '@/pages/SearchVacancies'
 import ExperimentForm from '@/pages/ExperimentForm'
 import UserRegistration from '@/pages/UserRegistration'
 import LoginPage from '@/pages/LoginPage'
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/" element={<App />}>
                 <Route index element={<HomePage />} />
                 {/* <Route path="parser" element={<ParseVacancies />} /> */}
-                <Route path="search" element={<SearchVacansy />} />
+                <Route path="search" element={<SearchVacancies />} />
                 <Route path="/vacancy/:id" element={<DetailVacancyPage type="regular" />} />
                 {/* <Route path="experiments" element={<ExperimentForm />} /> */}
             {/* Защищенные */}

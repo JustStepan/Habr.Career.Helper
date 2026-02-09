@@ -36,12 +36,14 @@ async def get_vacancies(
     db: AsyncSession = Depends(get_db),
     user: User | None = Depends(get_current_user_soft_auth)
 ):
-    # Ищем пользователя используем soft auth
+    # Загружаем только ID избранных вакансий (оптимизация N+1)
     favorites_map = {}
     if user:
-        query = await db.execute(select(User).where(User.id == user.id).options(selectinload(User.favorite_vacancies)))
-        user = query.scalar_one_or_none()
-        favorites_map = {u.original_vacancy_id: u.id for u in user.favorite_vacancies}
+        result = await db.execute(
+            select(FavoriteVacancy.original_vacancy_id, FavoriteVacancy.id)
+            .where(FavoriteVacancy.owner_id == user.id)
+        )
+        favorites_map = {row[0]: row[1] for row in result.all()}
 
     # Базовый запрос
     query = select(Vacancy).options(selectinload(Vacancy.skills))
@@ -82,7 +84,7 @@ async def get_vacancies(
 @router.get("/skills/search", response_model=List[str])
 async def search_skills(
     query: str = Query(..., min_length=1),
-    limit: int = 10,
+    limit: int = Query(default=20, le=100),
     db: AsyncSession = Depends(get_db)
 ):
     """

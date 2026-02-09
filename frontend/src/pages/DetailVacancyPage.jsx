@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import axiosInstance from '@/utils/axios';
+import { formatDateFull } from '@/utils/formatDate';
+import RepublishBadge from '@/components/ui/RepublishBadge';
 
 function DetailVacancyPage({ type }) {
     const { id } = useParams();
@@ -101,32 +103,6 @@ function DetailVacancyPage({ type }) {
 
     if (!vacancy) return null;
 
-    // Форматирование даты
-    const formatDate = (dateString) => {
-        if (!dateString) return 'Дата не указана';
-        return new Date(dateString).toLocaleDateString('ru-RU', {
-            year: 'numeric', month: 'long', day: 'numeric'
-        });
-    };
-
-    // Бейдж в зависимости от republish_count
-    const getRepublishBadge = () => {
-        if (vacancy.republish_count === 0) {
-            return (
-                <span className="px-3 py-1 bg-gradient-to-r from-amber-200 to-amber-600 text-amber-900 text-xs font-bold rounded-full">
-                    NEW ✨
-                </span>
-            );
-        } else if (vacancy.republish_count >= 2) {
-            return (
-                <span className="px-3 py-1 bg-gray-200 text-gray-600 text-xs font-semibold rounded-full">
-                    ♻️ OLD
-                </span>
-            );
-        }
-        return null;
-    };
-
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Хедер с кнопкой назад */}
@@ -172,10 +148,10 @@ function DetailVacancyPage({ type }) {
                                 {vacancy.title}
                             </h1>
                             <p className="text-gray-400 text-sm">
-                                {formatDate(vacancy.published_date)}
+                                {formatDateFull(vacancy.published_date)}
                             </p>
                         </div>
-                        {getRepublishBadge()}
+                        <RepublishBadge republishCount={vacancy.republish_count} />
                     </div>
 
                     {/* Свойства */}

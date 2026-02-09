@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axiosInstance from '@/utils/axios';
 import { useNavigate } from 'react-router-dom';
+import { formatDate } from '@/utils/formatDate';
+import RepublishBadge from '@/components/ui/RepublishBadge';
 
 
 function VacancyCard({ vacancy, favoritesMap }) {
@@ -14,39 +16,6 @@ function VacancyCard({ vacancy, favoritesMap }) {
 
     const navigate = useNavigate();
 
-    const getRepublishBadge = () => {
-        if (vacancy.republish_count === 0) {
-            return (
-                <span className="px-3 py-1 bg-gradient-to-r from-amber-200 to-amber-600 text-amber-900 text-xs font-bold rounded-full">
-                    NEW ✨
-                </span>
-            );
-        } else if (vacancy.republish_count >= 2) {
-            return (
-                <span className="px-3 py-1 bg-gray-200 text-gray-600 text-xs font-semibold rounded-full">
-                    OLD ♻️
-                </span>
-            );
-        }
-        return null;
-    };
-
-
-    function formatDate(dateString) {
-        if (!dateString) return 'Дата не указана';
-        
-        const date = new Date(dateString);
-        
-        const options = {
-            day: 'numeric',
-            month: 'long',
-            hour: '2-digit',
-            minute: '2-digit'
-        };
-        
-        return date.toLocaleDateString('ru-RU', options);
-    }
-    
     const HandleAddToFavorites = async (favorite_id) => {
         setError(null);
         setLoading(true);
@@ -97,7 +66,7 @@ function VacancyCard({ vacancy, favoritesMap }) {
                         <h3 className="text-lg font-extrabold text-blue-900 leading-tight line-clamp-2 group-hover:text-blue-600 transition-colors">
                             {vacancy.title}
                         </h3>
-                        {getRepublishBadge()}
+                        <RepublishBadge republishCount={vacancy.republish_count} />
                     </div>
                     <p className="text-sm font-semibold text-blue-700/60 truncate italic">
                         {vacancy.company}

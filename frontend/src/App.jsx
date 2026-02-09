@@ -52,17 +52,12 @@ function App() {
             <nav className="bg-gray-800 p-4 flex justify-between">
                 {/* Левая часть */}
                 <div className="flex gap-6 items-center">
-                    <NavLink to="/" className={({ isActive }) => 
+                    <NavLink to="/" className={({ isActive }) =>
                         isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Главная
                     </NavLink>
-                    {/* <NavLink to="/parser" className={({ isActive }) => 
-                        isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
-                    }>
-                        Парсить вакансии
-                    </NavLink> */}
-                    <NavLink to="/search" className={({ isActive }) => 
+                    <NavLink to="/search" className={({ isActive }) =>
                         isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
                     }>
                         Подобрать вакансии

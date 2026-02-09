@@ -56,7 +56,7 @@ class Vacancy(Base):
     url = Column(String(1000), nullable=False, unique=True)
     salary = Column(String(200), nullable=False)
     description = Column(Text, nullable=False)
-    published_date = Column(DateTime(timezone=True), server_default=text("CURRENT_TIMESTAMP"), nullable=True)
+    published_date = Column(DateTime(timezone=True), server_default=text("CURRENT_TIMESTAMP"), nullable=True, index=True)
     is_active = Column(Boolean, default=True, server_default=text('true'))
     republish_count = Column(Integer, default=0, nullable=False)
     # Связь многие-ко-многим

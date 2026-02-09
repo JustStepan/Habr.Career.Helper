@@ -1,25 +1,10 @@
 import { useNavigate } from 'react-router-dom';
+import { formatDate } from '@/utils/formatDate';
 
 function FavoriteVacancyCard({ vacancy, DeleteVacancy}) {
-    
-    const navigate = useNavigate();
-    
-    function formatDate(dateString) {
-        if (!dateString) return 'Дата не указана';
-        
-        const date = new Date(dateString);
-    
 
-        const options = {
-            day: 'numeric',
-            month: 'long',
-            hour: '2-digit',
-            minute: '2-digit'
-        };
-        
-        return date.toLocaleDateString('ru-RU', options);
-    }
-    
+    const navigate = useNavigate();
+
     const handleVacancyClick = () => {
         const route = `/favorite/${vacancy.id}`;
         navigate(route, { 
