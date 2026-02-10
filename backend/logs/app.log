@@ -260,3 +260,552 @@
 2026-02-10 11:00:26.735 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 4 из 21
 2026-02-10 11:00:26.744 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 4
 2026-02-10 11:06:54.880 | INFO     | app.routes.statistics:get_overview:27 - START
+2026-02-10 11:34:11.794 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 11:34:11.794 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 11:34:12.738 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 11:34:12.738 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 11:34:12.738 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 11:34:12.739 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 13:51:29.107 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 13:51:29.109 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 13:51:40.452 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 13:51:40.453 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 13:51:40.453 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 13:51:40.454 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 13:51:44.295 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 13:51:44.295 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 13:51:45.050 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 13:51:45.051 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 13:51:45.051 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 13:51:45.051 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 13:53:00.321 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 13:53:00.323 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 13:53:01.310 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 13:53:01.311 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 13:53:01.312 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 13:53:01.313 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 13:53:10.011 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 13:53:10.012 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 13:53:10.802 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 13:53:10.803 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 13:53:10.803 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 13:53:10.803 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 13:53:35.355 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 13:53:35.355 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 13:53:36.351 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 13:53:36.352 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 13:53:36.352 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 13:53:36.353 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 14:00:00.111 | INFO     | app.parser:parse_habr_vacancies:98 - Запуск парсинга: уровень=all, страниц=20
+2026-02-10 14:00:00.112 | INFO     | app.parser:parse_habr_vacancies:99 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-10 14:00:00.112 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 1/20...
+2026-02-10 14:00:01.703 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:03.098 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:05.019 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:05.999 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:07.053 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:08.046 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:10.413 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 7: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:11.404 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 8: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:12.363 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 9: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:13.268 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 10: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:14.273 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 11: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:15.286 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 12: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:16.351 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 13: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:17.304 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 14: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:18.290 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 15: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:19.229 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 16: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:20.219 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 17: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:21.259 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 18: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:22.289 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 19: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:23.317 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 20: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:24.288 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 21: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:25.325 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 22: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:26.276 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 23: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:27.607 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 24: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:28.745 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 25: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:00:29.247 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 1: добавлено 0 вакансий
+2026-02-10 14:00:30.248 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 2/20...
+2026-02-10 14:01:00.421 | ERROR    | app.parser:_fetch_vacancies_page:147 - Ошибка при запросе страницы 2: 
+2026-02-10 14:01:00.422 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 2: добавлено 0 вакансий
+2026-02-10 14:01:01.423 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 3/20...
+2026-02-10 14:01:02.963 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:03.890 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:04.988 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:05.922 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:07.129 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:08.247 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:09.450 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 7: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:10.614 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 8: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:11.652 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 9: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:12.864 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 10: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:13.852 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 11: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:14.813 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 12: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:15.872 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 13: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:16.788 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 14: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:17.713 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 15: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:18.705 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 16: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:19.724 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 17: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:20.669 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 18: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:21.649 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 19: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:22.624 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 20: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:23.539 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 21: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:24.492 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 22: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:25.565 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 23: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:27.127 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 24: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:28.102 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 25: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:28.604 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 3: добавлено 0 вакансий
+2026-02-10 14:01:29.605 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 4/20...
+2026-02-10 14:01:31.001 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:31.971 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:32.906 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:33.880 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:34.782 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:35.885 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:36.771 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 7: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:37.692 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 8: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:38.687 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 9: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:39.657 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 10: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:40.740 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 11: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:41.711 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 12: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:43.280 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 13: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:44.322 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 14: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:45.255 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 15: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:46.193 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 16: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:47.188 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 17: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:48.154 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 18: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:49.080 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 19: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:50.055 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 20: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:51.113 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 21: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:52.032 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 22: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:53.009 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 23: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:53.937 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 24: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:54.908 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 25: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:55.411 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 4: добавлено 0 вакансий
+2026-02-10 14:01:56.412 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 5/20...
+2026-02-10 14:01:57.744 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:58.847 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:01:59.844 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:00.912 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:02.106 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:03.117 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:04.378 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 7: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:05.398 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 8: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:06.372 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 9: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:07.340 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 10: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:08.336 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 11: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:09.261 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 12: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:10.329 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 13: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:11.848 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 14: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:12.871 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 15: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:13.909 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 16: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:14.839 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 17: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:16.016 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 18: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:17.070 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 19: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:18.130 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 20: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:19.238 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 21: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:20.366 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 22: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:21.402 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 23: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:22.514 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 24: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:23.529 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 25: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:24.032 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 5: добавлено 0 вакансий
+2026-02-10 14:02:25.032 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 6/20...
+2026-02-10 14:02:26.582 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:27.635 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:28.743 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:29.750 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:30.840 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:31.913 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:32.826 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 7: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:33.889 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 8: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:34.996 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 9: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:35.997 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 10: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:36.936 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 11: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:37.915 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 12: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:38.957 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 13: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:40.107 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 14: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:41.150 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 15: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:42.132 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 16: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:43.070 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 17: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:44.099 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 18: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:45.070 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 19: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:46.048 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 20: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:47.018 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 21: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:47.988 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 22: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:49.122 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 23: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:50.083 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 24: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:51.083 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 25: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:02:51.585 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 6: добавлено 0 вакансий
+2026-02-10 14:02:52.587 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 7/20...
+2026-02-10 14:03:22.786 | ERROR    | app.parser:_fetch_vacancies_page:147 - Ошибка при запросе страницы 7: 
+2026-02-10 14:03:22.786 | INFO     | app.parser:parse_habr_vacancies:121 - Страница 7: добавлено 0 вакансий
+2026-02-10 14:03:23.788 | INFO     | app.parser:parse_habr_vacancies:105 - Парсинг страницы 8/20...
+2026-02-10 14:03:25.152 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 1: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:03:26.177 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 2: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:03:27.113 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 3: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:18:59.128 | ERROR    | app.parser:_fetch_vacancy_details:255 - Ошибка при загрузке https://career.habr.com/vacancies/1000164894: 
+2026-02-10 14:19:02.056 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 4: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:19:03.143 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 5: name 'SPECIALIZATIONS' is not defined
+2026-02-10 14:19:04.070 | ERROR    | app.parser:_fetch_vacancies_page:165 - Ошибка при парсинге вакансии 6: name 'SPECIALIZATIONS' is not defined
+2026-02-10 15:02:40.043 | ERROR    | app.parser:_fetch_vacancy_details:255 - Ошибка при загрузке https://career.habr.com/vacancies/1000164426: 
+2026-02-10 15:03:11.744 | ERROR    | app.parser:_fetch_vacancy_details:255 - Ошибка при загрузке https://career.habr.com/vacancies/1000164426: 
+2026-02-10 15:03:16.784 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:16.784 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:17.765 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:17.766 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:17.766 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:17.766 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:19.485 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:19.485 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:20.257 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:20.258 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:20.258 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:20.259 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:22.183 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:22.183 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:22.939 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:22.940 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:22.940 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:22.940 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:24.455 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:24.455 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:25.263 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:25.264 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:25.264 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:25.264 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:25.669 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:25.669 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:26.472 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:26.473 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:26.473 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:26.473 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:30.921 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:30.922 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:31.694 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:31.694 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:31.694 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:31.695 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:34.835 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:34.836 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:35.612 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:35.612 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:35.612 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:35.613 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:39.150 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:39.151 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:39.922 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:39.922 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:39.923 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:39.923 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:48.616 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:48.616 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:49.405 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:49.406 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:49.406 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:49.407 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:49.711 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:49.712 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:50.450 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:50.450 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:50.450 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:50.451 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:55.300 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:55.301 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:56.061 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:56.061 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:56.061 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:56.062 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:56.567 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:56.567 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:57.388 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:57.388 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:57.388 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:57.389 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:03:58.402 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:03:58.403 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:03:59.169 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:03:59.169 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:03:59.169 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:03:59.170 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:04:01.394 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:04:01.395 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:04:02.148 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:04:02.148 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:04:02.148 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:04:02.149 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:08:04.645 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:08:04.647 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:08:05.539 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:08:05.539 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:08:05.540 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:08:05.540 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:08:36.160 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:08:36.160 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:08:36.999 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:08:37.000 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:08:37.000 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:08:37.001 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:08:57.620 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:08:57.620 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:08:58.481 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:08:58.481 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:08:58.481 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:08:58.482 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:09:11.417 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:09:11.418 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:09:12.338 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:09:12.339 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:09:12.339 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:09:12.339 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:09:40.334 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:09:40.334 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:09:41.224 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:09:41.225 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:09:41.225 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:09:41.226 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:09:43.856 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:09:43.856 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:09:44.710 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:09:44.711 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:09:44.711 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:09:44.711 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:43.825 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:43.825 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:10:44.639 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:10:44.639 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:10:44.640 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:10:44.640 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:47.268 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:47.268 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:10:48.036 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:10:48.036 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:10:48.036 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:10:48.037 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:50.662 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:50.663 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:10:51.438 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:10:51.438 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:10:51.439 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:10:51.439 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:53.156 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:53.156 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:10:53.907 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:10:53.908 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:10:53.908 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:10:53.908 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:57.445 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:57.445 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:10:58.224 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:10:58.224 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:10:58.225 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:10:58.225 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:10:59.641 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:10:59.641 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:00.498 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:00.499 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:00.499 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:00.500 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:10.401 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:10.401 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:11.195 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:11.195 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:11.195 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:11.196 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:16.552 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:16.552 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:17.325 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:17.326 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:17.326 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:17.326 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:18.035 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:18.035 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:18.827 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:18.827 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:18.828 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:18.828 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:24.189 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:24.189 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:24.939 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:24.939 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:24.939 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:24.940 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:28.276 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:28.276 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:29.067 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:29.068 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:29.068 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:29.068 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:30.989 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:30.989 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:31.760 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:31.760 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:31.760 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:31.761 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:33.275 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:33.276 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:34.019 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:34.019 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:34.019 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:34.020 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:36.041 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:36.041 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:36.787 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:36.787 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:36.787 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:36.788 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:46.992 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:46.993 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:47.778 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:47.778 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:47.778 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:47.779 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:48.992 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:48.992 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:49.747 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:49.747 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:49.748 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:49.748 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:11:54.298 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:11:54.298 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:11:55.130 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:11:55.131 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:11:55.131 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:11:55.131 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:16:25.899 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:16:25.899 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:16:26.788 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:16:26.790 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:16:26.791 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:16:26.791 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:17:05.074 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:17:05.075 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:17:05.975 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:17:05.975 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:17:05.976 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:17:05.976 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:18:51.153 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:18:51.154 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:18:52.093 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:18:52.094 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:18:52.094 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:18:52.095 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:00.281 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:00.281 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:01.067 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:01.067 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:01.067 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:01.068 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:02.887 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:02.887 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:03.645 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:03.645 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:03.645 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:03.646 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:12.446 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:12.446 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:13.217 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:13.217 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:13.217 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:13.218 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:15.339 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:15.339 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:16.136 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:16.136 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:16.137 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:16.137 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:21.493 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:21.494 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:22.253 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:22.254 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:22.254 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:22.255 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:22.660 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:22.660 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:23.416 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:23.417 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:23.417 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:23.417 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:26.955 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:26.955 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:27.714 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:27.714 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:27.714 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:27.715 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:29.736 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:29.737 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:30.547 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:30.547 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:30.548 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:30.548 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:32.268 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:32.268 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:33.036 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:33.036 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:33.037 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:33.037 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:33.946 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:33.946 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:34.693 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:34.693 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:34.694 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:34.694 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:39.648 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:39.648 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:40.403 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:40.404 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:40.404 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:40.404 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:41.212 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:41.213 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:42.000 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:42.000 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:42.000 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:42.001 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:44.021 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:44.021 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:44.786 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:44.786 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:44.786 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:44.787 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:49.037 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:49.037 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:49.798 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:49.798 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:49.798 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:49.799 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:52.427 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:52.427 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:19:53.170 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:19:53.171 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:19:53.171 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:19:53.171 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:19:59.536 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:19:59.536 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:20:00.304 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:20:00.305 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:20:00.305 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:20:00.305 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:20:01.214 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:20:01.214 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:20:01.978 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:20:01.979 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:20:01.979 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:20:01.979 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:21:02.803 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:21:02.803 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:21:03.674 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:21:03.674 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:21:03.674 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:21:03.675 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:24:35.038 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:24:35.039 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:24:35.948 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:24:35.949 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:24:35.949 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:24:35.949 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-10 15:24:38.881 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-10 15:24:38.882 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-10 15:24:39.659 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-10 15:24:39.660 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-10 15:24:39.660 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-10 15:24:39.660 | INFO     | app.main:lifespan:21 - Scheduler запущен
