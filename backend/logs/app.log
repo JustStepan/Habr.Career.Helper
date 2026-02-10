@@ -122,3 +122,141 @@
 2026-02-10 10:17:41.582 | INFO     | app.main:lifespan:21 - Scheduler запущен
 2026-02-10 10:18:28.284 | INFO     | app.routes.statistics:get_overview:27 - START
 2026-02-10 10:18:32.320 | INFO     | app.routes.statistics:get_overview:27 - START
+2026-02-10 11:00:00.061 | INFO     | app.parser:parse_habr_vacancies:106 - Запуск парсинга: уровень=all, страниц=20
+2026-02-10 11:00:00.061 | INFO     | app.parser:parse_habr_vacancies:107 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-10 11:00:00.061 | INFO     | app.parser:parse_habr_vacancies:113 - Парсинг страницы 1/20...
+2026-02-10 11:00:01.434 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 1/25: Deep Learning Engineer (ASR)
+2026-02-10 11:00:02.406 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 2/25: Ведущий инженер БД ClickHouse
+2026-02-10 11:00:03.359 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 3/25: Специалист по информационной безопасности
+2026-02-10 11:00:04.309 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 4/25: Специалист инфраструктурной безопасности
+2026-02-10 11:00:06.302 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 5/25: Руководитель группы разработки распределённой сборки в DevTools
+2026-02-10 11:00:07.286 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 6/25: Системный программист С/C++ (ОС Astra Linux)
+2026-02-10 11:00:08.362 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 7/25: Руководитель группы разработки Автосборки в DevTools
+2026-02-10 11:00:09.379 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 8/25: AppSec-инженер
+2026-02-10 11:00:10.369 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 9/25: Руководитель проекта внедрения 1С ERP
+2026-02-10 11:00:11.383 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 10/25: Системный аналитик (ОС Astra Linux)
+2026-02-10 11:00:12.388 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 11/25: Функциональный архитектор 1С
+2026-02-10 11:00:13.476 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 12/25: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-02-10 11:00:14.471 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 13/25: Разработчик 1С
+2026-02-10 11:00:15.424 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 14/25: Технический специалист по учёту и обслуживанию оборудования
+2026-02-10 11:00:16.441 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 15/25: Инженер по тестированию (ОС Astra Linux)
+2026-02-10 11:00:17.466 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 16/25: Стажёр в отдел проверки персонала
+2026-02-10 11:00:18.408 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 17/25: Стажёр по универсальному тестированию (Java)
+2026-02-10 11:00:19.312 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 18/25: Продуктовый маркетолог/Product Marketing manager
+2026-02-10 11:00:20.288 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 19/25: PL/SQL Разработчик
+2026-02-10 11:00:21.272 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 20/25: Архитектор программного обеспечения (Java)
+2026-02-10 11:00:22.214 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 21/25: Руководитель IT проектов
+2026-02-10 11:00:23.200 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 22/25: Стажер бизнес-аналитик
+2026-02-10 11:00:24.149 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 23/25: Аналитик 1С:WMS
+2026-02-10 11:00:25.144 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 24/25: Senior DevOps/ Platform Engineer
+2026-02-10 11:00:26.066 | INFO     | app.parser:_fetch_vacancies_page:170 - Страница 1, вакансия 25/25: 1С Программист
+2026-02-10 11:00:26.568 | INFO     | app.parser:parse_habr_vacancies:123 - Дубликат на странице 1: Стажер бизнес-аналитик (https://career.habr.com/vacancies/1000162829)
+2026-02-10 11:00:26.569 | INFO     | app.parser:parse_habr_vacancies:129 - Страница 1: добавлено 21 вакансий
+2026-02-10 11:00:26.569 | INFO     | app.parser:parse_habr_vacancies:133 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-10 11:00:26.569 | INFO     | app.parser:parse_habr_vacancies:139 - Парсинг завершен. Найдено новых вакансий: 21
+2026-02-10 11:00:26.569 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 21
+2026-02-10 11:00:26.569 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Deep Learning Engineer (ASR)
+2026-02-10 11:00:26.575 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:27:01+00:00 --> 2026-02-10 10:58:19+03:00
+2026-02-10 11:00:26.575 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 405 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.582 | INFO     | app.tasks:save_vacancies:89 - Вакансия 1 - дубликат: Deep Learning Engineer (ASR)
+2026-02-10 11:00:26.582 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Ведущий инженер БД ClickHouse
+2026-02-10 11:00:26.588 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-10 11:00:26.624 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Ведущий инженер БД ClickHouse (995) сохранена в БД.
+2026-02-10 11:00:26.625 | INFO     | app.tasks:save_vacancies:87 - Вакансия 2 сохранена: Ведущий инженер БД ClickHouse
+2026-02-10 11:00:26.625 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Специалист по информационной безопасности
+2026-02-10 11:00:26.633 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:54:30+00:00 --> 2026-02-10 10:54:24+03:00
+2026-02-10 11:00:26.633 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 592 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.639 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: Специалист по информационной безопасности
+2026-02-10 11:00:26.639 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Специалист инфраструктурной безопасности
+2026-02-10 11:00:26.645 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:51:12+00:00 --> 2026-02-10 10:51:28+03:00
+2026-02-10 11:00:26.646 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 591 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.653 | INFO     | app.tasks:save_vacancies:89 - Вакансия 4 - дубликат: Специалист инфраструктурной безопасности
+2026-02-10 11:00:26.653 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель группы разработки распределённой сборки в DevTools
+2026-02-10 11:00:26.659 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:50:12+00:00 --> 2026-02-10 10:50:19+03:00
+2026-02-10 11:00:26.659 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 588 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.667 | INFO     | app.tasks:save_vacancies:89 - Вакансия 5 - дубликат: Руководитель группы разработки распределённой сборки в DevTools
+2026-02-10 11:00:26.667 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный программист С/C++ (ОС Astra Linux)
+2026-02-10 11:00:26.670 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:48:20+00:00 --> 2026-02-10 10:47:54+03:00
+2026-02-10 11:00:26.670 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 593 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.674 | INFO     | app.tasks:save_vacancies:89 - Вакансия 6 - дубликат: Системный программист С/C++ (ОС Astra Linux)
+2026-02-10 11:00:26.674 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель группы разработки Автосборки в DevTools
+2026-02-10 11:00:26.676 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:44:44+00:00 --> 2026-02-10 10:44:44+03:00
+2026-02-10 11:00:26.676 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 589 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.678 | INFO     | app.tasks:save_vacancies:89 - Вакансия 7 - дубликат: Руководитель группы разработки Автосборки в DevTools
+2026-02-10 11:00:26.678 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: AppSec-инженер
+2026-02-10 11:00:26.680 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:42:53+00:00 --> 2026-02-10 10:42:48+03:00
+2026-02-10 11:00:26.680 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 594 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.683 | INFO     | app.tasks:save_vacancies:89 - Вакансия 8 - дубликат: AppSec-инженер
+2026-02-10 11:00:26.683 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель проекта внедрения 1С ERP
+2026-02-10 11:00:26.685 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:36:42+00:00 --> 2026-02-10 10:36:29+03:00
+2026-02-10 11:00:26.685 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 584 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.686 | INFO     | app.tasks:save_vacancies:89 - Вакансия 9 - дубликат: Руководитель проекта внедрения 1С ERP
+2026-02-10 11:00:26.686 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный аналитик (ОС Astra Linux)
+2026-02-10 11:00:26.688 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:35:12+00:00 --> 2026-02-10 10:35:17+03:00
+2026-02-10 11:00:26.688 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 595 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.689 | INFO     | app.tasks:save_vacancies:89 - Вакансия 10 - дубликат: Системный аналитик (ОС Astra Linux)
+2026-02-10 11:00:26.689 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Функциональный архитектор 1С
+2026-02-10 11:00:26.690 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:33:10+00:00 --> 2026-02-10 10:33:14+03:00
+2026-02-10 11:00:26.690 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 585 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.692 | INFO     | app.tasks:save_vacancies:89 - Вакансия 11 - дубликат: Функциональный архитектор 1С
+2026-02-10 11:00:26.692 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-02-10 11:00:26.693 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:31:42+00:00 --> 2026-02-10 10:31:44+03:00
+2026-02-10 11:00:26.693 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 590 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.694 | INFO     | app.tasks:save_vacancies:89 - Вакансия 12 - дубликат: Разработчик на Java в команду B2B-платформы Яндекс 360
+2026-02-10 11:00:26.694 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик 1С
+2026-02-10 11:00:26.695 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:29:10+00:00 --> 2026-02-10 10:29:30+03:00
+2026-02-10 11:00:26.695 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 586 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.697 | INFO     | app.tasks:save_vacancies:89 - Вакансия 13 - дубликат: Разработчик 1С
+2026-02-10 11:00:26.697 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Технический специалист по учёту и обслуживанию оборудования
+2026-02-10 11:00:26.698 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-10 11:00:26.707 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Технический специалист по учёту и обслуживанию оборудования (996) сохранена в БД.
+2026-02-10 11:00:26.708 | INFO     | app.tasks:save_vacancies:87 - Вакансия 14 сохранена: Технический специалист по учёту и обслуживанию оборудования
+2026-02-10 11:00:26.708 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер по тестированию (ОС Astra Linux)
+2026-02-10 11:00:26.708 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:27:21+00:00 --> 2026-02-10 10:27:13+03:00
+2026-02-10 11:00:26.708 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 596 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.710 | INFO     | app.tasks:save_vacancies:89 - Вакансия 15 - дубликат: Инженер по тестированию (ОС Astra Linux)
+2026-02-10 11:00:26.710 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Стажёр в отдел проверки персонала
+2026-02-10 11:00:26.711 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:27:21+00:00 --> 2026-02-10 10:27:13+03:00
+2026-02-10 11:00:26.711 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 227 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.712 | INFO     | app.tasks:save_vacancies:89 - Вакансия 16 - дубликат: Стажёр в отдел проверки персонала
+2026-02-10 11:00:26.712 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Стажёр по универсальному тестированию (Java)
+2026-02-10 11:00:26.713 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:27:01+00:00 --> 2026-02-10 10:27:13+03:00
+2026-02-10 11:00:26.713 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 3 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.714 | INFO     | app.tasks:save_vacancies:89 - Вакансия 17 - дубликат: Стажёр по универсальному тестированию (Java)
+2026-02-10 11:00:26.714 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Продуктовый маркетолог/Product Marketing manager
+2026-02-10 11:00:26.716 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-01 07:42:56+00:00 --> 2026-02-10 10:27:05+03:00
+2026-02-10 11:00:26.716 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 406 опубликована снова (счетчик: 1)
+2026-02-10 11:00:26.717 | INFO     | app.tasks:save_vacancies:89 - Вакансия 18 - дубликат: Продуктовый маркетолог/Product Marketing manager
+2026-02-10 11:00:26.717 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: PL/SQL Разработчик
+2026-02-10 11:00:26.718 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-10 11:00:26.722 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия PL/SQL Разработчик (997) сохранена в БД.
+2026-02-10 11:00:26.722 | INFO     | app.tasks:save_vacancies:87 - Вакансия 19 сохранена: PL/SQL Разработчик
+2026-02-10 11:00:26.722 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор программного обеспечения (Java)
+2026-02-10 11:00:26.723 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-03 07:16:35+00:00 --> 2026-02-10 10:16:35+03:00
+2026-02-10 11:00:26.723 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 598 опубликована снова (счетчик: 2)
+2026-02-10 11:00:26.724 | INFO     | app.tasks:save_vacancies:89 - Вакансия 20 - дубликат: Архитектор программного обеспечения (Java)
+2026-02-10 11:00:26.724 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель IT проектов
+2026-02-10 11:00:26.725 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-10 11:00:26.734 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Руководитель IT проектов (998) сохранена в БД.
+2026-02-10 11:00:26.734 | INFO     | app.tasks:save_vacancies:87 - Вакансия 21 сохранена: Руководитель IT проектов
+2026-02-10 11:00:26.735 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 4 из 21
+2026-02-10 11:00:26.744 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 4
+2026-02-10 11:06:54.880 | INFO     | app.routes.statistics:get_overview:27 - START

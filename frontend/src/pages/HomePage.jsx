@@ -103,6 +103,27 @@ function HomePage() {
                         </div>
                     </div>
                 </Link>
+
+                {/* Статистика */}
+                <Link
+                    to="/statistics"
+                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all"
+                >
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            S
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                Статистика вакансий
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                Аналитика по вакансиям: распределение по уровням, популярные технологии,
+                                тренды языков программирования. Инфографика на основе собранных данных.
+                            </p>
+                        </div>
+                    </div>
+                </Link>
             </div>
 
             {/* Будущие возможности */}
@@ -111,29 +132,7 @@ function HomePage() {
                     В разработке
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Статистика */}
-                    <div className="bg-gray-50 p-6 rounded-xl border border-dashed border-gray-300">
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 text-gray-400">
-                                #
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold text-gray-700 mb-2">
-                                    Статистика рынка
-                                </h3>
-                                <p className="text-gray-500 text-sm">
-                                    Аналитика по вакансиям: распределение по уровням, популярные технологии,
-                                    динамика зарплат, тренды языков программирования.
-                                    Инфографика на основе собранных данных.
-                                </p>
-                                <span className="inline-block mt-3 px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
-                                    Скоро
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
+                <div className="grid grid-cols-1 gap-6">
                     {/* AI подбор */}
                     <div className="bg-gray-50 p-6 rounded-xl border border-dashed border-gray-300">
                         <div className="flex items-start gap-4">
