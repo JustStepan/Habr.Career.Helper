@@ -1,11 +1,11 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
-from app.routes import auth, parser, crud, favorite_crud
+from app.routes import auth, parser, crud, favorite_crud, statistics
 from app.scheduler import scheduler, configure_scheduler
 from app.logger_config import logger
 
@@ -41,7 +41,7 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Маршруты
-routers = [auth.router, parser.router, crud.router, favorite_crud.router]
+routers = [auth.router, parser.router, crud.router, favorite_crud.router, statistics.router]
 for router in routers:
     app.include_router(router, prefix="/api")
 

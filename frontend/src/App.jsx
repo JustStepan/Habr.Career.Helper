@@ -62,6 +62,11 @@ function App() {
                     }>
                         Подобрать вакансии
                     </NavLink>
+                    <NavLink to="/statistics" className={({ isActive }) =>
+                        isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                    }>
+                        📊 Статистика
+                    </NavLink>
                 </div>
 
                 {/* Правая часть */}

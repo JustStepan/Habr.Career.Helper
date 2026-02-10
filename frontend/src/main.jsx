@@ -4,16 +4,17 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from '@/App'  // ✅ Импортируем App
 
-import HomePage from '@/pages/HomePage'
+import HomePage from '@/pages/HomePage';
 // import ParseVacancies from '@/pages/ParseVacancies'
-import SearchVacancies from '@/pages/SearchVacancies'
+import SearchVacancies from '@/pages/SearchVacancies';
 import ExperimentForm from '@/pages/ExperimentForm'
-import UserRegistration from '@/pages/UserRegistration'
-import LoginPage from '@/pages/LoginPage'
-import FavoritesPage from './pages/FavoritesPages'
-import ProfilePage from './pages/ProfilePage'
-import ProtectedRoute from '@/components/ProtectedRoute'
+import UserRegistration from '@/pages/UserRegistration';
+import LoginPage from '@/pages/LoginPage';
+import FavoritesPage from './pages/FavoritesPages';
+import ProfilePage from './pages/ProfilePage';
+import ProtectedRoute from '@/components/ProtectedRoute';
 import DetailVacancyPage from '@/pages/DetailVacancyPage';
+import StatisticsPage from '@/pages/StatisticsPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 {/* <Route path="parser" element={<ParseVacancies />} /> */}
                 <Route path="search" element={<SearchVacancies />} />
                 <Route path="/vacancy/:id" element={<DetailVacancyPage type="regular" />} />
+                <Route path="statistics" element={<StatisticsPage />} />
                 {/* <Route path="experiments" element={<ExperimentForm />} /> */}
             {/* Защищенные */}
                 <Route path="favorites" element={<ProtectedRoute><FavoritesPage /></ProtectedRoute>}/>
