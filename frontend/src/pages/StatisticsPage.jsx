@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react';
 import axiosInstance from '@/utils/axios';
 import SkillsChart from '@/components/statistics/SkillsChart';
 import LevelsPieChart from '@/components/statistics/LevelsPieChart';
-import TimelineChart from '@/components/statistics/TimelineChart';  // ← Добавь
+import TimelineChart from '@/components/statistics/TimelineChart';
+import CompaniesPieChart from '@/components/statistics/CompaniesPieChart';  // ← Добавь
 
 function StatisticsPage() {
     const [stats, setStats] = useState(null);
     const [skillsData, setSkillsData] = useState([]);
     const [levelsData, setLevelsData] = useState([]);
-    const [timelineData, setTimelineData] = useState([]);  // ← Добавь
+    const [timelineData, setTimelineData] = useState([]);
+    const [companiesData, setCompaniesData] = useState([]);  // ← Добавь
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     
@@ -21,18 +23,20 @@ function StatisticsPage() {
         setError(null);
         
         try {
-            // Загружаем четыре endpoint'а параллельно
-            const [overviewRes, skillsRes, levelsRes, timelineRes] = await Promise.all([
+            // Загружаем пять endpoint'ов параллельно
+            const [overviewRes, skillsRes, levelsRes, timelineRes, companiesRes] = await Promise.all([
                 axiosInstance.get('/statistics/overview'),
                 axiosInstance.get('/statistics/skills?limit=20'),
                 axiosInstance.get('/statistics/levels'),
-                axiosInstance.get('/statistics/timeline?days=30')  // ← Добавь
+                axiosInstance.get('/statistics/timeline?days=30'),
+                axiosInstance.get('/statistics/companies?limit=10')  // ← Добавь
             ]);
             
             setStats(overviewRes.data);
             setSkillsData(skillsRes.data);
             setLevelsData(levelsRes.data);
-            setTimelineData(timelineRes.data);  // ← Добавь
+            setTimelineData(timelineRes.data);
+            setCompaniesData(companiesRes.data);  // ← Добавь
         } catch (err) {
             setError(err.message);
             console.error('Ошибка загрузки статистики:', err);
@@ -92,10 +96,11 @@ function StatisticsPage() {
                 <TimelineChart data={timelineData} />
             </div>
             
-            {/* Круговая диаграмма и топ навыков */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <SkillsChart data={skillsData} />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <LevelsPieChart data={levelsData} />
-                <SkillsChart data={skillsData} />
+                <CompaniesPieChart data={companiesData} />
             </div>
         </div>
     );

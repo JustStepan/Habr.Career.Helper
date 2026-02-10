@@ -77,7 +77,8 @@ SPECIALIZATIONS = {
     'DevOps', 'Data Scientist', 'Data Engineer', 'Backend', 'Frontend',
     'Fullstack', 'Mobile', 'iOS', 'Android', 'QA', 'ML Engineer',
     'Дизайнер', 'Product Manager', 'Project Manager', 'HR', 'Маркетолог',
-    'Бэкенд разработчик', 'Фронтенд разработчик',
+    'Бэкенд разработчик', 'Фронтенд разработчик', 'Системный аналитик',
+    'Управление проектами', 'DevOps-инженер', 'Ведение переговоров'
 }
 
 

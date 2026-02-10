@@ -165,3 +165,42 @@ async def get_timeline(
         }
         for row in rows
     ]
+
+@router.get("/companies")
+async def get_top_companies(
+    limit: int = 10,
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Топ компаний по количеству вакансий
+    
+    Параметры:
+    - limit: сколько компаний вернуть (по умолчанию 10)
+    
+    Возвращает:
+    [
+        {"company": "Яндекс", "count": 45},
+        {"company": "Сбер", "count": 38},
+        ...
+    ]
+    """
+    
+    # SQL: GROUP BY company, COUNT(*)
+    query = (
+        select(
+            Vacancy.company,
+            func.count(Vacancy.id).label('count')
+        )
+        .where(Vacancy.is_active == True)
+        .group_by(Vacancy.company)
+        .order_by(desc('count'))
+        .limit(limit)
+    )
+    
+    result = await db.execute(query)
+    rows = result.all()
+    
+    return [
+        {"company": row.company, "count": row.count}
+        for row in rows
+    ]
