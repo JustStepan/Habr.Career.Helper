@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, ConfigDict
 from typing import List, Optional
 from datetime import datetime, date
 
@@ -6,11 +6,9 @@ from app.db_models import ParseStatus
 
 
 class SkillResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True) # Новый синтаксис
     id: int
     name: str
-    
-    class Config:
-        from_attributes = True
 
 
 class VacancySearchFilter(BaseModel):
@@ -39,6 +37,8 @@ class ParsedVacancy(BaseModel):
 
 
 class VacancyResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True) # Новый синтаксис
+
     id: int
     level: str
     title: str
@@ -49,12 +49,12 @@ class VacancyResponse(BaseModel):
     published_date: Optional[datetime] = None
     republish_count: int
     skills: List[SkillResponse]  # ← Список скиллов
-    
-    class Config:
-        from_attributes = True
+
 
 
 class FavoriteVacancyResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True) # Новый синтаксис
+
     id: int
     owner_id: int
     user_notes: str
@@ -67,9 +67,6 @@ class FavoriteVacancyResponse(BaseModel):
     description: str
     published_date: Optional[datetime] = None
     skills: List[SkillResponse] = []
-    
-    class Config:
-        from_attributes = True
 
 
 class SearchVacanciesResponse(BaseModel):
@@ -94,14 +91,14 @@ class VacanciesDBRequest(BaseModel):
 
 
 class ParsingStatusResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True) # Новый синтаксис
+
     status: ParseStatus
     last_updated: Optional[datetime] = None
     vacancies_added: int = 0
     total_vacancies: int = 0
     error_message: Optional[str] = None
-    
-    class Config:
-        from_attributes = True
+
 
 
 class PatchRequest(BaseModel):

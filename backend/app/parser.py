@@ -1,37 +1,7 @@
 """
-Парсер вакансий с Хабр Карьеры (career.habr.com)
-
-Последнее обновление: 2026-01-27
-Причина: Редизайн сайта - изменилась структура HTML блока требований.
-
-ИСТОРИЯ ИЗМЕНЕНИЙ:
-------------------
-2026-01-27: Адаптация под новую вёрстку Хабр Карьеры
-    - Блок требований: было <span class="inline-list">, стало <div class="vacancy-meta"> с chip-элементами
-    - Level теперь возвращается как 'Junior', 'Middle' и т.д. (было 'Младший (Junior)')
-    - Добавлена фильтрация специализаций из skills
-    - Сохранён fallback для старой структуры (на случай A/B тестов)
-
-СТРУКТУРА HTML (актуальная на 2026-01):
----------------------------------------
-Список вакансий:
-    div.vacancy-card
-        a.vacancy-card__title-link     -> title
-        a.link-comp                    -> company
-        div.basic-salary               -> salary (может отсутствовать)
-        time.basic-date[datetime]      -> published_date
-        a.vacancy-card__backdrop-link  -> ссылка на детальную страницу
-
-Детальная страница вакансии:
-    Требования:
-        h2.content-section__title (text содержит "Требования")
-            -> parent.parent -> div.vacancy-meta
-                -> div.chip-with-icon__text     (level, specialization)
-                -> div.chip-without-icon__text  (skills)
-
-    Описание:
-        div.vacancy-description__text
-            -> div.style-ugc (h3, p, ul, ol)
+ВАЖНОЕ УТОЧНЕНИЕ. НА ДЕТАЛЬНОЙ СТРАНИЦЕ ПРИСУТСТВЕТ ДЕТАЛЬНОЕ ОПИСАНИЕ ВАКАНСИИ В <script type="application/ld+json">
+СЕЙЧАС НЕДОСУГ ПЕРЕПИСЫВАТЬ, НО ЭТО МОЖНО РЕАЛИЗОВАТЬ ПОЗЖЕ
+КАК ВИДИТСЯ ЭТО БОЛЕЕ СТАБИЛЬАЯ СХЕМА ПАРСИНГА. В DATA ЕСТЬ ДОПОЛНИТЕЛЬНЫЕ ПОЛЯ КОТОРЫЕ МОЖНО УЧЕСТЬ ДЛЯ СТАТИСТИКИ
 """
 
 from datetime import datetime
@@ -71,7 +41,7 @@ LEVEL_NAMES = {
 }
 
 # Специализации - не являются skills, фильтруются
-# (расширяй этот список при необходимости)
+# МОЖНО ПРЕПИСАТЬ С ИСПОЛЬЗОВАНИЕМ <script type="application/ld+json"> ТОГДА НЕОБХОДИМОСТЬ ЭТОЙ ПРОВЕРКИ ОТПАДЕТ
 SPECIALIZATIONS = {
     'Системный администратор', 'Разработчик', 'Тестировщик', 'Аналитик',
     'DevOps', 'Data Scientist', 'Data Engineer', 'Backend', 'Frontend',
@@ -81,10 +51,6 @@ SPECIALIZATIONS = {
     'Управление проектами', 'DevOps-инженер', 'Ведение переговоров'
 }
 
-
-# =============================================================================
-# ОСНОВНЫЕ ФУНКЦИИ
-# =============================================================================
 
 async def parse_habr_vacancies(
     level: str = "all",
@@ -114,7 +80,6 @@ async def parse_habr_vacancies(
         url = f"{query_url}&page={page}"
 
         vacancies_list = await _fetch_vacancies_page(url, level, page)
-        
         for vacancy in vacancies_list:
             if stop_parsing:
                 break
@@ -282,13 +247,6 @@ async def _fetch_vacancy_details(url: str, client) -> Tuple[str, List[str], str]
 def _parse_requirements(soup) -> Tuple[str, List[str]]:
     """
     Парсит блок "Требования" с детальной страницы вакансии.
-
-    Структура (2026-01):
-        h2.content-section__title (text="Требования")
-            -> parent -> parent -> div.vacancy-meta
-                -> div.chip-with-icon__text     (level, specialization)
-                -> div.chip-without-icon__text  (skills)
-
     Returns:
         (level, skills) - level как 'Junior'/'Middle'/etc, skills как список строк
     """
@@ -320,7 +278,6 @@ def _parse_requirements(soup) -> Tuple[str, List[str]]:
             text = chip.get_text(strip=True)
             if not text:
                 continue
-
             # Level - один из LEVEL_NAMES
             if text in LEVEL_NAMES:
                 if not level:
