@@ -1,26 +1,21 @@
+"""
+Database configuration and session management.
+"""
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import declarative_base
-import os
-from dotenv import load_dotenv
 
-# Загружаем переменные из .env
-load_dotenv()
+from app.core.config import get_settings
 
-# Строка подключения
-POSTGRES_USER = os.getenv("POSTGRES_USER")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-POSTGRES_HOST = os.getenv("POSTGRES_HOST")
-POSTGRES_PORT = os.getenv("POSTGRES_PORT")
-POSTGRES_DB = os.getenv("POSTGRES_DB")
+settings = get_settings()
 
-DATABASE_URL = f"postgresql+asyncpg://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
-# SQLite (файловая БД, без сервера)
-# DATABASE_URL = "sqlite+aiosqlite:///./test.db" # здесь "//" - путь(нет сервера) и далее "/./" - начало относительного пути к файлам БД
-
-# Движок (менеджер подключений)
+# Движок с настройками пула подключений
 engine = create_async_engine(
-    DATABASE_URL,
-    echo=False,  # логирование SQL запросов True (для отладки)/ False - отключить
+    settings.DATABASE_URL,
+    echo=settings.DEBUG,
+    pool_size=20,
+    max_overflow=10,
+    pool_pre_ping=True,
+    pool_recycle=3600,
 )
 
 # Фабрика сессий

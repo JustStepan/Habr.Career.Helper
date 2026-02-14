@@ -247,3 +247,164 @@
 2026-02-14 21:43:08.021 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
 2026-02-14 21:43:08.021 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
 2026-02-14 21:43:08.022 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-14 21:57:14.693 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-14 21:57:14.694 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-14 21:57:16.473 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-14 21:57:16.474 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 21:57:16.474 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 21:57:16.475 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-14 21:57:32.643 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-14 21:57:32.643 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-14 21:57:33.867 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-14 21:57:33.868 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 21:57:33.868 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 21:57:33.868 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-14 22:00:00.108 | INFO     | app.parser:parse_habr_vacancies:72 - Запуск парсинга: уровень=all, страниц=20
+2026-02-14 22:00:00.108 | INFO     | app.parser:parse_habr_vacancies:73 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-14 22:00:00.109 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 1/20...
+2026-02-14 22:00:30.416 | ERROR    | app.parser:_fetch_vacancies_page:120 - Ошибка при запросе страницы 1: 
+2026-02-14 22:00:30.417 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 1: добавлено 0 вакансий
+2026-02-14 22:00:31.417 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 2/20...
+2026-02-14 22:00:32.920 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 1/25: Архитектор (кибербезопасность)
+2026-02-14 22:00:33.912 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 2/25: Архитектор по использованию программных СКЗИ
+2026-02-14 22:00:34.908 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 3/25: Аналитик данных (Команда "Smart Collection")
+2026-02-14 22:00:35.923 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 4/25: Data Engineer
+2026-02-14 22:00:36.951 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 5/25: GO-разработчик (Геосервисы)
+2026-02-14 22:00:37.871 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 6/25: SRE
+2026-02-14 22:00:38.939 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 7/25: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-14 22:00:39.928 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 8/25: SRE-инженер
+2026-02-14 22:00:40.865 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 9/25: Инженер данных (потоковая загрузка)
+2026-02-14 22:00:41.978 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 10/25: Системный аналитик
+2026-02-14 22:00:43.097 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 11/25: Аналитик 1С:ERP УСО
+2026-02-14 22:00:44.041 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 12/25: Linux администратор
+2026-02-14 22:00:44.956 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 13/25: Аналитик SOC L1
+2026-02-14 22:00:46.163 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 14/25: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-02-14 22:00:47.289 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 15/25: Data аналитик (Рекомендательная платформа)
+2026-02-14 22:00:48.313 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 16/25: Аналитик сопровождения
+2026-02-14 22:00:49.296 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 17/25: Инженер ИБ / SOC
+2026-02-14 22:00:50.329 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 18/25: Full-Stack Web Developer (AI / SaaS)
+2026-02-14 22:00:51.335 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 19/25: Разработчик 1С ERP
+2026-02-14 22:00:52.520 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 20/25: Senior embedded-разработчик на C++ в команду OpenBMC
+2026-02-14 22:00:53.589 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 21/25: SRE/DevOps инженер
+2026-02-14 22:00:54.726 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 22/25: ML-инженер (GigaChat Data)
+2026-02-14 22:00:55.680 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 23/25: Senior Python Developer | AI / Highload / Product
+2026-02-14 22:00:56.669 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 24/25: Lead account manager
+2026-02-14 22:00:57.788 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 2, вакансия 25/25: Руководитель группы анализа защищенности приложений (Кибербезопасность)
+2026-02-14 22:00:58.290 | INFO     | app.parser:parse_habr_vacancies:88 - Дубликат на странице 2: Full-Stack Web Developer (AI / SaaS) (https://career.habr.com/vacancies/1000165048)
+2026-02-14 22:00:58.291 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 2: добавлено 17 вакансий
+2026-02-14 22:00:58.291 | INFO     | app.parser:parse_habr_vacancies:98 - Парсинг остановлен на странице 2 - найден дубликат
+2026-02-14 22:00:58.291 | INFO     | app.parser:parse_habr_vacancies:104 - Парсинг завершен. Найдено новых вакансий: 17
+2026-02-14 22:00:58.291 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 17
+2026-02-14 22:00:58.291 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор (кибербезопасность)
+2026-02-14 22:00:58.317 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 11:43:14+00:00 --> 2026-02-14 14:27:09+03:00
+2026-02-14 22:00:58.318 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 33 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.327 | INFO     | app.tasks:save_vacancies:89 - Вакансия 1 - дубликат: Архитектор (кибербезопасность)
+2026-02-14 22:00:58.328 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Архитектор по использованию программных СКЗИ
+2026-02-14 22:00:58.330 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 11:38:53+00:00 --> 2026-02-14 14:27:09+03:00
+2026-02-14 22:00:58.330 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 35 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.334 | INFO     | app.tasks:save_vacancies:89 - Вакансия 2 - дубликат: Архитектор по использованию программных СКЗИ
+2026-02-14 22:00:58.334 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик данных (Команда "Smart Collection")
+2026-02-14 22:00:58.337 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 11:35:23+00:00 --> 2026-02-14 14:27:09+03:00
+2026-02-14 22:00:58.337 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 36 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.340 | INFO     | app.tasks:save_vacancies:89 - Вакансия 3 - дубликат: Аналитик данных (Команда "Smart Collection")
+2026-02-14 22:00:58.340 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data Engineer
+2026-02-14 22:00:58.343 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 11:33:24+00:00 --> 2026-02-14 14:27:08+03:00
+2026-02-14 22:00:58.343 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 37 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.346 | INFO     | app.tasks:save_vacancies:89 - Вакансия 4 - дубликат: Data Engineer
+2026-02-14 22:00:58.346 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: GO-разработчик (Геосервисы)
+2026-02-14 22:00:58.348 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-07 10:27:06+00:00 --> 2026-02-14 13:47:13+03:00
+2026-02-14 22:00:58.348 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 41 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.351 | INFO     | app.tasks:save_vacancies:89 - Вакансия 5 - дубликат: GO-разработчик (Геосервисы)
+2026-02-14 22:00:58.351 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: SRE
+2026-02-14 22:00:58.353 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 10:49:53+00:00 --> 2026-02-14 13:27:04+03:00
+2026-02-14 22:00:58.354 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 40 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.357 | INFO     | app.tasks:save_vacancies:89 - Вакансия 6 - дубликат: SRE
+2026-02-14 22:00:58.358 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-14 22:00:58.361 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 10:27:24+00:00 --> 2026-02-14 13:27:04+03:00
+2026-02-14 22:00:58.361 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 46 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.364 | INFO     | app.tasks:save_vacancies:89 - Вакансия 7 - дубликат: Главный специалист по сопровождению операций с ценными бумагами / деривативами
+2026-02-14 22:00:58.365 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: SRE-инженер
+2026-02-14 22:00:58.368 | INFO     | app.crud:update_vacancy_if_changed:51 - Вакансия изменилась. Новый параметр - description:
+
+О компании и команде
+
+В департамент, выполняющий работы по разработке заказного программного обеспе --> 
+О компании и команде
+
+В департамент, выполняющий работы по разработке заказного программного обеспе
+2026-02-14 22:00:58.368 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-01-22 10:27:22+00:00 --> 2026-02-14 13:27:03+03:00
+2026-02-14 22:00:58.368 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 47 опубликована снова (счетчик: 1)
+2026-02-14 22:00:58.377 | INFO     | app.tasks:save_vacancies:89 - Вакансия 8 - дубликат: SRE-инженер
+2026-02-14 22:00:58.378 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер данных (потоковая загрузка)
+2026-02-14 22:00:58.380 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-07 09:27:11+00:00 --> 2026-02-14 12:27:10+03:00
+2026-02-14 22:00:58.380 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 256 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.384 | INFO     | app.tasks:save_vacancies:89 - Вакансия 9 - дубликат: Инженер данных (потоковая загрузка)
+2026-02-14 22:00:58.384 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Системный аналитик
+2026-02-14 22:00:58.387 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-07 07:29:30+00:00 --> 2026-02-14 10:29:48+03:00
+2026-02-14 22:00:58.387 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 266 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.390 | INFO     | app.tasks:save_vacancies:89 - Вакансия 10 - дубликат: Системный аналитик
+2026-02-14 22:00:58.390 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик 1С:ERP УСО
+2026-02-14 22:00:58.393 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-14 22:00:58.412 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Аналитик 1С:ERP УСО (1129) сохранена в БД.
+2026-02-14 22:00:58.412 | INFO     | app.tasks:save_vacancies:87 - Вакансия 11 сохранена: Аналитик 1С:ERP УСО
+2026-02-14 22:00:58.412 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Linux администратор
+2026-02-14 22:00:58.413 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-07 06:42:54+00:00 --> 2026-02-14 09:42:32+03:00
+2026-02-14 22:00:58.413 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 268 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.415 | INFO     | app.tasks:save_vacancies:89 - Вакансия 12 - дубликат: Linux администратор
+2026-02-14 22:00:58.415 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик SOC L1
+2026-02-14 22:00:58.416 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 05:27:33+00:00 --> 2026-02-14 08:27:08+03:00
+2026-02-14 22:00:58.416 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 65 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.417 | INFO     | app.tasks:save_vacancies:89 - Вакансия 13 - дубликат: Аналитик SOC L1
+2026-02-14 22:00:58.417 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-02-14 22:00:58.419 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 05:27:33+00:00 --> 2026-02-14 08:27:07+03:00
+2026-02-14 22:00:58.419 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 67 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.420 | INFO     | app.tasks:save_vacancies:89 - Вакансия 14 - дубликат: Team Lead Data Scientist в области рекомендательных систем (AmazMe)
+2026-02-14 22:00:58.420 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Data аналитик (Рекомендательная платформа)
+2026-02-14 22:00:58.422 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 05:27:33+00:00 --> 2026-02-14 08:27:07+03:00
+2026-02-14 22:00:58.422 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 68 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.424 | INFO     | app.tasks:save_vacancies:89 - Вакансия 15 - дубликат: Data аналитик (Рекомендательная платформа)
+2026-02-14 22:00:58.424 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик сопровождения
+2026-02-14 22:00:58.425 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-05 05:27:33+00:00 --> 2026-02-14 08:27:07+03:00
+2026-02-14 22:00:58.426 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 66 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.427 | INFO     | app.tasks:save_vacancies:89 - Вакансия 16 - дубликат: Аналитик сопровождения
+2026-02-14 22:00:58.427 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Инженер ИБ / SOC
+2026-02-14 22:00:58.428 | INFO     | app.crud:update_vacancy_if_changed:54 - Вакансия изменилась. Новый параметр - published_date:
+2026-02-07 05:27:08+00:00 --> 2026-02-14 08:27:05+03:00
+2026-02-14 22:00:58.428 | INFO     | app.crud:update_vacancy_if_changed:59 - Вакансия 270 опубликована снова (счетчик: 2)
+2026-02-14 22:00:58.429 | INFO     | app.tasks:save_vacancies:89 - Вакансия 17 - дубликат: Инженер ИБ / SOC
+2026-02-14 22:00:58.430 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 1 из 17
+2026-02-14 22:00:58.432 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 1
+2026-02-14 22:03:26.753 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-14 22:03:26.753 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-14 22:03:28.193 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-14 22:03:28.194 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 22:03:28.194 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 22:03:28.195 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-14 22:03:45.570 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-14 22:03:45.570 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-14 22:03:47.392 | INFO     | app.main:lifespan:18 - Запуск приложения...
+2026-02-14 22:03:47.392 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 22:03:47.393 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 22:03:47.393 | INFO     | app.main:lifespan:21 - Scheduler запущен
+2026-02-14 22:04:15.583 | INFO     | app.main:lifespan:26 - Остановка приложения...
+2026-02-14 22:04:15.584 | INFO     | app.main:lifespan:28 - Scheduler остановлен
+2026-02-14 22:09:00.106 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-14 22:09:00.107 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 22:09:00.107 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 22:09:00.108 | INFO     | app.main:lifespan:26 - Scheduler запущен

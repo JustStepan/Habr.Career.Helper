@@ -24,7 +24,6 @@ async def get_overview(db: AsyncSession = Depends(get_db)):
     - active_vacancies: с is_active=true
     - new_today: опубликованные сегодня
     """
-    logger.info('START')
     # Всего вакансий
     total = await db.scalar(select(func.count(Vacancy.id)))
     

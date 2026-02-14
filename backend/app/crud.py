@@ -127,5 +127,77 @@ async def get_latest_vacancy_urls(db: AsyncSession, limit: int = 20) -> List[str
         .order_by(desc(Vacancy.published_date))
         .limit(limit)
     )
-    return result.scalars().all()
+    return list(result.scalars().all())
+
+
+async def get_or_create_skills_bulk(
+    db: AsyncSession,
+    skills_names: List[str]
+) -> List[Skill]:
+    """Bulk получить или создать скиллы."""
+    if not skills_names:
+        return []
+    
+    normalized_names = [s.strip() for s in skills_names if s.strip()]
+    
+    existing = await db.execute(
+        select(Skill).where(Skill.name.in_(normalized_names))
+    )
+    existing_skills = {s.name: s for s in existing.scalars().all()}
+    
+    new_skills = []
+    for name in normalized_names:
+        if name not in existing_skills:
+            skill = Skill(name=name)
+            db.add(skill)
+            new_skills.append(skill)
+    
+    if new_skills:
+        await db.flush()
+    
+    return list(existing_skills.values()) + new_skills
+
+
+async def create_vacancies_bulk(
+    db: AsyncSession,
+    vacancies_data: List[dict],
+    skills_map: dict[str, List[str]]
+) -> List[Vacancy]:
+    """
+    Bulk создание вакансий со скиллами.
+    Предварительно нужно получить/создать все скиллы через get_or_create_skills_bulk.
+    """
+    if not vacancies_data:
+        return []
+    
+    urls = [v['url'] for v in vacancies_data]
+    existing = await db.execute(
+        select(Vacancy.url).where(Vacancy.url.in_(urls))
+    )
+    existing_urls = set(existing.scalars().all())
+    
+    new_vacancies = []
+    for vac_data in vacancies_data:
+        if vac_data['url'] in existing_urls:
+            continue
+        
+        vacancy = Vacancy(**vac_data)
+        db.add(vacancy)
+        new_vacancies.append(vacancy)
+    
+    await db.flush()
+    
+    for vacancy in new_vacancies:
+        skill_names = skills_map.get(vacancy.url, [])
+        skills = await db.execute(
+            select(Skill).where(Skill.name.in_(skill_names))
+        )
+        vacancy.skills = list(skills.scalars().all())
+    
+    await db.commit()
+    
+    for vacancy in new_vacancies:
+        await db.refresh(vacancy, attribute_names=['skills'])
+    
+    return new_vacancies
 

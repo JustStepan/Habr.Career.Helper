@@ -79,7 +79,7 @@ async def fetch_vacancies_by_skills(
     )
     
     result = await db.execute(query)
-    return result.scalars().all()
+    return list(result.scalars().all())
 
 
 def calculate_match_scores(
@@ -175,13 +175,14 @@ def apply_cascade_selection(
 
 def convert_to_dict(vacancy: Vacancy) -> Dict[str, Any]:
     """Конвертирует вакансию в словарь для LLM."""
+    desc = vacancy.description or ""
     return {
         "id": vacancy.id,
         "title": vacancy.title,
         "company": vacancy.company,
         "level": vacancy.level,
         "salary": vacancy.salary,
-        "description": vacancy.description[:500] if vacancy.description else "",
+        "description": desc[:500] if desc else "",
         "skills": [s.name for s in vacancy.skills],
         "republish_count": vacancy.republish_count or 0,
         "published_date": vacancy.published_date.isoformat() if vacancy.published_date else None

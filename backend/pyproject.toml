@@ -18,6 +18,7 @@ dependencies = [
     "loguru>=0.7.3",
     "passlib[bcrypt]==1.7.4",
     "pydantic[email]>=2.12.5",
+    "pydantic-settings>=2.8.0",
     "python-jose[cryptography]>=3.5.0",
     "python-multipart>=0.0.22",
     "sqlalchemy>=2.0.45",
