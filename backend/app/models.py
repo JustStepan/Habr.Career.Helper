@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator, ConfigDict
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from datetime import datetime, date
 
 from app.db_models import ParseStatus
@@ -50,6 +50,12 @@ class VacancyResponse(BaseModel):
     republish_count: int
     skills: List[SkillResponse]  # ← Список скиллов
 
+    model_config = ConfigDict(
+        from_attributes=True,  # Для SQLAlchemy
+        json_encoders={
+            datetime: lambda v: v.isoformat() if v else None
+        }
+    )
 
 
 class FavoriteVacancyResponse(BaseModel):
@@ -103,3 +109,68 @@ class ParsingStatusResponse(BaseModel):
 
 class PatchRequest(BaseModel):
     user_notes: str = Field(..., max_length=5000, description="Заметки пользователя")
+
+
+# ========== LLM Search Models ==========
+
+class LLMSearchRequest(BaseModel):
+    """Запрос на LLM-поиск вакансий."""
+    user_query: str = Field(
+        ..., 
+        min_length=3,
+        max_length=1000,
+        description="Запрос пользователя (что ищет)"
+    )
+    skills: List[str] = Field(
+        ..., 
+        min_length=1,
+        max_length=20,
+        description="Список скиллов пользователя"
+    )
+    level: str = Field(
+        ..., 
+        pattern=r"^(Intern|Junior|Middle|Senior|Lead)$",
+        description="Уровень: Intern, Junior, Middle, Senior, Lead"
+    )
+
+
+class LLMVacancyResult(BaseModel):
+
+    """Упрощенная вакансия для ответа LLM search."""
+    id: int
+    title: str
+    company: str
+    level: str
+    salary: str
+    match_score: float = Field(
+        ..., 
+        ge=0.0, 
+        le=1.0,
+        description="Скор совпадения (0-1)"
+    )
+    skills: List[str] = Field(
+        default_factory=list,
+        max_length=10,
+        description="Топ скиллы вакансии"
+    )
+
+
+class LLMSearchResponse(BaseModel):
+    """Ответ LLM-поиска с primary и secondary вакансиями."""
+    primary: Optional[LLMVacancyResult] = Field(
+        None,
+        description="Наиболее подходящая вакансия"
+    )
+    secondary: Optional[LLMVacancyResult] = Field(
+        None,
+        description="Вторая по подходимости вакансия"
+    )
+    total_found: int = Field(
+        ...,
+        ge=0,
+        description="Всего найдено кандидатов"
+    )
+    search_stats: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="Статистика поиска"
+    )

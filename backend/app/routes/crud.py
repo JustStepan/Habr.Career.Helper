@@ -4,14 +4,22 @@ from fastapi import APIRouter, HTTPException, Depends, Path, Query
 
 from app.database import get_db
 from app.crud import get_vacancy_by_id
-from app.models import SearchVacanciesResponse, VacancyResponse, VacanciesDBRequest
 from app.db_models import Vacancy, Skill, User, FavoriteVacancy
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import desc, select, func
 from sqlalchemy.orm import selectinload
 
-from app.routes.auth import get_current_user_soft_auth
+from app.routes.auth import get_current_user_soft_auth, get_current_user
+from app.models import (
+    SearchVacanciesResponse, 
+    VacancyResponse, 
+    VacanciesDBRequest,
+    LLMSearchRequest,
+    LLMSearchResponse,
+    LLMVacancyResult
+)
+from app.llm_search.search_engine import search_best_vacancies
 
 
 router = APIRouter(tags=["crud"])
@@ -98,3 +106,57 @@ async def search_skills(
     )
     skills = result.scalars().all()
     return skills
+
+
+@router.post("/llm-search", response_model=LLMSearchResponse)
+async def llm_search_vacancies(
+    request: LLMSearchRequest,
+    db: AsyncSession = Depends(get_db),
+    user: User = Depends(get_current_user)
+):
+    print('request')
+    """
+    LLM-powered поиск вакансий.
+    
+    Принимает запрос пользователя, скиллы и уровень.
+    Возвращает primary (лучшую) и secondary (вторую) вакансии.
+    """
+    result = await search_best_vacancies(
+        db=db,
+        user_query=request.user_query,
+        skills=request.skills,
+        level=request.level
+    )
+    
+    # Конвертируем результат в response model
+    primary = None
+    secondary = None
+    
+    if result.primary:
+        primary = LLMVacancyResult(
+            id=result.primary["id"],
+            title=result.primary["title"],
+            company=result.primary["company"],
+            level=result.primary["level"],
+            salary=result.primary.get("salary", ""),
+            match_score=result.match_stats.get("primary_match_score", 0.0),
+            skills=result.primary.get("skills", [])[:10]
+        )
+    
+    if result.secondary:
+        secondary = LLMVacancyResult(
+            id=result.secondary["id"],
+            title=result.secondary["title"],
+            company=result.secondary["company"],
+            level=result.secondary["level"],
+            salary=result.secondary.get("salary", ""),
+            match_score=result.match_stats.get("secondary_match_score", 0.0),
+            skills=result.secondary.get("skills", [])[:10]
+        )
+    
+    return LLMSearchResponse(
+        primary=primary,
+        secondary=secondary,
+        total_found=result.total_found,
+        search_stats=result.match_stats
+    )

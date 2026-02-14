@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import SkillsAutocomplete from '@/components/search/SkillsAutocomplete';
 
-function SearchVacanciesDBForm({ onSearchDB, initialLevel = 'Junior', initialSkills = '', initialDate = '' }) {
+function SearchVacanciesDBForm({ onSearchDB, initialLevel = 'all', initialSkills = '', initialDate = '' }) {
     const [level, setLevel] = useState(initialLevel);
     const [skills, setSkills] = useState(initialSkills);
     const [date, setDate] = useState(initialDate);

@@ -86,6 +86,11 @@ function App() {
                             }>
                                 👤 Профиль
                             </NavLink>
+                            <NavLink to="/llm-search" className={({ isActive }) => 
+                                isActive ? "border-b border-red-300 text-blue-400 font-bold" : "text-white hover:text-blue-400"
+                            }>
+                                LLM
+                            </NavLink>
                             <button 
                                 onClick={handleLogout}
                                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"

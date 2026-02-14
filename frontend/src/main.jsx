@@ -12,6 +12,7 @@ import UserRegistration from '@/pages/UserRegistration';
 import LoginPage from '@/pages/LoginPage';
 import FavoritesPage from './pages/FavoritesPages';
 import ProfilePage from './pages/ProfilePage';
+import LLMSearchPage from './pages/LLMSearchPage';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import DetailVacancyPage from '@/pages/DetailVacancyPage';
 import StatisticsPage from '@/pages/StatisticsPage';
@@ -36,6 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="favorites" element={<ProtectedRoute><FavoritesPage /></ProtectedRoute>}/>
                 <Route path="favorite/:id" element={<ProtectedRoute><DetailVacancyPage type="favorite"  /></ProtectedRoute>}/>
                 <Route path="profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>}/>
+                <Route path="llm-search" element={<ProtectedRoute><LLMSearchPage /></ProtectedRoute>}/>
 
             </Route>
         </Routes>
