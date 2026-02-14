@@ -10,8 +10,11 @@ import sys
 # Добавляем путь к app для импортов
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from app.database import DATABASE_URL
+from app.core.config import get_settings
 from app.db_models import Base
+
+settings = get_settings()
+DATABASE_URL = settings.DATABASE_URL
 
 # Конфигурация Alembic
 config = context.config
