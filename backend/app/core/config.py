@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 1 день
     
     # LLM
-    OPENROUTER_API_KEY: str
+    OPENROUTER_API_KEY: str = ""
     
     # CORS
     CORS_ORIGINS: str = "http://localhost:5173"

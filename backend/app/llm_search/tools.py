@@ -6,17 +6,22 @@ import os
 import json
 from typing import List, Optional
 from openai import AsyncOpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
-
-# Async OpenAI client for non-blocking calls
-client = AsyncOpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
-)
 
 DEFAULT_MODEL = "xiaomi/mimo-v2-flash"
+
+_api_key = os.getenv("OPENROUTER_API_KEY", "")
+_client = None
+
+
+def get_client() -> Optional[AsyncOpenAI]:
+    """Ленивая инициализация клиента."""
+    global _client
+    if _client is None and _api_key:
+        _client = AsyncOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=_api_key,
+        )
+    return _client
 
 
 async def llm_rank_vacancies(
@@ -41,6 +46,11 @@ async def llm_rank_vacancies(
     """
     if not vacancies:
         return []
+
+    client = get_client()
+    if not client:
+        # Fallback: вернуть первые N вакансий по порядку
+        return [v["id"] for v in vacancies[:top_n]]
 
     # Ограничиваем контекст для LLM
     truncated_vacancies = _truncate_vacancies(vacancies, max_skills=5)

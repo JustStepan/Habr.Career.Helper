@@ -408,3 +408,27 @@
 2026-02-14 22:09:00.107 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
 2026-02-14 22:09:00.107 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
 2026-02-14 22:09:00.108 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-14 23:12:48.033 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-14 23:12:48.034 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-14 23:12:51.687 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-14 23:12:51.687 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 23:12:51.687 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 23:12:51.688 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-14 23:16:40.633 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-14 23:16:40.633 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-14 23:16:42.267 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-14 23:16:42.268 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 23:16:42.268 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 23:16:42.269 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-14 23:16:57.727 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-14 23:16:57.728 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-14 23:16:59.618 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-14 23:16:59.618 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 23:16:59.618 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 23:16:59.619 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-14 23:17:39.529 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-14 23:17:39.529 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-14 23:17:41.105 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-14 23:17:41.105 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-14 23:17:41.105 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-14 23:17:41.106 | INFO     | app.main:lifespan:26 - Scheduler запущен
