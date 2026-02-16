@@ -113,7 +113,7 @@ function LLMSearchPage() {
 
                     <div className="flex gap-3 pt-4 border-t border-gray-100">
                         <a 
-                            href={`/vacancy/${vacancy.id}`}
+                            href={`/habr-vacancies/vacancy/${vacancy.id}`}
                             className="flex-1 text-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-medium text-sm"
                         >
                             Подробнее
@@ -168,10 +168,10 @@ function LLMSearchPage() {
                 {/* Header */}
                 <div className="text-center mb-10">
                     <h1 className="text-4xl font-bold text-gray-900 mb-3">
-                        🤖 AI Подбор вакансий
+                        AI Подбор вакансий
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Расскажите о себе, и наш AI подберет最适合您的职位
+                        Расскажите о себе, и наш AI подберет вам вакансию мечты!
                     </p>
                 </div>
 
