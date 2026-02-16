@@ -146,3 +146,24 @@
 2026-02-16 11:01:38.809 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 82 создана в БД.
 2026-02-16 11:22:15.537 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 433 найдена начинаем процесс копирования
 2026-02-16 11:22:15.567 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 83 создана в БД.
+2026-02-16 13:14:40.142 | INFO     | app.parser:parse_habr_vacancies:72 - Запуск парсинга: уровень=Junior, страниц=1
+2026-02-16 13:14:40.143 | INFO     | app.parser:parse_habr_vacancies:73 - URL: https://career.habr.com/vacancies?q=С++&sort=date&qid=3
+2026-02-16 13:14:40.144 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 1/1...
+2026-02-16 13:14:40.144 | INFO     | app.parser:parse_habr_vacancies:88 - Дубликат на странице 1: Инженер по тестированию (https://career.habr.com/vacancies/1000164814)
+2026-02-16 13:14:40.144 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 1: добавлено 1 вакансий
+2026-02-16 13:14:40.144 | INFO     | app.parser:parse_habr_vacancies:98 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-16 13:14:40.144 | INFO     | app.parser:parse_habr_vacancies:104 - Парсинг завершен. Найдено новых вакансий: 1
+2026-02-16 13:14:59.929 | INFO     | app.parser:parse_habr_vacancies:72 - Запуск парсинга: уровень=Junior, страниц=1
+2026-02-16 13:14:59.930 | INFO     | app.parser:parse_habr_vacancies:73 - URL: https://career.habr.com/vacancies?q=С++&sort=date&qid=3
+2026-02-16 13:14:59.931 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 1/1...
+2026-02-16 13:14:59.931 | INFO     | app.parser:parse_habr_vacancies:88 - Дубликат на странице 1: Инженер по тестированию (https://career.habr.com/vacancies/1000164814)
+2026-02-16 13:14:59.931 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 1: добавлено 1 вакансий
+2026-02-16 13:14:59.931 | INFO     | app.parser:parse_habr_vacancies:98 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-16 13:14:59.931 | INFO     | app.parser:parse_habr_vacancies:104 - Парсинг завершен. Найдено новых вакансий: 1
+2026-02-16 13:15:14.497 | INFO     | app.parser:parse_habr_vacancies:72 - Запуск парсинга: уровень=Junior, страниц=1
+2026-02-16 13:15:14.497 | INFO     | app.parser:parse_habr_vacancies:73 - URL: https://career.habr.com/vacancies?q=С++&sort=date&qid=3
+2026-02-16 13:15:14.497 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 1/1...
+2026-02-16 13:15:14.498 | INFO     | app.parser:parse_habr_vacancies:88 - Дубликат на странице 1: Инженер по тестированию (https://career.habr.com/vacancies/1000164814)
+2026-02-16 13:15:14.498 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 1: добавлено 1 вакансий
+2026-02-16 13:15:14.498 | INFO     | app.parser:parse_habr_vacancies:98 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-16 13:15:14.498 | INFO     | app.parser:parse_habr_vacancies:104 - Парсинг завершен. Найдено новых вакансий: 1

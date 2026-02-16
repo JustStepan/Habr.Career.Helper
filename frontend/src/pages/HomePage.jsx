@@ -104,6 +104,29 @@ function HomePage() {
                     </div>
                 </Link>
 
+                {/* ИИ поиск вакансий */}
+                <Link
+                    to={token ? "/llm-search" : "/register"}
+                    className="group bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all"
+                >
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                            LLM
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                {token ? "Подбор вакансий с помощью ИИ" : "Подбор вакансий с помощью ИИ (Необходима регистрация)"}
+                            </h2>
+                            <p className="text-gray-600 text-sm">
+                                {token
+                                    ? "Опишите свои навыки, опыт и пожелания к работе. Языковая модель проанализирует базу вакансий и подберет наиболее подходящие предложения."
+                                    : "После регистрации вы сможете описать свои навыки и пожелания, а ИИ подберет для вас наиболее подходящие вакансии с объяснением выбора."
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </Link>
+
                 {/* Статистика */}
                 <Link
                     to="/statistics"
@@ -126,44 +149,13 @@ function HomePage() {
                 </Link>
             </div>
 
-            {/* Будущие возможности */}
-            <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                    В разработке
-                </h2>
-
-                <div className="grid grid-cols-1 gap-6">
-                    {/* AI подбор */}
-                    <div className="bg-gray-50 p-6 rounded-xl border border-dashed border-gray-300">
-                        <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center text-2xl flex-shrink-0 text-gray-400">
-                                AI
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold text-gray-700 mb-2">
-                                    Подбор вакансий с помощью ИИ
-                                </h3>
-                                <p className="text-gray-500 text-sm">
-                                    Опишите свои навыки, опыт и пожелания к работе.
-                                    Языковая модель проанализирует базу вакансий и подберет
-                                    наиболее подходящие предложения с объяснением выбора.
-                                </p>
-                                <span className="inline-block mt-3 px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
-                                    Скоро
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {/* Техническая информация */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Как это работает</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
                     <div>
                         <p className="font-medium text-gray-800 mb-1">Сбор данных</p>
-                        <p>Парсер на Beautiful Soup собирает вакансии с Habr Career каждые 2 часа по расписанию.</p>
+                        <p>Парсер на Beautiful Soup собирает вакансии с Habr Career каждый час по расписанию.</p>
                     </div>
                     <div>
                         <p className="font-medium text-gray-800 mb-1">Хранение</p>
