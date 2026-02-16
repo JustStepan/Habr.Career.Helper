@@ -34,7 +34,6 @@ function VacancyCard({ vacancy, favoritesMap }) {
             setLoading(false);
         }
 
-        console.log('Вакансия добавлена в избранное ID = ', favorite_id);
     }
 
     const handleVacancyClick = () => {
@@ -112,7 +111,7 @@ function VacancyCard({ vacancy, favoritesMap }) {
                                 }
                             `}
                         >
-                            {isFavorite ? '❤️ Сохранено' : '🤍 Избранное'}
+                            {isFavorite ? '🤍 Сохранено' : '❤️ В избранное'}
                         </button>
                     )}
                 </div>

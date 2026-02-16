@@ -60,3 +60,89 @@
 2026-02-16 10:00:27.339 | INFO     | app.tasks:save_vacancies:87 - Вакансия 6 сохранена: Senior Full Stack Developer
 2026-02-16 10:00:27.339 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 4 из 6
 2026-02-16 10:00:27.358 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 4
+2026-02-16 10:54:13.641 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-16 10:54:13.643 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-16 10:54:15.796 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-16 10:54:15.796 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-16 10:54:15.796 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-16 10:54:15.797 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-16 10:54:21.559 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-16 10:54:21.560 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-16 10:54:22.980 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-16 10:54:22.981 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-16 10:54:22.981 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-16 10:54:22.982 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-16 10:59:00.324 | INFO     | app.main:lifespan:30 - Остановка приложения...
+2026-02-16 10:59:00.326 | INFO     | app.main:lifespan:32 - Scheduler остановлен
+2026-02-16 10:59:15.509 | INFO     | app.main:lifespan:23 - Запуск приложения Habr Career Parser v1.0.0
+2026-02-16 10:59:15.510 | INFO     | app.scheduler:configure_scheduler:29 - Scheduler настроен: парсинг в 8:00-20:00 (каждые 2ч) + 4:00 (МСК)
+2026-02-16 10:59:15.510 | INFO     | app.scheduler:configure_scheduler:38 - Scheduler настроен: проверка вакансий (404) 05:00
+2026-02-16 10:59:15.511 | INFO     | app.main:lifespan:26 - Scheduler запущен
+2026-02-16 11:00:00.069 | INFO     | app.parser:parse_habr_vacancies:72 - Запуск парсинга: уровень=all, страниц=20
+2026-02-16 11:00:00.070 | INFO     | app.parser:parse_habr_vacancies:73 - URL: https://career.habr.com/vacancies?q=&sort=date&type=all
+2026-02-16 11:00:00.070 | INFO     | app.parser:parse_habr_vacancies:79 - Парсинг страницы 1/20...
+2026-02-16 11:00:02.347 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 1/25: Руководитель отдела внедрения 1С
+2026-02-16 11:00:03.219 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 2/25: Аналитик 1С
+2026-02-16 11:00:04.221 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 3/25: Руководитель по продажам и развитию продукта
+2026-02-16 11:00:05.463 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 4/25: Разработчик PHP, SQL фреймворк Symfony
+2026-02-16 11:00:07.643 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 5/25: Руководитель IT проектов
+2026-02-16 11:00:08.693 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 6/25: Fullstack Developer (Laravel + Nuxt 3)
+2026-02-16 11:00:09.855 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 7/25: Senior Java Developer (LLM)
+2026-02-16 11:00:10.832 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 8/25: DevSecOps Engineer (Екатеринбург)
+2026-02-16 11:00:11.813 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 9/25: Blockchain  разработчик (Backend)
+2026-02-16 11:00:12.941 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 10/25: Tech lead React Native
+2026-02-16 11:00:14.047 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 11/25: Специалист по анализу защищенности (pentest)
+2026-02-16 11:00:15.179 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 12/25: Senior Full Stack Developer
+2026-02-16 11:00:16.274 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 13/25: Аналитик DWH
+2026-02-16 11:00:17.435 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 14/25: C developer (ME)
+2026-02-16 11:00:18.461 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 15/25: JavaScript веб-разработчик (Backend/Frontend)
+2026-02-16 11:00:19.511 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 16/25: Java (Т-банк)
+2026-02-16 11:00:20.617 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 17/25: iOS разработчик
+2026-02-16 11:00:21.765 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 18/25: QA Engineer Mobile fullstack (Java)
+2026-02-16 11:00:22.985 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 19/25: Android разработчик
+2026-02-16 11:00:24.442 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 20/25: Java Developer eFX
+2026-02-16 11:00:25.449 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 21/25: Java разработчик (СОПББ)
+2026-02-16 11:00:26.668 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 22/25: Системный аналитик (НО БО)
+2026-02-16 11:00:27.673 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 23/25: Системный аналитик (СОПББ)
+2026-02-16 11:00:28.631 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 24/25: QA Manual
+2026-02-16 11:00:29.619 | INFO     | app.parser:_fetch_vacancies_page:135 - Страница 1, вакансия 25/25: Консультант по продажам и сопровождению клиентов 1С
+2026-02-16 11:00:30.120 | INFO     | app.parser:parse_habr_vacancies:88 - Дубликат на странице 1: Senior Java Developer (LLM) (https://career.habr.com/vacancies/1000165071)
+2026-02-16 11:00:30.121 | INFO     | app.parser:parse_habr_vacancies:94 - Страница 1: добавлено 6 вакансий
+2026-02-16 11:00:30.121 | INFO     | app.parser:parse_habr_vacancies:98 - Парсинг остановлен на странице 1 - найден дубликат
+2026-02-16 11:00:30.121 | INFO     | app.parser:parse_habr_vacancies:104 - Парсинг завершен. Найдено новых вакансий: 6
+2026-02-16 11:00:30.121 | INFO     | app.tasks:scheduled_parsing_task:34 - Начинаем процесс сохрания вакансий в БД.
+Всего вакансий: 6
+2026-02-16 11:00:30.122 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель отдела внедрения 1С
+2026-02-16 11:00:30.139 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.170 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Руководитель отдела внедрения 1С (1154) сохранена в БД.
+2026-02-16 11:00:30.170 | INFO     | app.tasks:save_vacancies:87 - Вакансия 1 сохранена: Руководитель отдела внедрения 1С
+2026-02-16 11:00:30.170 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Аналитик 1С
+2026-02-16 11:00:30.179 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.209 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Аналитик 1С (1155) сохранена в БД.
+2026-02-16 11:00:30.209 | INFO     | app.tasks:save_vacancies:87 - Вакансия 2 сохранена: Аналитик 1С
+2026-02-16 11:00:30.209 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель по продажам и развитию продукта
+2026-02-16 11:00:30.216 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.241 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Руководитель по продажам и развитию продукта (1156) сохранена в БД.
+2026-02-16 11:00:30.242 | INFO     | app.tasks:save_vacancies:87 - Вакансия 3 сохранена: Руководитель по продажам и развитию продукта
+2026-02-16 11:00:30.242 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Разработчик PHP, SQL фреймворк Symfony
+2026-02-16 11:00:30.248 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.278 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Разработчик PHP, SQL фреймворк Symfony (1157) сохранена в БД.
+2026-02-16 11:00:30.279 | INFO     | app.tasks:save_vacancies:87 - Вакансия 4 сохранена: Разработчик PHP, SQL фреймворк Symfony
+2026-02-16 11:00:30.279 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Руководитель IT проектов
+2026-02-16 11:00:30.284 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.306 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Руководитель IT проектов (1158) сохранена в БД.
+2026-02-16 11:00:30.307 | INFO     | app.tasks:save_vacancies:87 - Вакансия 5 сохранена: Руководитель IT проектов
+2026-02-16 11:00:30.307 | INFO     | app.crud:create_vacancy_with_skills:70 - Создание вакансии: Fullstack Developer (Laravel + Nuxt 3)
+2026-02-16 11:00:30.311 | INFO     | app.crud:create_vacancy_with_skills:79 - Проверка на вакансию пройдена. Приступаем к созданию вакансии.
+2026-02-16 11:00:30.335 | INFO     | app.crud:create_vacancy_with_skills:99 - Вакансия Fullstack Developer (Laravel + Nuxt 3) (1159) сохранена в БД.
+2026-02-16 11:00:30.335 | INFO     | app.tasks:save_vacancies:87 - Вакансия 6 сохранена: Fullstack Developer (Laravel + Nuxt 3)
+2026-02-16 11:00:30.335 | INFO     | app.tasks:save_vacancies:95 - Сохранение завершено. Сохранено 6 из 6
+2026-02-16 11:00:30.362 | INFO     | app.tasks:scheduled_parsing_task:42 - Новых вакансий в БД = 6
+2026-02-16 11:01:10.515 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 310 найдена начинаем процесс копирования
+2026-02-16 11:01:10.551 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 80 создана в БД.
+2026-02-16 11:01:12.412 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 1128 найдена начинаем процесс копирования
+2026-02-16 11:01:12.444 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 81 создана в БД.
+2026-02-16 11:01:38.790 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 1093 найдена начинаем процесс копирования
+2026-02-16 11:01:38.809 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 82 создана в БД.
+2026-02-16 11:22:15.537 | INFO     | app.routes.favorite_crud:add_to_favorites:102 - Вакансия 433 найдена начинаем процесс копирования
+2026-02-16 11:22:15.567 | INFO     | app.routes.favorite_crud:add_to_favorites:136 - Любимая вакансия 83 создана в БД.

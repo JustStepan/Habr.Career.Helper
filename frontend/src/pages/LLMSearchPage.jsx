@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SkillsAutocomplete from '@/components/search/SkillsAutocomplete';
 import axiosInstance from '@/utils/axios';
 
 function LLMSearchPage() {
+    const token = localStorage.getItem('access_token');
     const [level, setLevel] = useState('Junior');
     const [skills, setSkills] = useState('');
     const [userQuery, setUserQuery] = useState('');
@@ -47,8 +49,19 @@ function LLMSearchPage() {
         return 'bg-gray-100 text-gray-800 border-gray-200';
     };
 
+    const handleAddToFavorite = async (vacancyId) => {
+        try {
+            await axiosInstance.post('favorite', { favorite_id: vacancyId });
+        } catch (err) {
+            console.error('Ошибка добавления в избранное:', err);
+        }
+    };
+
     const VacancyCard = ({ vacancy, isPrimary = false, rank }) => {
         if (!vacancy) return null;
+
+        const [isFavorite, setIsFavorite] = useState(false);
+        const [favLoading, setFavLoading] = useState(false);
         
         return (
             <div className={`relative bg-white rounded-xl shadow-lg overflow-hidden border-2 ${isPrimary ? 'border-blue-500 ring-4 ring-blue-100' : 'border-gray-200'}`}>
@@ -112,18 +125,32 @@ function LLMSearchPage() {
                     </div>
 
                     <div className="flex gap-3 pt-4 border-t border-gray-100">
-                        <a 
-                            href={`/habr-vacancies/vacancy/${vacancy.id}`}
+                        <Link
+                            to={`/vacancy/${vacancy.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex-1 text-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-medium text-sm"
                         >
                             Подробнее
-                        </a>
-                        <button className="flex-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition font-medium text-sm flex items-center justify-center gap-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                            В избранное
-                        </button>
+                        </Link>
+                        
+                        {token && (
+                            <button 
+                                onClick={() => {
+                                    setFavLoading(true);
+                                    handleAddToFavorite(vacancy.id).finally(() => setFavLoading(false));
+                                    setIsFavorite(true);
+                                }}
+                                disabled={favLoading || isFavorite}
+                                className={`flex-1 px-4 py-2 rounded-lg font-medium text-sm flex items-center justify-center gap-2 transition ${
+                                    isFavorite 
+                                        ? 'bg-slate-200 text-slate-500 cursor-default'
+                                        : 'bg-blue-500 text-white hover:bg-blue-600'
+                                }`}
+                            >
+                                {isFavorite ? 'Сохранено' : 'В избранное'}
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
