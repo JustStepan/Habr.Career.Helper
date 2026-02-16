@@ -154,7 +154,7 @@ function DetailVacancyPage({ type }) {
                         <RepublishBadge republishCount={vacancy.republish_count} />
                     </div>
 
-                    {/* Свойства */}
+                    {/* Свойства  */}
                     <div className="grid grid-cols-2 gap-4 mb-8 text-sm">
                         <div>
                             <span className="font-semibold text-gray-700">Уровень:</span>
